@@ -19,8 +19,9 @@
       
       <guid>https://katsuragicsl.github.io/posts/2022/04/classic-api-unhooking/</guid>
       <description>Introduction AV and EDR use API hoooking to monitor API calls of processes. This post will take a brief look on how does a hook look like and the classic solution for malwares to bypass API hooking.
+I tested the content of this blog in a windows 10 VM with BitDefender installed.
 You can get the sample code here.
-API hooking On a VM with BitDefender installed, if you load a PE into x64dbg and look for NtMapViewOfSection, you will see the first instruction is jmp to something.</description>
+API hooking On the Windows VM with BitDefender installed, if you load a PE into x64dbg and look for NtMapViewOfSection, you will see the first instruction is jmp to something.</description>
     </item>
     
     <item>
