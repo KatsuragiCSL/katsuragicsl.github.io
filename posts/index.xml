@@ -1,0 +1,15 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on KatsuragiCSL</title><link>https://katsuragicsl.github.io/posts/</link><description>Recent content in Posts on KatsuragiCSL</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Thu, 14 Apr 2022 20:54:39 +0800</lastBuildDate><atom:link href="https://katsuragicsl.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Classic API Unhooking</title><link>https://katsuragicsl.github.io/posts/2022/04/classic-api-unhooking/</link><pubDate>Thu, 14 Apr 2022 20:54:39 +0800</pubDate><guid>https://katsuragicsl.github.io/posts/2022/04/classic-api-unhooking/</guid><description>Introduction AV and EDR use API hoooking to monitor API calls of processes. This post will take a brief look on how does a hook look like and the classic solution for malwares to bypass API hooking.
+You can get the sample code here.
+API hooking On a VM with BitDefender installed, if you load a PE into x64dbg and look for NtMapViewOfSection, you will see the first instruction is jmp to something.</description><content type="html"><![CDATA[<h3 id="introduction">Introduction</h3>
+<p>AV and EDR use API hoooking to monitor API calls of processes. This post will take a brief look on how does a hook look like and the classic solution for malwares to bypass API hooking.</p>
+<p>You can get the sample code <a href="https://github.com/KatsuragiCSL/classic-unhooking">here</a>.</p>
+<h3 id="api-hooking">API hooking</h3>
+<p><img src="/classic-api-unhooking/s1.png" alt=""></p>
+<p><img src="/classic-api-unhooking/s2.png" alt=""></p>
+<p>On a VM with BitDefender installed, if you load a PE into x64dbg and look for NtMapViewOfSection, you will see the first instruction is jmp to something.
+This is NOT what NtMapViewOfSection looks like originally, but an inline hook on this function by BitDefender.</p>
+<p>BitDefender set the hook in order to perform its job before the function runs. In order to evade from BitDefender, you need to evade from this hook. The method discussed in this post is known as classic unhooking.</p>
+<h3 id="creating-a-view-of-a-fresh-copy-of-ntdlldll">Creating a view of a fresh copy of ntdll.dll</h3>
+<p><img src="/classic-api-unhooking/1.png" alt=""></p>
+<p>This is the part responsible for creating a view of the fresh copy of ntdll.dll on disk.</p>
+]]></content></item></channel></rss>
