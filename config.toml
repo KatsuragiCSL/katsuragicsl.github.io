@@ -1,5 +1,5 @@
 baseURL = "https://katsuragicsl.github.io"
-title   = "KatsuragiCSL"
+title   = "Script Adults"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 
@@ -55,7 +55,7 @@ disableHugoGeneratorInject = false
 
   # Metadata mostly used in document's head
   # 
-  description = "Nice theme for homepages and blogs"
+  description = "KatsuragiCSL's personal blog"
   keywords = ""
   images = [""]
 
