@@ -1,18 +1,19 @@
 ---
 title: "Flaws of Maximum Munch in (F)lex"
 date: 2022-06-04T16:26:45+08:00
+lastmod: 2022-06-04T20:20:09+08:00
 draft: false
-toc: false
-images:
+mathjax: true
+toc: true
 tags: ["flex", "regex"]
 categories: ["compilers"]
 ---
 
-### Introduction
+## Introduction
 
 Recently I am studying compilers and it reminds me a vulnerability class which is called [ReDOS](https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS) I saw a long time ago. This post will discuss some flaws of lexers, specifically on [flex](https://github.com/westes/flex).
 
-### Lexer
+## Lexer
 
 In theory, a compiler contains 5 components:
 1. **Lexical analyzer** -> identifying tokens (*valid "words" of the source language*)
@@ -27,7 +28,7 @@ For example, let say we have a source language **L** and all you can code with i
 
 $$x = 1$$
 
-it should identify $$x$$ as `<Identifier, "x"> <operator, "="> <numerics, "1">`, which specifies the type of each token.
+it should gives `<Identifier, "x"> <operator, "="> <numerics, "1">`, which specifies the type of each token.
 
 At the same time it should be able to catch invalid input such as $$x > 1$$, $$y???2$$.
 
@@ -46,7 +47,7 @@ std::cin >> something;
 To achive its goal, lexers make use of regex to match input. Let's use flex as an example.
 
 
-### Flex and Maximum Munch
+## Flex and Maximum Munch
 
 In short, flex is a lexer generator for C. It consumes flex code and output the  C implementation of the corresponding lexer.
 
@@ -85,7 +86,7 @@ Here is the principle which called **Maximum Munch**.
 As its name suggests, when substrings `s_1` and `s_2` with `len(s_1) > len(s_2)` of input `s` matches some rules, we should (and flex will) take `s_1`.  
 Hence in the above case, "aaa" will be matched, instead of matching `.|\n` three times.
 
-### Flaws of Maximum Munch
+## Flaws of Maximum Munch
 
 Imagine we need to read the string "xxxx" as two "xx". Also "xxx" should be read as "xxx".
 
@@ -116,7 +117,7 @@ xxx   { printf("xxx\n");}
 ```
 the `/` in the second rule helps us to match the whole string ("xxxx") but just consume the first two x. So due the maximum munch "xxx" won't be matched because it is shorter than "xxxx". After consuming the first two x, the remaining two x match the first rule, so now we have two "xx".
 
-### Abusing maximun munch to slow down the lexer
+## Abusing maximun munch to slow down the lexer
 
 According to the [manual](https://westes.github.io/flex/manual/Limitations.html#Limitations), the following rules won't be matched properly
 ```
@@ -147,7 +148,7 @@ with input "xxxxxxxxxxxx[...]".
 
 The version with lookahead was just a heuristic for coming up with the idea of how to slow down a lexer.
 
-### Appendix
+## Appendix
 It is simple if you want to try flex on linux. For instance on ubuntu, you can write your flex code inside a file with .flex extension, then you type something as input after:
 ```
 flex test.flex

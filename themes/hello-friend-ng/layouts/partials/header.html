@@ -18,4 +18,5 @@
             {{- end}}
         </span>
     </span>
+    {{ if .Params.mathjax }}{{ partial "mathjax_support.html" . }}{{ end }}
 </header>
