@@ -61,7 +61,7 @@ disableHugoGeneratorInject = false
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = "Reverse Engineering, Exploitation, RedTeaming, random security thoughts"
+  homeSubtitle = "Reverse Engineering, Exploitation, RedTeaming, random thoughts"
 
   # Set a background for the homepage
   # backgroundImage = "assets/images/background.jpg"
@@ -175,7 +175,7 @@ disableHugoGeneratorInject = false
 
 [languages]
   [languages.en]
-    subtitle  = "Reverse Engineering, Exploitation, RedTeaming, random security thoughts"
+    subtitle  = "Reverse Engineering, Exploitation, RedTeaming, random thoughts"
     weight    = 1
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
