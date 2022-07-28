@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>Prisma Cloud Defenders</title>
+      <link>https://katsuragicsl.github.io/posts/2022/07/prisma-cloud-defenders/</link>
+      <pubDate>Wed, 20 Jul 2022 17:54:24 +0800</pubDate>
+      
+      <guid>https://katsuragicsl.github.io/posts/2022/07/prisma-cloud-defenders/</guid>
+      <description>Tl;dr - unfixed information disclosure in Prisma Cloud defenders This post is about how to abuse a agent of a cloud security solution to get information which you should not know, like what security controls are applied, what assets the victim owns and the owners of the assets.
+Introduction A few months ago I was examining the Prisma Cloud configuration of my workplace and accidentally discovered an information disclosure issue of Prisma Cloud defender (the agent).</description>
+    </item>
+    
+    <item>
       <title>Flaws of Maximum Munch in (F)lex</title>
       <link>https://katsuragicsl.github.io/posts/2022/06/flaws-of-maximum-munch-in-flex/</link>
       <pubDate>Sat, 04 Jun 2022 16:26:45 +0800</pubDate>

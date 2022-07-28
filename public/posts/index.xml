@@ -6,8 +6,52 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Sat, 04 Jun 2022 16:26:45 +0800</lastBuildDate>
+        <lastBuildDate>Wed, 20 Jul 2022 17:54:24 +0800</lastBuildDate>
         <atom:link href="https://katsuragicsl.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Prisma Cloud Defenders</title>
+            <link>https://katsuragicsl.github.io/posts/2022/07/prisma-cloud-defenders/</link>
+            <pubDate>Wed, 20 Jul 2022 17:54:24 +0800</pubDate>
+            
+            <guid>https://katsuragicsl.github.io/posts/2022/07/prisma-cloud-defenders/</guid>
+            <description>Tl;dr - unfixed information disclosure in Prisma Cloud defenders This post is about how to abuse a agent of a cloud security solution to get information which you should not know, like what security controls are applied, what assets the victim owns and the owners of the assets.
+Introduction A few months ago I was examining the Prisma Cloud configuration of my workplace and accidentally discovered an information disclosure issue of Prisma Cloud defender (the agent).</description>
+            <content type="html"><![CDATA[<h2 id="tldr---unfixed-information-disclosure-in-prisma-cloud-defenders">Tl;dr - unfixed information disclosure in Prisma Cloud defenders</h2>
+<p>This post is about how to abuse a agent of a cloud security solution to get information which you should not know, like what security controls are applied, what assets the victim owns and the owners of the assets.</p>
+<h2 id="introduction">Introduction</h2>
+<p>A few months ago I was examining the Prisma Cloud configuration of my workplace and accidentally discovered an information disclosure issue of Prisma Cloud defender (the agent). This issue has been reported to Palo Alto as security disclosure, however Palo Alto declared that this is an <a href="https://github.com/PaloAltoNetworks/prisma-cloud-docs/pull/400/commits/3f6d17e63170929a2be5f015a28034fd80631486">expected behavior</a>.</p>
+<p><img src="/prisma-cloud-defenders/prisma1.png" alt=""></p>
+<p>While Palo Alto seems not considering it as a problem, I think it is at least a trick for post exploitation. Below is some background knowledge.</p>
+<h2 id="prisma-cloud">Prisma Cloud</h2>
+<p>Prisma Cloud is a cloud security solution developed by Palo Alto, providing features including monitoring processes in standalone hosts/ run as daemon set in a K8S cluster.</p>
+<p>This is done by deploying an agent (which is called a <strong>defender</strong>) in the target host.</p>
+<p>To do so, one needs permissions to Prisma Cloud in order to get an access token. <strong>Defender Manager</strong> is the most suitable role for an operator whose manager only wants him to help deploying defenders without letting him/ her know other information, for example monitoring rules.</p>
+<p><img src="/prisma-cloud-defenders/prisma2.png" alt=""></p>
+<h2 id="digging-the-hole-host">Digging the <del>hole</del> host</h2>
+<p>Let&rsquo;s get a <strong>Defender Manager</strong> role and install a host defender on a linux machine, let&rsquo;s say machine A.<br>
+Take a look at the directory <code>/var/lib/twistlock/local_db/local/&lt;version number&gt;/messages/</code>, <code>connect</code> is a big file containing a lot of configs, while some details are stored in other files in the same directory.</p>
+<p><img src="/prisma-cloud-defenders/message_dir.png" alt=""></p>
+<h2 id="why-can-i-view-things-that-has-nothing-to-do-with-my-host">Why can I view things that has nothing to do with my host?</h2>
+<ul>
+<li>Other assets like container registries</li>
+</ul>
+<p><code>/var/lib/twistlock/local_db/local/&lt;version number&gt;/connect</code></p>
+<p><img src="/prisma-cloud-defenders/assets.png" alt=""></p>
+<ul>
+<li>Firewall rules that belongs to <strong>OTHER</strong> hosts</li>
+</ul>
+<p><code>/var/lib/twistlock/local_db/local/&lt;version number&gt;/hostAppFirewallPolicy</code></p>
+<p><img src="/prisma-cloud-defenders/hostappfirewallrule.png" alt=""></p>
+<ul>
+<li>Content of custom rules (e.g. process/ network monitoring)</li>
+</ul>
+<p><code>/var/lib/twistlock/local_db/local/&lt;version number&gt;/updateCustomRule</code></p>
+<p><img src="/prisma-cloud-defenders/custom_rule_content.png" alt=""></p>
+<p>As a <strong>Defender Manager</strong>, all you are supposed to have is the root access in the host where the defender to be installed on. However, after installing defenders, you will be able to get information much more than just the info of that host. For example, reading custom rules on other hosts, let say, hosts which are more important and you don&rsquo;t want to get caught when you have the chance to access them.</p>
+<p>Those could help you if you are an internal threat of a company which uses Prisma Cloud but don&rsquo;t know this trick :)</p>
+]]></content>
+        </item>
         
         <item>
             <title>Flaws of Maximum Munch in (F)lex</title>
