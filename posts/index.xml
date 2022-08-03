@@ -10,7 +10,7 @@ Introduction A few months ago I was examining the Prisma Cloud configuration of 
 <p>This is done by deploying an agent (which is called a <strong>defender</strong>) in the target host.</p>
 <p>To do so, one needs permissions to Prisma Cloud in order to get an access token. <strong>Defender Manager</strong> is the most suitable role for an operator whose manager only wants him to help deploying defenders without letting him/ her know other information, for example monitoring rules.</p>
 <p><img src="/prisma-cloud-defenders/prisma2.png" alt=""></p>
-<h2 id="digging-the-hole-host">Digging the <del>hole</del> host</h2>
+<h2 id="digging-the--hole--host">Digging the  <del>hole</del>  host</h2>
 <p>Let&rsquo;s get a <strong>Defender Manager</strong> role and install a host defender on a linux machine, let&rsquo;s say machine A.<br>
 Take a look at the directory <code>/var/lib/twistlock/local_db/local/&lt;version number&gt;/messages/</code>, <code>connect</code> is a big file containing a lot of configs, while some details are stored in other files in the same directory.</p>
 <p><img src="/prisma-cloud-defenders/message_dir.png" alt=""></p>
