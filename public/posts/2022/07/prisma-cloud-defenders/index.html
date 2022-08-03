@@ -43,7 +43,7 @@ Introduction A few months ago I was examining the Prisma Cloud configuration of 
 <meta itemprop="description" content="Tl;dr - unfixed information disclosure in Prisma Cloud defenders This post is about how to abuse a agent of a cloud security solution to get information which you should not know, like what security controls are applied, what assets the victim owns and the owners of the assets.
 Introduction A few months ago I was examining the Prisma Cloud configuration of my workplace and accidentally discovered an information disclosure issue of Prisma Cloud defender (the agent).">
 <meta itemprop="datePublished" content="2022-07-20T17:54:24&#43;08:00" />
-<meta itemprop="dateModified" content="2022-07-20T17:54:24&#43;08:00" />
+<meta itemprop="dateModified" content="2022-08-03T22:14:05&#43;08:00" />
 <meta itemprop="wordCount" content="403">
 <meta itemprop="image" content="https://katsuragicsl.github.io"/>
 
@@ -67,7 +67,7 @@ Introduction A few months ago I was examining the Prisma Cloud configuration of 
 <meta property="og:url" content="https://katsuragicsl.github.io/posts/2022/07/prisma-cloud-defenders/" />
 <meta property="og:image" content="https://katsuragicsl.github.io"/>
 <meta property="article:published_time" content="2022-07-20T17:54:24+08:00" />
-<meta property="article:modified_time" content="2022-07-20T17:54:24+08:00" />
+<meta property="article:modified_time" content="2022-08-03T22:14:05+08:00" />
 
 
 
@@ -168,7 +168,7 @@ Introduction A few months ago I was examining the Prisma Cloud configuration of 
     <li><a href="#tldr---unfixed-information-disclosure-in-prisma-cloud-defenders">Tl;dr - unfixed information disclosure in Prisma Cloud defenders</a></li>
     <li><a href="#introduction">Introduction</a></li>
     <li><a href="#prisma-cloud">Prisma Cloud</a></li>
-    <li><a href="#digging-the-hole-host">Digging the hole host</a></li>
+    <li><a href="#digging-the--hole--host">Digging the  hole  host</a></li>
     <li><a href="#why-can-i-view-things-that-has-nothing-to-do-with-my-host">Why can I view things that has nothing to do with my host?</a></li>
   </ul>
 </nav>
@@ -189,7 +189,7 @@ Introduction A few months ago I was examining the Prisma Cloud configuration of 
 <p>This is done by deploying an agent (which is called a <strong>defender</strong>) in the target host.</p>
 <p>To do so, one needs permissions to Prisma Cloud in order to get an access token. <strong>Defender Manager</strong> is the most suitable role for an operator whose manager only wants him to help deploying defenders without letting him/ her know other information, for example monitoring rules.</p>
 <p><img src="https://katsuragicsl.github.io/prisma-cloud-defenders/prisma2.png" alt=""></p>
-<h2 id="digging-the-hole-host">Digging the <del>hole</del> host</h2>
+<h2 id="digging-the--hole--host">Digging the  <del>hole</del>  host</h2>
 <p>Let&rsquo;s get a <strong>Defender Manager</strong> role and install a host defender on a linux machine, let&rsquo;s say machine A.<br>
 Take a look at the directory <code>/var/lib/twistlock/local_db/local/&lt;version number&gt;/messages/</code>, <code>connect</code> is a big file containing a lot of configs, while some details are stored in other files in the same directory.</p>
 <p><img src="https://katsuragicsl.github.io/prisma-cloud-defenders/message_dir.png" alt=""></p>
@@ -259,6 +259,10 @@ Take a look at the directory <code>/var/lib/twistlock/local_db/local/&lt;version
         
 
          
+          
+            
+              (Last updated: 2022-08-03 22:14)
+            
           
         
       </p>
