@@ -1,4 +1,58 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Script Adults</title><link>https://katsuragicsl.github.io/posts/</link><description>Recent content in Posts on Script Adults</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Wed, 20 Jul 2022 17:54:24 +0800</lastBuildDate><atom:link href="https://katsuragicsl.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Prisma Cloud Defenders</title><link>https://katsuragicsl.github.io/posts/2022/07/prisma-cloud-defenders/</link><pubDate>Wed, 20 Jul 2022 17:54:24 +0800</pubDate><guid>https://katsuragicsl.github.io/posts/2022/07/prisma-cloud-defenders/</guid><description>Tl;dr - unfixed information disclosure in Prisma Cloud defenders This post is about how to abuse a agent of a cloud security solution to get information which you should not know, like what security controls are applied, what assets the victim owns and the owners of the assets.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Script Adults</title><link>https://katsuragicsl.github.io/posts/</link><description>Recent content in Posts on Script Adults</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sat, 27 Aug 2022 18:06:09 +0800</lastBuildDate><atom:link href="https://katsuragicsl.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Fuzzing nmap(1): a Dumb Approach</title><link>https://katsuragicsl.github.io/posts/2022/08/fuzzing-nmap1-a-dumb-approach/</link><pubDate>Sat, 27 Aug 2022 18:06:09 +0800</pubDate><guid>https://katsuragicsl.github.io/posts/2022/08/fuzzing-nmap1-a-dumb-approach/</guid><description>Introduction Recently I am hooked on fuzzing. Apart from &amp;ldquo;normal&amp;rdquo; fuzzing following the textbook examples, I tried to fuzz nmap because
+It is fun Seems no blog posts about fuzzing nmap yet, it surprised me, and hence, it is fun, again. 😏 As my first target, I am going to fuzz the nse of nmap. NSE (nmap scripting engine) parses the scripts provided in --script and provide additional scanning according to how the script is written.</description><content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>Recently I am hooked on fuzzing. Apart from &ldquo;normal&rdquo; fuzzing following the textbook examples, I tried to fuzz nmap because</p>
+<ol>
+<li>It is fun</li>
+<li>Seems no blog posts about fuzzing nmap yet, it surprised me, and hence, it is fun, again. 😏</li>
+</ol>
+<p>As my first target, I am going to fuzz the nse of nmap. NSE (nmap scripting engine) parses the scripts provided in <code>--script</code> and provide additional scanning according to how the script is written. For instance, the <code>http-title.nse</code> comes with the stock nmap tries to grab the web page&rsquo;s title if there are ports running http:</p>
+<pre><code>root@develop:~/nmap_fuzzing# ./install/bin/nmap 127.0.0.1 -p 80 --script=install/share/nmap/scripts/http-title.nse
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-08-27 17:43 HKT
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.000094s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+|_http-title: Directory listing for /
+
+</code></pre><p>You may want to want to know how does a nmap script looks like by checking out <a href="https://svn.nmap.org/nmap/scripts/http-title.nse">here</a>. Essentially nmap scripts consists of head, rules (the trigger of the actions) and actions, where actions are written in <code>lua</code>. We won&rsquo;t dive into it until we talk about grammar-based fuzzing in the future.</p>
+<h2 id="setup-and-debugs">Setup and debugs</h2>
+<p>We are testing on Ubuntu 20.04. Get the source code of nmap and decompress it following the <a href="https://nmap.org/book/inst-source.html#inst-configure">guide</a>.</p>
+<p>There is something tricky when compiling nmap with afl C compilers. The first time I compiled nmap with the normal way:</p>
+<pre><code>AFL_USE_ASAN=1 CC=~/AFLplusplus/afl-clang-fast CXX=~/AFLplusplus/afl-clang-fast++ ./configure --prefix=&quot;$HOME/nmap_fuzzing/install/
+</code></pre><p>When I tried to <code>make</code> it, it failed with some compiling errors:</p>
+<p><img src="/fuzzing_nmap1/fuzzing_nmap_1.png" alt=""></p>
+<p>Seems <code>addrinfo</code> is redefined in <code>nbase/nbase_ipv6.h</code>, let&rsquo;s take a look at this header file:</p>
+<p><img src="/fuzzing_nmap1/fuzzing_nmap_2.png" alt=""></p>
+<p>This suggests that if <code>HAVE_GETADDRINFO</code> is non-zero, the <code>addrinfo</code> struct will not be redefined in <code>nbase/nbase_ipv6.h</code>. Let&rsquo;s edit <code>./nbase/nbase_config.h</code>:</p>
+<p><img src="/fuzzing_nmap1/fuzzing_nmap_3.png" alt=""></p>
+<p>After adding a line <code>#define HAVE_GETADDRINFO 1</code>, we saw <code>make</code> works by running <code>AFL_USE_ASAN=1 make &amp;&amp; AFL_USE_ASAN=1 make install</code>:</p>
+<p><img src="/fuzzing_nmap1/fuzzing_nmap_4.png" alt=""></p>
+<p>For corpus, we simply copy some nmap scripts for http that come with nmap. They are located at <code>&lt;directory where nmap installed&gt;/share/nmap/scripts</code>.</p>
+<p>Also we will run a dummy http server on port 80 by <code>python3 -m http.server 80</code>, so that nmap can have a target to scan.</p>
+<h2 id="fuzzing">Fuzzing!</h2>
+<p>By running <code>afl-fuzz -m none -i $HOME/nmap_fuzzing/corpus_nmap_scripts/ -o $HOME/nmap_fuzzing/output/ -s 999 -- $HOME/nmap_fuzzing/install/bin/nmap 127.0.0.1 -p 80 --script @@</code>, we see AFL is doing his job ❤</p>
+<p><img src="/fuzzing_nmap1/fuzzing_nmap_5.png" alt=""></p>
+<h2 id="pitfalls-and-future-improvement">Pitfalls and future improvement</h2>
+<p>This fuzzing is not promising. There are a few reasons why it is bad to fuzz nmap in this way:</p>
+<ol>
+<li>It is slow
+<ol>
+<li>AFL runs nmap once for each test case 😴</li>
+<li>nmap has to do port scans before running the script</li>
+<li>Many useless(for fuzzing NSE) code running and each nmap run has to wait for them to finish.</li>
+</ol>
+</li>
+<li>It generates a lot of invalid nmap script files, or those will never be triggered by nmap
+<ol>
+<li>The mutation engine of AFL does not aware of the syntax of nmap script files and generates a lot of invalid files</li>
+<li>Even the test cases have correct syntax, many of them may never be troggered because they don&rsquo;t run for http service.</li>
+</ol>
+</li>
+</ol>
+<p>For <strong>1</strong>, we will handle it by writing a better harness and using persistent mode of afl++.</p>
+<p>For <strong>2</strong>, we will do grammar-based fuzzing to make sure we only generate test cases which are valid nmap script, and make sure they will be triggered during the test, probably by ensuring the generated nmap script is using <a href="https://nmap.org/book/nse-script-format.html#:~:text=will%20be%20run%3A-,prerule">prerule</a>.</p>
+]]></content></item><item><title>Prisma Cloud Defenders</title><link>https://katsuragicsl.github.io/posts/2022/07/prisma-cloud-defenders/</link><pubDate>Wed, 20 Jul 2022 17:54:24 +0800</pubDate><guid>https://katsuragicsl.github.io/posts/2022/07/prisma-cloud-defenders/</guid><description>Tl;dr - unfixed information disclosure in Prisma Cloud defenders This post is about how to abuse a agent of a cloud security solution to get information which you should not know, like what security controls are applied, what assets the victim owns and the owners of the assets.
 Introduction A few months ago I was examining the Prisma Cloud configuration of my workplace and accidentally discovered an information disclosure issue of Prisma Cloud defender (the agent).</description><content type="html"><![CDATA[<h2 id="tldr---unfixed-information-disclosure-in-prisma-cloud-defenders">Tl;dr - unfixed information disclosure in Prisma Cloud defenders</h2>
 <p>This post is about how to abuse a agent of a cloud security solution to get information which you should not know, like what security controls are applied, what assets the victim owns and the owners of the assets.</p>
 <h2 id="introduction">Introduction</h2>
