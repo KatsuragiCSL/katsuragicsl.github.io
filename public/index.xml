@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>Fuzzing nmap(1): a Dumb Approach</title>
+      <link>https://katsuragicsl.github.io/posts/2022/08/fuzzing-nmap1-a-dumb-approach/</link>
+      <pubDate>Sat, 27 Aug 2022 18:06:09 +0800</pubDate>
+      
+      <guid>https://katsuragicsl.github.io/posts/2022/08/fuzzing-nmap1-a-dumb-approach/</guid>
+      <description>Introduction Recently I am hooked on fuzzing. Apart from &amp;ldquo;normal&amp;rdquo; fuzzing following the textbook examples, I tried to fuzz nmap because
+ It is fun Seems no blog posts about fuzzing nmap yet, it surprised me, and hence, it is fun, again. 😏  As my first target, I am going to fuzz the nse of nmap. NSE (nmap scripting engine) parses the scripts provided in --script and provide additional scanning according to how the script is written.</description>
+    </item>
+    
+    <item>
       <title>Prisma Cloud Defenders</title>
       <link>https://katsuragicsl.github.io/posts/2022/07/prisma-cloud-defenders/</link>
       <pubDate>Wed, 20 Jul 2022 17:54:24 +0800</pubDate>

@@ -5,19 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="KatsuragiCSL ">
-<meta name="description" content="Introduction AV and EDR use API hoooking to monitor API calls of processes. This post will take a brief look on how does a hook look like and the classic solution for malwares to bypass API hooking.
-I tested the content of this blog in a windows 10 VM with BitDefender installed.
-You can get the sample code here.
-API hooking On the Windows VM with BitDefender installed, if you load a PE into x64dbg and look for NtMapViewOfSection, you will see the first instruction is jmp to something." />
-<meta name="keywords" content=", windows, PE, C&#43;&#43;" />
+<meta name="description" content="Introduction Recently I am hooked on fuzzing. Apart from &amp;ldquo;normal&amp;rdquo; fuzzing following the textbook examples, I tried to fuzz nmap because
+ It is fun Seems no blog posts about fuzzing nmap yet, it surprised me, and hence, it is fun, again. 😏  As my first target, I am going to fuzz the nse of nmap. NSE (nmap scripting engine) parses the scripts provided in --script and provide additional scanning according to how the script is written." />
+<meta name="keywords" content=", nmap" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
-<link rel="canonical" href="https://katsuragicsl.github.io/posts/2022/04/classic-api-unhooking/" />
+<link rel="canonical" href="https://katsuragicsl.github.io/posts/2022/08/fuzzing-nmap1-a-dumb-approach/" />
 
 
     <title>
         
-            Classic API Unhooking :: Script Adults  — Reverse Engineering, Exploitation, RedTeaming, random thoughts
+            Fuzzing nmap(1): a Dumb Approach :: Script Adults  — Reverse Engineering, Exploitation, RedTeaming, random thoughts
         
     </title>
 
@@ -41,50 +39,45 @@ API hooking On the Windows VM with BitDefender installed, if you load a PE into 
     <meta name="msapplication-TileColor" content="">
 
 
-<meta itemprop="name" content="Classic API Unhooking">
-<meta itemprop="description" content="Introduction AV and EDR use API hoooking to monitor API calls of processes. This post will take a brief look on how does a hook look like and the classic solution for malwares to bypass API hooking.
-I tested the content of this blog in a windows 10 VM with BitDefender installed.
-You can get the sample code here.
-API hooking On the Windows VM with BitDefender installed, if you load a PE into x64dbg and look for NtMapViewOfSection, you will see the first instruction is jmp to something.">
-<meta itemprop="datePublished" content="2022-04-14T20:54:39&#43;08:00" />
-<meta itemprop="dateModified" content="2022-04-15T03:23:39&#43;08:00" />
-<meta itemprop="wordCount" content="485">
+<meta itemprop="name" content="Fuzzing nmap(1): a Dumb Approach">
+<meta itemprop="description" content="Introduction Recently I am hooked on fuzzing. Apart from &ldquo;normal&rdquo; fuzzing following the textbook examples, I tried to fuzz nmap because
+ It is fun Seems no blog posts about fuzzing nmap yet, it surprised me, and hence, it is fun, again. 😏  As my first target, I am going to fuzz the nse of nmap. NSE (nmap scripting engine) parses the scripts provided in --script and provide additional scanning according to how the script is written.">
+<meta itemprop="datePublished" content="2022-08-27T18:06:09&#43;08:00" />
+<meta itemprop="dateModified" content="2022-08-27T18:06:09&#43;08:00" />
+<meta itemprop="wordCount" content="553">
 <meta itemprop="image" content="https://katsuragicsl.github.io"/>
 
 
 
-<meta itemprop="keywords" content="windows,PE,C&#43;&#43;," />
+<meta itemprop="keywords" content="nmap," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://katsuragicsl.github.io"/>
 
-<meta name="twitter:title" content="Classic API Unhooking"/>
-<meta name="twitter:description" content="Introduction AV and EDR use API hoooking to monitor API calls of processes. This post will take a brief look on how does a hook look like and the classic solution for malwares to bypass API hooking.
-I tested the content of this blog in a windows 10 VM with BitDefender installed.
-You can get the sample code here.
-API hooking On the Windows VM with BitDefender installed, if you load a PE into x64dbg and look for NtMapViewOfSection, you will see the first instruction is jmp to something."/>
+<meta name="twitter:title" content="Fuzzing nmap(1): a Dumb Approach"/>
+<meta name="twitter:description" content="Introduction Recently I am hooked on fuzzing. Apart from &ldquo;normal&rdquo; fuzzing following the textbook examples, I tried to fuzz nmap because
+ It is fun Seems no blog posts about fuzzing nmap yet, it surprised me, and hence, it is fun, again. 😏  As my first target, I am going to fuzz the nse of nmap. NSE (nmap scripting engine) parses the scripts provided in --script and provide additional scanning according to how the script is written."/>
 
 
 
 
-    <meta property="og:title" content="Classic API Unhooking" />
-<meta property="og:description" content="Introduction AV and EDR use API hoooking to monitor API calls of processes. This post will take a brief look on how does a hook look like and the classic solution for malwares to bypass API hooking.
-I tested the content of this blog in a windows 10 VM with BitDefender installed.
-You can get the sample code here.
-API hooking On the Windows VM with BitDefender installed, if you load a PE into x64dbg and look for NtMapViewOfSection, you will see the first instruction is jmp to something." />
+    <meta property="og:title" content="Fuzzing nmap(1): a Dumb Approach" />
+<meta property="og:description" content="Introduction Recently I am hooked on fuzzing. Apart from &ldquo;normal&rdquo; fuzzing following the textbook examples, I tried to fuzz nmap because
+ It is fun Seems no blog posts about fuzzing nmap yet, it surprised me, and hence, it is fun, again. 😏  As my first target, I am going to fuzz the nse of nmap. NSE (nmap scripting engine) parses the scripts provided in --script and provide additional scanning according to how the script is written." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://katsuragicsl.github.io/posts/2022/04/classic-api-unhooking/" />
+<meta property="og:url" content="https://katsuragicsl.github.io/posts/2022/08/fuzzing-nmap1-a-dumb-approach/" />
 <meta property="og:image" content="https://katsuragicsl.github.io"/>
-<meta property="article:published_time" content="2022-04-14T20:54:39+08:00" />
-<meta property="article:modified_time" content="2022-04-15T03:23:39+08:00" />
+<meta property="article:published_time" content="2022-08-27T18:06:09+08:00" />
+<meta property="article:modified_time" content="2022-08-27T18:06:09+08:00" />
 
 
 
 
-    <meta property="article:section" content="malware-development" />
+
+    <meta property="article:section" content="fuzzing" />
 
 
 
-    <meta property="article:published_time" content="2022-04-14 20:54:39 &#43;0800 HKT" />
+    <meta property="article:published_time" content="2022-08-27 18:06:09 &#43;0800 HKT" />
 
 
 
@@ -162,7 +155,7 @@ API hooking On the Windows VM with BitDefender installed, if you load a PE into 
 
     <article>
       <h1 class="post-title">
-        <a href="https://katsuragicsl.github.io/posts/2022/04/classic-api-unhooking/">Classic API Unhooking</a>
+        <a href="https://katsuragicsl.github.io/posts/2022/08/fuzzing-nmap1-a-dumb-approach/">Fuzzing nmap(1): a Dumb Approach</a>
       </h1>
 
       
@@ -174,11 +167,9 @@ API hooking On the Windows VM with BitDefender installed, if you load a PE into 
           <nav id="TableOfContents">
   <ul>
     <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#api-hooking">API hooking</a></li>
-    <li><a href="#creating-a-view-of-a-fresh-copy-of-ntdlldll">Creating a view of a fresh copy of ntdll.dll</a></li>
-    <li><a href="#rewrite-the-text-section">Rewrite the .text section</a></li>
-    <li><a href="#ntdlldll-unhooked">Ntdll.dll unhooked</a></li>
-    <li><a href="#afterword">Afterword</a></li>
+    <li><a href="#setup-and-debugs">Setup and debugs</a></li>
+    <li><a href="#fuzzing">Fuzzing!</a></li>
+    <li><a href="#pitfalls-and-future-improvement">Pitfalls and future improvement</a></li>
   </ul>
 </nav>
         </aside>
@@ -188,53 +179,58 @@ API hooking On the Windows VM with BitDefender installed, if you load a PE into 
 
       <div class="post-content">
         <h2 id="introduction">Introduction</h2>
-<p>AV and EDR use API hoooking to monitor API calls of processes. This post will take a brief look on how does a hook look like and the classic solution for malwares to bypass API hooking.</p>
-<p>I tested the content of this blog in a windows 10 VM with BitDefender installed.</p>
-<p>You can get the sample code <a href="https://github.com/KatsuragiCSL/classic-unhooking">here</a>.</p>
-<h2 id="api-hooking">API hooking</h2>
-<p><img src="https://katsuragicsl.github.io/classic-api-unhooking/s1.png" alt=""></p>
-<p><img src="https://katsuragicsl.github.io/classic-api-unhooking/s2.png" alt=""></p>
-<p>On the Windows VM with BitDefender installed, if you load a PE into x64dbg and look for <code>NtMapViewOfSection</code>, you will see the first instruction is jmp to something.<br>
-This is NOT how <code>ZwMapViewOfSection</code> looks like originally, but an inline hook on this function by BitDefender.</p>
-<p>BitDefender set the hook in order to perform its job before the function runs. In order to evade from BitDefender, you need to evade from this hook. The method discussed in this post is known as classic unhooking.</p>
-<h2 id="creating-a-view-of-a-fresh-copy-of-ntdlldll">Creating a view of a fresh copy of ntdll.dll</h2>
-<p><img src="https://katsuragicsl.github.io/classic-api-unhooking/1.png" alt=""></p>
-<p>This is the part responsible for creating a view of the fresh copy of ntdll.dll on disk.</p>
-<p>We also need a handle of ntdll.dll which loaded into the current process. It is the one which (some of) its functions are hooked. Let&rsquo;s call it <code>pollutedNtdll</code>.</p>
-<h2 id="rewrite-the-text-section">Rewrite the .text section</h2>
-<p><img src="https://katsuragicsl.github.io/classic-api-unhooking/2.png" alt=""></p>
-<p>These few lines are for getting to the section header (and number of sections for iteration). If you are not familiar with PE structure, you could take a look at <a href="https://github.com/corkami/pics/tree/master/binary/pe101">PE101</a> which has nice pictures. You may also want to refer to MSDN pages like <a href="https://docs.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-image_nt_headers64">this</a>.</p>
-<p>We also defined a <code>DWORD</code> variable <code>oldprotect</code> for saving the <a href="https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualprotect">old access protection value</a>.</p>
-<p><img src="https://katsuragicsl.github.io/classic-api-unhooking/3.png" alt=""></p>
-<p>You can get the number of sections in a PE file in the <code>IMAGE_FILE_HEADER</code> structure. We iterate through the sections and find the <code>.text</code> section.<br>
-If we get it, we make the <code>.text</code> section of pollutedNtdll writable, by <code>VirtualProtect</code>.</p>
-<p><img src="https://katsuragicsl.github.io/classic-api-unhooking/4.png" alt=""></p>
-<p>Now we can copy the <code>.text</code> section from the fresh copy of <code>ntdll.dll</code> to the one polluted.</p>
-<p><img src="https://katsuragicsl.github.io/classic-api-unhooking/5.png" alt=""></p>
-<p>Finally make sure we recover the access protection.</p>
-<h2 id="ntdlldll-unhooked">Ntdll.dll unhooked</h2>
-<p>Now we set a breakpoint on an instruction after the unhooking (in this case it is where &ldquo;done!&rdquo; is printed).<br>
-Run it and the breakpoint is hit:</p>
-<p><img src="https://katsuragicsl.github.io/classic-api-unhooking/s3.png" alt=""></p>
-<p>Back to the address of <code>ZwMapViewOfSection</code>, you can see the hook is gone.</p>
-<p><img src="https://katsuragicsl.github.io/classic-api-unhooking/s4.png" alt=""></p>
-<h2 id="afterword">Afterword</h2>
-<p>First of all, as a simple sample, I did not put any effort in obfuscating my function calls/ strings etc. So the code is definitely far from ready-to-go.<br>
-There will probably be posts about basic obfuscation in the future.</p>
-<p>And, is it a perfect solution for API unhooking? Of course not, as it&rsquo;s called <strong>Classic</strong> unhooking :)<br>
-In fact, there is a part looks suspicious when we unhooking like this, as in the EDR&rsquo;s point of view:</p>
-<blockquote>
-<p>Why the heck is this process reading <code>ntdll.dll</code> from disk???<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-</blockquote>
-<p>Yes, normal process should not read <code>ntdll.dll</code> &ldquo;manually&rdquo;, as it should be automatically loaded. There will be posts about more advanced technique for unhooking in the future.</p>
-<section class="footnotes" role="doc-endnotes">
-<hr>
+<p>Recently I am hooked on fuzzing. Apart from &ldquo;normal&rdquo; fuzzing following the textbook examples, I tried to fuzz nmap because</p>
 <ol>
-<li id="fn:1" role="doc-endnote">
-<p><a href="https://www.cyberbit.com/blog/endpoint-security/malware-mitigation-when-direct-system-calls-are-used/">https://www.cyberbit.com/blog/endpoint-security/malware-mitigation-when-direct-system-calls-are-used/</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li>It is fun</li>
+<li>Seems no blog posts about fuzzing nmap yet, it surprised me, and hence, it is fun, again. 😏</li>
+</ol>
+<p>As my first target, I am going to fuzz the nse of nmap. NSE (nmap scripting engine) parses the scripts provided in <code>--script</code> and provide additional scanning according to how the script is written. For instance, the <code>http-title.nse</code> comes with the stock nmap tries to grab the web page&rsquo;s title if there are ports running http:</p>
+<pre><code>root@develop:~/nmap_fuzzing# ./install/bin/nmap 127.0.0.1 -p 80 --script=install/share/nmap/scripts/http-title.nse
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-08-27 17:43 HKT
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.000094s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+|_http-title: Directory listing for /
+
+</code></pre><p>You may want to want to know how does a nmap script looks like by checking out <a href="https://svn.nmap.org/nmap/scripts/http-title.nse">here</a>. Essentially nmap scripts consists of head, rules (the trigger of the actions) and actions, where actions are written in <code>lua</code>. We won&rsquo;t dive into it until we talk about grammar-based fuzzing in the future.</p>
+<h2 id="setup-and-debugs">Setup and debugs</h2>
+<p>We are testing on Ubuntu 20.04. Get the source code of nmap and decompress it following the <a href="https://nmap.org/book/inst-source.html#inst-configure">guide</a>.</p>
+<p>There is something tricky when compiling nmap with afl C compilers. The first time I compiled nmap with the normal way:</p>
+<pre><code>AFL_USE_ASAN=1 CC=~/AFLplusplus/afl-clang-fast CXX=~/AFLplusplus/afl-clang-fast++ ./configure --prefix=&quot;$HOME/nmap_fuzzing/install/
+</code></pre><p>When I tried to <code>make</code> it, it failed with some compiling errors:</p>
+<p><img src="https://katsuragicsl.github.io/fuzzing_nmap1/fuzzing_nmap_1.png" alt=""></p>
+<p>Seems <code>addrinfo</code> is redefined in <code>nbase/nbase_ipv6.h</code>, let&rsquo;s take a look at this header file:</p>
+<p><img src="https://katsuragicsl.github.io/fuzzing_nmap1/fuzzing_nmap_2.png" alt=""></p>
+<p>This suggests that if <code>HAVE_GETADDRINFO</code> is non-zero, the <code>addrinfo</code> struct will not be redefined in <code>nbase/nbase_ipv6.h</code>. Let&rsquo;s edit <code>./nbase/nbase_config.h</code>:</p>
+<p><img src="https://katsuragicsl.github.io/fuzzing_nmap1/fuzzing_nmap_3.png" alt=""></p>
+<p>After adding a line <code>#define HAVE_GETADDRINFO 1</code>, we saw <code>make</code> works by running <code>AFL_USE_ASAN=1 make &amp;&amp; AFL_USE_ASAN=1 make install</code>:</p>
+<p><img src="https://katsuragicsl.github.io/fuzzing_nmap1/fuzzing_nmap_4.png" alt=""></p>
+<p>For corpus, we simply copy some nmap scripts for http that come with nmap. They are located at <code>&lt;directory where nmap installed&gt;/share/nmap/scripts</code>.</p>
+<p>Also we will run a dummy http server on port 80 by <code>python3 -m http.server 80</code>, so that nmap can have a target to scan.</p>
+<h2 id="fuzzing">Fuzzing!</h2>
+<p>By running <code>afl-fuzz -m none -i $HOME/nmap_fuzzing/corpus_nmap_scripts/ -o $HOME/nmap_fuzzing/output/ -s 999 -- $HOME/nmap_fuzzing/install/bin/nmap 127.0.0.1 -p 80 --script @@</code>, we see AFL is doing his job ❤</p>
+<p><img src="https://katsuragicsl.github.io/fuzzing_nmap1/fuzzing_nmap_5.png" alt=""></p>
+<h2 id="pitfalls-and-future-improvement">Pitfalls and future improvement</h2>
+<p>This fuzzing is not promising. There are a few reasons why it is bad to fuzz nmap in this way:</p>
+<ol>
+<li>It is slow
+<ol>
+<li>AFL runs nmap once for each test case 😴</li>
+<li>nmap has to do port scans before running the script</li>
+<li>Many useless(for fuzzing NSE) code running and each nmap run has to wait for them to finish.</li>
+</ol>
+</li>
+<li>It generates a lot of invalid nmap script files, or those will never be triggered by nmap
+<ol>
+<li>The mutation engine of AFL does not aware of the syntax of nmap script files and generates a lot of invalid files</li>
+<li>Even the test cases have correct syntax, many of them may never be troggered because they don&rsquo;t run for http service.</li>
+</ol>
 </li>
 </ol>
-</section>
+<p>For <strong>1</strong>, we will handle it by writing a better harness and using persistent mode of afl++.</p>
+<p>For <strong>2</strong>, we will do grammar-based fuzzing to make sure we only generate test cases which are valid nmap script, and make sure they will be triggered during the test, probably by ensuring the generated nmap script is using <a href="https://nmap.org/book/nse-script-format.html#:~:text=will%20be%20run%3A-,prerule">prerule</a>.</p>
 
       </div>
     </article>
@@ -246,9 +242,7 @@ In fact, there is a part looks suspicious when we unhooking like this, as in the
     <p>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
 
-        <span class="tag"><a href="https://katsuragicsl.github.io/tags/windows/">windows</a></span>
-        <span class="tag"><a href="https://katsuragicsl.github.io/tags/pe/">PE</a></span>
-        <span class="tag"><a href="https://katsuragicsl.github.io/tags/c&#43;&#43;/">C&#43;&#43;</a></span>
+        <span class="tag"><a href="https://katsuragicsl.github.io/tags/nmap/">nmap</a></span>
         
     </p>
 
@@ -256,11 +250,19 @@ In fact, there is a part looks suspicious when we unhooking like this, as in the
     <p>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder meta-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
 
-        <span class="tag"><a href="https://katsuragicsl.github.io/categories/malware-development/">malware-development</a></span>
+        <span class="tag"><a href="https://katsuragicsl.github.io/categories/fuzzing/">fuzzing</a></span>
         
     </p>
 
       
+    <p>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder meta-icon"><path d="M17.657,2.982H2.342c-0.234,0-0.425,0.191-0.425,0.426v10.21c0,0.234,0.191,0.426,0.425,0.426h3.404v2.553c0,0.397,0.48,0.547,0.725,0.302l2.889-2.854h8.298c0.234,0,0.426-0.191,0.426-0.426V3.408C18.083,3.174,17.892,2.982,17.657,2.982M17.232,13.192H9.185c-0.113,0-0.219,0.045-0.3,0.124l-2.289,2.262v-1.96c0-0.233-0.191-0.426-0.425-0.426H2.767V3.833h14.465V13.192z M10,7.237c-0.821,0-1.489,0.668-1.489,1.489c0,0.821,0.668,1.489,1.489,1.489c0.821,0,1.488-0.668,1.488-1.489C11.488,7.905,10.821,7.237,10,7.237 M10,9.364c-0.352,0-0.638-0.288-0.638-0.638c0-0.351,0.287-0.638,0.638-0.638c0.351,0,0.638,0.287,0.638,0.638C10.638,9.077,10.351,9.364,10,9.364 M14.254,7.237c-0.821,0-1.489,0.668-1.489,1.489c0,0.821,0.668,1.489,1.489,1.489s1.489-0.668,1.489-1.489C15.743,7.905,15.075,7.237,14.254,7.237 M14.254,9.364c-0.351,0-0.638-0.288-0.638-0.638c0-0.351,0.287-0.638,0.638-0.638c0.352,0,0.639,0.287,0.639,0.638C14.893,9.077,14.605,9.364,14.254,9.364 M5.746,7.237c-0.821,0-1.489,0.668-1.489,1.489c0,0.821,0.668,1.489,1.489,1.489c0.821,0,1.489-0.668,1.489-1.489C7.234,7.905,6.566,7.237,5.746,7.237 M5.746,9.364c-0.351,0-0.638-0.288-0.638-0.638c0-0.351,0.287-0.638,0.638-0.638c0.351,0,0.638,0.287,0.638,0.638C6.384,9.077,6.096,9.364,5.746,9.364"></path></svg>
+
+        <span class="tag"><a href="https://katsuragicsl.github.io/series/fuzzing_nmap/">fuzzing_nmap</a></span>
+        
+    </p>
+
 
 
       <p>
@@ -271,7 +273,7 @@ In fact, there is a part looks suspicious when we unhooking like this, as in the
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        485 Words
+        553 Words
       </p>
 
       <p>
@@ -282,14 +284,10 @@ In fact, there is a part looks suspicious when we unhooking like this, as in the
           <line x1="3" y1="10" x2="21" y2="10"></line>
         </svg>
         
-          2022-04-14 20:54
+          2022-08-27 18:06
         
 
          
-          
-            
-              (Last updated: 2022-04-15 03:23)
-            
           
         
       </p>
@@ -297,7 +295,7 @@ In fact, there is a part looks suspicious when we unhooking like this, as in the
       <hr />
       <div class="sharing-buttons">
         
-<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f04%2fclassic-api-unhooking%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f08%2ffuzzing-nmap1-a-dumb-approach%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
   <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
     </div>
@@ -305,7 +303,7 @@ In fact, there is a part looks suspicious when we unhooking like this, as in the
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f04%2fclassic-api-unhooking%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f08%2ffuzzing-nmap1-a-dumb-approach%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
   <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
       <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
@@ -314,7 +312,7 @@ In fact, there is a part looks suspicious when we unhooking like this, as in the
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Classic%20API%20Unhooking&amp;caption=Classic%20API%20Unhooking&amp;canonicalUrl=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f04%2fclassic-api-unhooking%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Fuzzing%20nmap%281%29%3a%20a%20Dumb%20Approach&amp;caption=Fuzzing%20nmap%281%29%3a%20a%20Dumb%20Approach&amp;canonicalUrl=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f08%2ffuzzing-nmap1-a-dumb-approach%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
   <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
     <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg>
@@ -323,7 +321,7 @@ In fact, there is a part looks suspicious when we unhooking like this, as in the
 </a>
 
 
-<a class="resp-sharing-button__link" href="mailto:?subject=Classic%20API%20Unhooking&amp;body=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f04%2fclassic-api-unhooking%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
+<a class="resp-sharing-button__link" href="mailto:?subject=Fuzzing%20nmap%281%29%3a%20a%20Dumb%20Approach&amp;body=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f08%2ffuzzing-nmap1-a-dumb-approach%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
   <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
     </div>
@@ -331,7 +329,7 @@ In fact, there is a part looks suspicious when we unhooking like this, as in the
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f04%2fclassic-api-unhooking%2f&amp;media=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f04%2fclassic-api-unhooking%2f;description=Classic%20API%20Unhooking" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f08%2ffuzzing-nmap1-a-dumb-approach%2f&amp;media=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f08%2ffuzzing-nmap1-a-dumb-approach%2f;description=Fuzzing%20nmap%281%29%3a%20a%20Dumb%20Approach" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
   <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
     </div>
@@ -339,7 +337,7 @@ In fact, there is a part looks suspicious when we unhooking like this, as in the
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f04%2fclassic-api-unhooking%2f&amp;title=Classic%20API%20Unhooking&amp;summary=Classic%20API%20Unhooking&amp;source=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f04%2fclassic-api-unhooking%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f08%2ffuzzing-nmap1-a-dumb-approach%2f&amp;title=Fuzzing%20nmap%281%29%3a%20a%20Dumb%20Approach&amp;summary=Fuzzing%20nmap%281%29%3a%20a%20Dumb%20Approach&amp;source=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f08%2ffuzzing-nmap1-a-dumb-approach%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
   <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
     </div>
@@ -347,7 +345,7 @@ In fact, there is a part looks suspicious when we unhooking like this, as in the
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f04%2fclassic-api-unhooking%2f&amp;resubmit=true&amp;title=Classic%20API%20Unhooking" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f08%2ffuzzing-nmap1-a-dumb-approach%2f&amp;resubmit=true&amp;title=Fuzzing%20nmap%281%29%3a%20a%20Dumb%20Approach" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
   <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
     </div>
@@ -355,7 +353,7 @@ In fact, there is a part looks suspicious when we unhooking like this, as in the
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f04%2fclassic-api-unhooking%2f;title=Classic%20API%20Unhooking" target="_blank" rel="noopener" aria-label="" title="Share on xing">
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f08%2ffuzzing-nmap1-a-dumb-approach%2f;title=Fuzzing%20nmap%281%29%3a%20a%20Dumb%20Approach" target="_blank" rel="noopener" aria-label="" title="Share on xing">
   <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
     </div>
@@ -363,7 +361,7 @@ In fact, there is a part looks suspicious when we unhooking like this, as in the
 </a>
 
 
-<a class="resp-sharing-button__link" href="whatsapp://send?text=Classic%20API%20Unhooking%20https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f04%2fclassic-api-unhooking%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
+<a class="resp-sharing-button__link" href="whatsapp://send?text=Fuzzing%20nmap%281%29%3a%20a%20Dumb%20Approach%20https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f08%2ffuzzing-nmap1-a-dumb-approach%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
   <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
     </div>
@@ -371,7 +369,7 @@ In fact, there is a part looks suspicious when we unhooking like this, as in the
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f04%2fclassic-api-unhooking%2f&amp;t=Classic%20API%20Unhooking" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f08%2ffuzzing-nmap1-a-dumb-approach%2f&amp;t=Fuzzing%20nmap%281%29%3a%20a%20Dumb%20Approach" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
   <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg>
     </div>
@@ -379,7 +377,7 @@ In fact, there is a part looks suspicious when we unhooking like this, as in the
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=Classic%20API%20Unhooking&amp;url=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f04%2fclassic-api-unhooking%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=Fuzzing%20nmap%281%29%3a%20a%20Dumb%20Approach&amp;url=https%3a%2f%2fkatsuragicsl.github.io%2fposts%2f2022%2f08%2ffuzzing-nmap1-a-dumb-approach%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
   <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
     </div>
@@ -394,14 +392,14 @@ In fact, there is a part looks suspicious when we unhooking like this, as in the
 
         <div class="pagination__buttons">
             
-            <span class="button previous">
-                <a href="https://katsuragicsl.github.io/posts/2022/06/flaws-of-maximum-munch-in-flex/">
-                    <span class="button__icon">←</span>
-                    <span class="button__text">Flaws of Maximum Munch in (F)lex</span>
+
+            
+            <span class="button next">
+                <a href="https://katsuragicsl.github.io/posts/2022/07/prisma-cloud-defenders/">
+                    <span class="button__text">Prisma Cloud Defenders</span>
+                    <span class="button__icon">→</span>
                 </a>
             </span>
-            
-
             
         </div>
     </div>
