@@ -4,7 +4,47 @@
   
   <url>
     <loc>https://katsuragicsl.github.io/categories/</loc>
-    <lastmod>2022-08-27T18:06:09+08:00</lastmod>
+    <lastmod>2022-10-02T00:54:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://katsuragicsl.github.io/tags/exfiltration/</loc>
+    <lastmod>2022-10-02T00:54:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://katsuragicsl.github.io/tags/lots-project/</loc>
+    <lastmod>2022-10-02T00:54:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://katsuragicsl.github.io/posts/2022/10/lots-project-paypal/</loc>
+    <lastmod>2022-10-02T00:54:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://katsuragicsl.github.io/series/lots_project/</loc>
+    <lastmod>2022-10-02T00:54:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://katsuragicsl.github.io/categories/post-exploitation/</loc>
+    <lastmod>2022-10-02T00:54:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://katsuragicsl.github.io/posts/</loc>
+    <lastmod>2022-10-02T00:54:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://katsuragicsl.github.io/series/</loc>
+    <lastmod>2022-10-02T00:54:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://katsuragicsl.github.io/tags/</loc>
+    <lastmod>2022-10-02T00:54:30+08:00</lastmod>
   </url>
   
   <url>
@@ -28,27 +68,7 @@
   </url>
   
   <url>
-    <loc>https://katsuragicsl.github.io/posts/</loc>
-    <lastmod>2022-08-27T18:06:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://katsuragicsl.github.io/series/</loc>
-    <lastmod>2022-08-27T18:06:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://katsuragicsl.github.io/tags/</loc>
-    <lastmod>2022-08-27T18:06:09+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://katsuragicsl.github.io/tags/lateral-movement/</loc>
-    <lastmod>2022-08-03T22:14:05+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://katsuragicsl.github.io/categories/post-exploitation/</loc>
     <lastmod>2022-08-03T22:14:05+08:00</lastmod>
   </url>
   
