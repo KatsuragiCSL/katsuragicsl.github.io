@@ -1,4 +1,26 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Script Adults</title><link>https://katsuragicsl.github.io/posts/</link><description>Recent content in Posts on Script Adults</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sat, 27 Aug 2022 18:06:09 +0800</lastBuildDate><atom:link href="https://katsuragicsl.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Fuzzing nmap(1): a Dumb Approach</title><link>https://katsuragicsl.github.io/posts/2022/08/fuzzing-nmap1-a-dumb-approach/</link><pubDate>Sat, 27 Aug 2022 18:06:09 +0800</pubDate><guid>https://katsuragicsl.github.io/posts/2022/08/fuzzing-nmap1-a-dumb-approach/</guid><description>Introduction Recently I am hooked on fuzzing. Apart from &amp;ldquo;normal&amp;rdquo; fuzzing following the textbook examples, I tried to fuzz nmap because
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Script Adults</title><link>https://katsuragicsl.github.io/posts/</link><description>Recent content in Posts on Script Adults</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sun, 02 Oct 2022 00:54:30 +0800</lastBuildDate><atom:link href="https://katsuragicsl.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>LOTS Project - Paypal</title><link>https://katsuragicsl.github.io/posts/2022/10/lots-project-paypal/</link><pubDate>Sun, 02 Oct 2022 00:54:30 +0800</pubDate><guid>https://katsuragicsl.github.io/posts/2022/10/lots-project-paypal/</guid><description>Introduction LOTS project, founded by mrd0x, is a collection of websites which is likely be trusted but can be used to evade detection when conducting phishing, C&amp;amp;C, exfiltration and downloading tools. In this post I will introduce a way to abusing PayPal and hopefully will be contributing to the LOTS project.
+This series is (intentively) for my ideas on novel exfiltration/ C&amp;amp;C channels.
+Exfiltraftion by Paypal In Paypal, one can dispute an order and upload his/ her evidence.</description><content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p><a href="https://lots-project.com/">LOTS project</a>, founded by <a href="https://twitter.com/mrd0x">mrd0x</a>, is a collection of websites which is likely be trusted but can be used to evade detection when conducting phishing, C&amp;C, exfiltration and downloading tools. In this post I will introduce a way to abusing <code>PayPal</code> and hopefully will be contributing to the LOTS project.</p>
+<p>This series is (intentively) for my ideas on novel exfiltration/ C&amp;C channels.</p>
+<h2 id="exfiltraftion-by-paypal">Exfiltraftion by Paypal</h2>
+<p>In Paypal, one can dispute an order and upload his/ her evidence. This feature can be used as data exfiltration channel.</p>
+<p><img src="/lots-project-paypal/paypal1.png" alt=""></p>
+<p>While the document states that the dispute only accepts JPG, GIF, PNG and PDF, it is not complicated to pass this requirement by prepending the magic number of GIF to the file being uploaded (tested in API sandbox):</p>
+<p><code>printf &quot;\x47\x49\x46\x38\x37\x61&quot; | cat - realfile &gt; fakegif</code></p>
+<p>Sucessfully uploaded on Paypal:</p>
+<p><img src="/lots-project-paypal/paypal3.png" alt=""></p>
+<p><img src="/lots-project-paypal/paypal4.png" alt=""></p>
+<h2 id="advantages">Advantages</h2>
+<p><strong>Evading SSL inspection</strong></p>
+<p>Organization which cares employees’ privacy (getting more these years) exempts some websites from SSL inspection:</p>
+<ul>
+<li>Healthcare</li>
+<li>Payments</li>
+<li>etc
+Example: <a href="http://web.archive.org/web/20220317001648/https://www.ga.gov.au/__data/assets/pdf_file/0011/88373/Privacy-Impact-Assessment-Secure-Sockets-Layer-SSL-Inspection-Project.pdf">Policy of Geoscience Australia (under Australian gov)</a></li>
+</ul>
+]]></content></item><item><title>Fuzzing nmap(1): a Dumb Approach</title><link>https://katsuragicsl.github.io/posts/2022/08/fuzzing-nmap1-a-dumb-approach/</link><pubDate>Sat, 27 Aug 2022 18:06:09 +0800</pubDate><guid>https://katsuragicsl.github.io/posts/2022/08/fuzzing-nmap1-a-dumb-approach/</guid><description>Introduction Recently I am hooked on fuzzing. Apart from &amp;ldquo;normal&amp;rdquo; fuzzing following the textbook examples, I tried to fuzz nmap because
 It is fun Seems no blog posts about fuzzing nmap yet, it surprised me, and hence, it is fun, again. 😏 As my first target, I am going to fuzz the nse of nmap. NSE (nmap scripting engine) parses the scripts provided in --script and provide additional scanning according to how the script is written.</description><content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
 <p>Recently I am hooked on fuzzing. Apart from &ldquo;normal&rdquo; fuzzing following the textbook examples, I tried to fuzz nmap because</p>
 <ol>
