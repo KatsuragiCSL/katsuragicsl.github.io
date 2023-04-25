@@ -1,4 +1,54 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Script Adults</title><link>https://katsuragicsl.github.io/posts/</link><description>Recent content in Posts on Script Adults</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sun, 02 Oct 2022 00:54:30 +0800</lastBuildDate><atom:link href="https://katsuragicsl.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>LOTS Project - Paypal</title><link>https://katsuragicsl.github.io/posts/2022/10/lots-project-paypal/</link><pubDate>Sun, 02 Oct 2022 00:54:30 +0800</pubDate><guid>https://katsuragicsl.github.io/posts/2022/10/lots-project-paypal/</guid><description>Introduction LOTS project, founded by mrd0x, is a collection of websites which is likely be trusted but can be used to evade detection when conducting phishing, C&amp;amp;C, exfiltration and downloading tools. In this post I will introduce a way to abusing PayPal and hopefully will be contributing to the LOTS project.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Script Adults</title><link>https://katsuragicsl.github.io/posts/</link><description>Recent content in Posts on Script Adults</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Mon, 17 Apr 2023 04:16:55 +0800</lastBuildDate><atom:link href="https://katsuragicsl.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Unity Game Reversing(1): Setup</title><link>https://katsuragicsl.github.io/posts/2023/04/unity-game-reversing1-setup/</link><pubDate>Mon, 17 Apr 2023 04:16:55 +0800</pubDate><guid>https://katsuragicsl.github.io/posts/2023/04/unity-game-reversing1-setup/</guid><description>Introduction Recently I am trying to reverse engineering a simple Windows desktop game made with Unity. I took a look on some reference but found that the setup can be a bit frustrating. This post is attempting to make the setup clearer and more followable. Reference links are listed below.
+Tools Our target is to decompile and debug the Assembly-CSharp.dll inside the folder &amp;lt;game root folder&amp;gt;\&amp;lt;GANE_NAME&amp;gt;_Data\Managed\, which contains custom code the game developer wrote, not the code of Unity or other frameworks.</description><content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>Recently I am trying to reverse engineering a simple Windows desktop game made with Unity. I took a look on some reference but found that the setup can be a bit frustrating. This post is attempting to make the setup clearer and more followable. Reference links are listed below.</p>
+<h2 id="tools">Tools</h2>
+<p>Our target is to decompile and debug the <code>Assembly-CSharp.dll</code> inside the folder <code>&lt;game root folder&gt;\&lt;GANE_NAME&gt;_Data\Managed\</code>, which contains custom code the game developer wrote, not the code of Unity or other frameworks. It is written in <code>C#</code>. We need the below tools:</p>
+<ol>
+<li><a href="https://github.com/dnSpy/dnSpy/">dnSpy</a></li>
+<li><a href="https://www.jetbrains.com/decompiler/">dotPeek</a></li>
+<li><a href="https://github.com/earnol/de4dot/tree/dotPeek">(patched) de4dot</a></li>
+<li>Some files from official Unity</li>
+</ol>
+<h2 id="setup">Setup</h2>
+<p>If you got a <code>DEBUG</code> build of the game, you are lucky, you can skip almost all the steps below and just use <code>dnSpy</code> to decompile, debug and modify the code (discussed below). But if you are not insider of the game development team and the team is not stupid enough (or, unfortunately, didn&rsquo;t get enough sleep) to release a debug build to production, you will be dealing with a <code>RELEASE</code> build.</p>
+<p>Fortunately, there is a way to tweak the release build to debug build.</p>
+<h3 id="step-1">Step 1</h3>
+<p>Check the version of Unity of the game. Open the file <code>&lt;game root folder&gt;\&lt;game name&gt;_Data\globalgamemanagers.assets</code> with notepad, the version of Unity will be shown at the beginning.</p>
+<p><img src="/unity_reversing1/unity_version.png" alt=""></p>
+<h3 id="step-2">Step 2</h3>
+<p>Go to <code>https://unity.com/releases/editor/archive</code> and download the correct version of Unity. Install it.</p>
+<h3 id="step-3">Step 3</h3>
+<p>Go to <code>&lt;Unity root&gt;\Editor\Data\PlaybackEngines\windowsstandalonesupport\Variations\win32_development_mono</code> if the game is 32bit, otherwise go to <code>&lt;Unity root&gt;\Editor\Data\PlaybackEngines\windowsstandalonesupport\Variations\win64_development_mono</code>.</p>
+<p><img src="/unity_reversing1/mono.png" alt=""></p>
+<ul>
+<li>Copy <code>Data\Managed</code> folder to the corr. folder of the game.</li>
+<li>Copy <code>WindowsPlayer.exe</code> and <code>UnityPlayer.dll</code>. Rename to <code>&lt;GAME_NAME&gt;.exe</code>.</li>
+<li>Copy <code>&lt;Unity root&gt;\Editor\Data\MonoBleedingEdge\bin\mono-2.0-bdwgc.dl</code> to <code>&lt;GAME_NAME&gt;\MonoBleedingEdge</code>.</li>
+<li>Create of edit <code>boot.config</code> and ensure the line <code>player-connection-debug=1</code> presents.</li>
+</ul>
+<h3 id="step-4">Step 4</h3>
+<p>Download <a href="https://github.com/earnol/de4dot/tree/dotPeek">this de4dot fork</a> and compile it locally by Visual Studio.</p>
+<h3 id="step-5">Step 5</h3>
+<p>Run <code>de4dot.exe -f Assembly-CSharp.dll -o &lt;output dll location&gt; -fpdb</code>. Remove the output <code>pdb</code> file.</p>
+<h3 id="step-6">Step 6</h3>
+<p>Load the output dll into dotPeek.</p>
+<ul>
+<li>Right click on the output dll and select <code>Export to Project</code></li>
+<li>Check the box <code>Create *.pdb file</code></li>
+<li>Export</li>
+</ul>
+<h3 id="step-7">Step 7</h3>
+<p>Run the following command:
+<code>&quot;%UNITY_MONO%\bin\mono.exe&quot; &quot;%UNITY_MONO%\lib\mono\4.5\pdb2mdb.exe&quot; &quot;&lt;target_assembly_dll&gt;&quot;</code>
+where <code>&quot;%UNITY_MONO%</code> is equal to <code>&lt;Unity root&gt;\Editor\Data\MonoBleedingEdge</code>.</p>
+<p>You will get a <code>.mdb</code> file. Now you can debug with <code>dnSpy</code> the dll located in the same folder.</p>
+<h2 id="reference">Reference</h2>
+<ol>
+<li><a href="https://github.com/dnSpy/dnSpy/wiki/Debugging-Unity-Games">Debugging Unity Games</a></li>
+<li><a href="https://wiki.fireundubh.com/unity/turning-a-release-build-into-a-debug-build">Let&rsquo;s Play with Fire Wiki</a></li>
+<li><a href="https://stackoverflow.com/questions/31299157/dotpeek-pdb-generation-for-assemblies-without-debug-directory">DotPeek PDB generation for assemblies without debug directory</a></li>
+</ol>
+]]></content></item><item><title>LOTS Project - Paypal</title><link>https://katsuragicsl.github.io/posts/2022/10/lots-project-paypal/</link><pubDate>Sun, 02 Oct 2022 00:54:30 +0800</pubDate><guid>https://katsuragicsl.github.io/posts/2022/10/lots-project-paypal/</guid><description>Introduction LOTS project, founded by mrd0x, is a collection of websites which is likely be trusted but can be used to evade detection when conducting phishing, C&amp;amp;C, exfiltration and downloading tools. In this post I will introduce a way to abusing PayPal and hopefully will be contributing to the LOTS project.
 This series is (intentively) for my ideas on novel exfiltration/ C&amp;amp;C channels.
 Exfiltraftion by Paypal In Paypal, one can dispute an order and upload his/ her evidence.</description><content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
 <p><a href="https://lots-project.com/">LOTS project</a>, founded by <a href="https://twitter.com/mrd0x">mrd0x</a>, is a collection of websites which is likely be trusted but can be used to evade detection when conducting phishing, C&amp;C, exfiltration and downloading tools. In this post I will introduce a way to abusing <code>PayPal</code> and hopefully will be contributing to the LOTS project.</p>
