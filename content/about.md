@@ -7,4 +7,4 @@ I am [Jack Chan](https://www.linkedin.com/in/jack-shue-long-chan/), with a fancy
 
 This blog is a place for me to share what I learnt, what I experimented, occationally shitposting and some "tutorial series" that are unlikely to be finished. 
 
-Potential original thoughts are in research section. Other categories are for things I found beautiful (like the amazing Thomae's function and its continuity/ discontinuity on irrationals/ rationals) and some dumb things I tried before.
+Potential original thoughts are in research section. Other categories are for things I found beautiful and some dumb things I tried before.

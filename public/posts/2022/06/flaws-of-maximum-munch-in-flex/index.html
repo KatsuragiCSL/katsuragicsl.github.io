@@ -43,14 +43,9 @@ Lexer In theory, a compiler contains 5 components:
 <meta itemprop="name" content="Flaws of Maximum Munch in (F)lex">
 <meta itemprop="description" content="Introduction Recently I am studying compilers and it reminds me a vulnerability class which is called ReDOS I saw a long time ago. This post will discuss some flaws of lexers, specifically on flex.
 Lexer In theory, a compiler contains 5 components:
- Lexical analyzer -&gt; identifying tokens (valid &ldquo;words&rdquo; of the source language) Parser -&gt; identifying grammatical structure Semantic analyzer -&gt; identifying semantics (e.g. binding objects to identifiers) Optimizer -&gt; optimizing the programs Code generator -&gt; generate the target language  The job of a lexical analyzer, or lexer, scanner, is providing the type and value of a token when fed with input (intended to be code written in source language).">
-<meta itemprop="datePublished" content="2022-06-04T16:26:45&#43;08:00" />
-<meta itemprop="dateModified" content="2022-06-04T20:20:09&#43;08:00" />
-<meta itemprop="wordCount" content="956">
-<meta itemprop="image" content="https://katsuragicsl.github.io"/>
-
-
-
+ Lexical analyzer -&gt; identifying tokens (valid &ldquo;words&rdquo; of the source language) Parser -&gt; identifying grammatical structure Semantic analyzer -&gt; identifying semantics (e.g. binding objects to identifiers) Optimizer -&gt; optimizing the programs Code generator -&gt; generate the target language  The job of a lexical analyzer, or lexer, scanner, is providing the type and value of a token when fed with input (intended to be code written in source language)."><meta itemprop="datePublished" content="2022-06-04T16:26:45+08:00" />
+<meta itemprop="dateModified" content="2022-06-04T20:20:09+08:00" />
+<meta itemprop="wordCount" content="955"><meta itemprop="image" content="https://katsuragicsl.github.io"/>
 <meta itemprop="keywords" content="flex,regex," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://katsuragicsl.github.io"/>
@@ -68,10 +63,10 @@ Lexer In theory, a compiler contains 5 components:
 Lexer In theory, a compiler contains 5 components:
  Lexical analyzer -&gt; identifying tokens (valid &ldquo;words&rdquo; of the source language) Parser -&gt; identifying grammatical structure Semantic analyzer -&gt; identifying semantics (e.g. binding objects to identifiers) Optimizer -&gt; optimizing the programs Code generator -&gt; generate the target language  The job of a lexical analyzer, or lexer, scanner, is providing the type and value of a token when fed with input (intended to be code written in source language)." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://katsuragicsl.github.io/posts/2022/06/flaws-of-maximum-munch-in-flex/" />
-<meta property="og:image" content="https://katsuragicsl.github.io"/>
+<meta property="og:url" content="https://katsuragicsl.github.io/posts/2022/06/flaws-of-maximum-munch-in-flex/" /><meta property="og:image" content="https://katsuragicsl.github.io"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-06-04T16:26:45+08:00" />
 <meta property="article:modified_time" content="2022-06-04T20:20:09+08:00" />
+
 
 
 
@@ -80,7 +75,7 @@ Lexer In theory, a compiler contains 5 components:
 
 
 
-    <meta property="article:published_time" content="2022-06-04 16:26:45 &#43;0800 HKT" />
+    <meta property="article:published_time" content="2022-06-04 16:26:45 &#43;0800 CST" />
 
 
 
@@ -222,25 +217,25 @@ Lexer In theory, a compiler contains 5 components:
 <p>it should gives <code>&lt;Identifier, &quot;x&quot;&gt; &lt;operator, &quot;=&quot;&gt; &lt;numerics, &quot;1&quot;&gt;</code>, which specifies the type of each token.</p>
 <p>At the same time it should be able to catch invalid input such as $$x &gt; 1$$, $$y???2$$.</p>
 <p>Also, the lexer needs to deal with ambiguity such as in C++ nested templates</p>
-<pre><code>Oh&lt;My&lt;God&gt;&gt;
+<pre tabindex="0"><code>Oh&lt;My&lt;God&gt;&gt;
 </code></pre><p>the <code>&gt;&gt;</code> at the ends should be distinguishable from stream operator like which in</p>
-<pre><code>std::cin &gt;&gt; something;
+<pre tabindex="0"><code>std::cin &gt;&gt; something;
 </code></pre><p>To achive its goal, lexers make use of regex to match input. Let&rsquo;s use flex as an example.</p>
 <h2 id="flex-and-maximum-munch">Flex and Maximum Munch</h2>
 <p>In short, flex is a lexer generator for C. It consumes flex code and output the  C implementation of the corresponding lexer.</p>
 <p>A flex file has the following format<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>:</p>
-<pre><code>%%
+<pre tabindex="0"><code>%%
 regex_1    {action_1}
 regex_2    {actin_2}
 [...]
 </code></pre><p>The lexer it creates will take one char at a time and evaluates it. For example when input &ldquo;aaa&rdquo; is consumed by the lexer generated by the following flex code</p>
-<pre><code>%%
+<pre tabindex="0"><code>%%
 aaa    {printf(&quot;aaa\n&quot;);}
 b       {printf(&quot;b\n&quot;);}
 </code></pre><p>the first &ldquo;a&rdquo; in the input is being evaluated. However, it doesn&rsquo;t match any rules above, so the lexer eats one more char and now it has &ldquo;aa&rdquo;. Again, it doesn&rsquo;t match any rules so we have &ldquo;aaa&rdquo; now. Finally it matches the first rule so the lexer <code>printf(&quot;aaa\n&quot;);</code></p>
 <p>What if nothing got matched after reading the whole input?</p>
 <p>That&rsquo;s why in reality we need a extra rule to catch anything we don&rsquo;t want (just like the default deny rule at the bottom in firewall)</p>
-<pre><code>%%
+<pre tabindex="0"><code>%%
 aaa    {printf(&quot;aaa\n&quot;);}
 b       {printf(&quot;b\n&quot;);}
  /*do nothing when hits anything else or newline*/
@@ -253,17 +248,17 @@ Hence in the above case, &ldquo;aaa&rdquo; will be matched, instead of matching 
 <h2 id="flaws-of-maximum-munch">Flaws of Maximum Munch</h2>
 <p>Imagine we need to read the string &ldquo;xxxx&rdquo; as two &ldquo;xx&rdquo;. Also &ldquo;xxx&rdquo; should be read as &ldquo;xxx&rdquo;.</p>
 <p>A naive flex code to catch it will be:</p>
-<pre><code>%%
+<pre tabindex="0"><code>%%
 xx    {printf(&quot;xx\n&quot;);}
 xxx    {printf(&quot;xxx\n&quot;);}
 </code></pre><p>but this is not going to work as expected. By maximum munch, &ldquo;xxxx&rdquo; will be read as &ldquo;xxx&rdquo; + &ldquo;x&rdquo; (unknown token).</p>
 <p>How about this:</p>
-<pre><code>%%
+<pre tabindex="0"><code>%%
 xxxx   {printf(&quot;We got two 'xx' !\n&quot;);}
 xxx    {printf(&quot;xxx\n&quot;);}
 </code></pre><p>it seems avoided &ldquo;xxx&rdquo; at he first glance but it is actually not what we want. This lexer reads the whole &ldquo;xxxx&rdquo; as <strong>1</strong> token, instead of <strong>2</strong> &ldquo;xx&rdquo; token. Maximum Munch does not work all the time!</p>
 <p>Luckily, with the help of <a href="https://westes.github.io/flex/manual/Patterns.html">lookahead</a>, we can solve this problem:</p>
-<pre><code>%%
+<pre tabindex="0"><code>%%
 xx    { printf(&quot;xx\n&quot;);}
 xx/xx    { printf(&quot;xx,\n&quot;);}
 xxx   { printf(&quot;xxx\n&quot;);}
@@ -272,32 +267,32 @@ xxx   { printf(&quot;xxx\n&quot;);}
 </code></pre><p>the <code>/</code> in the second rule helps us to match the whole string (&ldquo;xxxx&rdquo;) but just consume the first two x. So due the maximum munch &ldquo;xxx&rdquo; won&rsquo;t be matched because it is shorter than &ldquo;xxxx&rdquo;. After consuming the first two x, the remaining two x match the first rule, so now we have two &ldquo;xx&rdquo;.</p>
 <h2 id="abusing-maximun-munch-to-slow-down-the-lexer">Abusing maximun munch to slow down the lexer</h2>
 <p>According to the <a href="https://westes.github.io/flex/manual/Limitations.html#Limitations">manual</a>, the following rules won&rsquo;t be matched properly</p>
-<pre><code>%%
+<pre tabindex="0"><code>%%
 zx*/xy    {}
 </code></pre><p>because the <code>zx*</code> eats up the x&rsquo;s which should belongs to <code>xy</code>.</p>
 <p>Now consider such rules:</p>
-<pre><code>%%
+<pre tabindex="0"><code>%%
 x*/xy    {printf(&quot;OK!\n&quot;);}
 x           {printf(&quot;just one x&quot;);}
 </code></pre><p>when <code>xxxy</code> is provided as input, since the first rule can;t be matched properly, each <code>x</code> before the <code>y</code> will be matched one by one.</p>
 <p>Each time the lexer sees &ldquo;x&rdquo;, because it can probably match the first rule, so it will read one more &ldquo;x&rdquo; into the buffer and decide whether it matches, until it has read the whole input string <code>xxxy</code>. But since it can&rsquo;t be properly matched, the second rule is matched instead and now we have <code>xxy</code>. Then the same process repeats.</p>
 <p>Note that this process is of $$\Theta(n)$$ where $$n$$ is the number of &ldquo;x&rdquo;. This can slow down the lexer when the input is very large. You can find more vulnerable regexes on <a href="https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS">OWASP</a>.</p>
 <p>Lastly, the above rule can be simpler:</p>
-<pre><code>%%
+<pre tabindex="0"><code>%%
 x*y    {printf(&quot;OK!\n&quot;);}
 x        {printf(&quot;just one x&quot;);}
-</code></pre><p>with input &ldquo;xxxxxxxxxxxx[&hellip;]&quot;.</p>
+</code></pre><p>with input &ldquo;xxxxxxxxxxxx[&hellip;]&rdquo;.</p>
 <p>The version with lookahead was just a heuristic for coming up with the idea of how to slow down a lexer.</p>
 <h2 id="appendix">Appendix</h2>
 <p>It is simple if you want to try flex on linux. For instance on ubuntu, you can write your flex code inside a file with .flex extension, then you type something as input after:</p>
-<pre><code>flex test.flex
+<pre tabindex="0"><code>flex test.flex
 gcc -ll lex.yy.c
 ./a.out
 </code></pre><section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p>For simplicity, I have pruned off many details of flex syntax and focus on the regex matching part. Anyone interested can refer to the <a href="https://westes.github.io/flex/manual/index.html">flex manual</a>. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>For simplicity, I have pruned off many details of flex syntax and focus on the regex matching part. Anyone interested can refer to the <a href="https://westes.github.io/flex/manual/index.html">flex manual</a>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
@@ -336,7 +331,7 @@ gcc -ll lex.yy.c
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        956 Words
+        955 Words
       </p>
 
       <p>
@@ -516,7 +511,7 @@ gcc -ll lex.yy.c
 
 
 
-<script type="text/javascript" src="https://katsuragicsl.github.io/bundle.min.ace63d93098bf623f7c286a9084a4c22bfc482944c734f87fe0b685c7c6c7fa0ad2edb028c3b4b60d3343720c8ab490b320ad7f8edf4f6e9a6b898fc529057a9.js" integrity="sha512-rOY9kwmL9iP3woapCEpMIr/EgpRMc0&#43;H/gtoXHxsf6CtLtsCjDtLYNM0NyDIq0kLMgrX&#43;O309ummuJj8UpBXqQ=="></script>
+<script type="text/javascript" src="https://katsuragicsl.github.io/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
 
 
 
