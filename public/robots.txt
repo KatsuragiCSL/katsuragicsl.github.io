@@ -1,3 +1,1 @@
 User-agent: *
-Disallow:
-Sitemap: https://katsuragicsl.github.io/sitemap.xml

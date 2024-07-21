@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fuzzing on Script Adults</title>
     <link>https://katsuragicsl.github.io/categories/fuzzing/</link>
     <description>Recent content in Fuzzing on Script Adults</description>
-    <image>
-      <title>Script Adults</title>
-      <url>https://katsuragicsl.github.io/images/papermod-cover.png</url>
-      <link>https://katsuragicsl.github.io/images/papermod-cover.png</link>
-    </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 27 Aug 2022 18:06:09 +0800</lastBuildDate>
     <atom:link href="https://katsuragicsl.github.io/categories/fuzzing/index.xml" rel="self" type="application/rss+xml" />
@@ -18,8 +13,7 @@
       <link>https://katsuragicsl.github.io/blogs/fuzzing/fuzzing-nmap1-a-dumb-approach/</link>
       <pubDate>Sat, 27 Aug 2022 18:06:09 +0800</pubDate>
       <guid>https://katsuragicsl.github.io/blogs/fuzzing/fuzzing-nmap1-a-dumb-approach/</guid>
-      <description>Introduction Recently I am hooked on fuzzing. Apart from &amp;ldquo;normal&amp;rdquo; fuzzing following the textbook examples, I tried to fuzz nmap because
-It is fun Seems no blog posts about fuzzing nmap yet, it surprised me, and hence, it is fun, again. &amp;#x1f60f; As my first target, I am going to fuzz the nse of nmap. NSE (nmap scripting engine) parses the scripts provided in --script and provide additional scanning according to how the script is written.</description>
+      <description>Introduction Recently I am hooked on fuzzing. Apart from &amp;ldquo;normal&amp;rdquo; fuzzing following the textbook examples, I tried to fuzz nmap because&#xA;It is fun Seems no blog posts about fuzzing nmap yet, it surprised me, and hence, it is fun, again. &amp;#x1f60f; As my first target, I am going to fuzz the nse of nmap. NSE (nmap scripting engine) parses the scripts provided in --script and provide additional scanning according to how the script is written.</description>
     </item>
   </channel>
 </rss>
