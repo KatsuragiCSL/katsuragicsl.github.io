@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Unity Game Reversing(1): Setup | Script Adults</title>
+<meta name="keywords" content="tutorials, unity, reversing, dotnet">
+<meta name="description" content="Introduction Recently I am trying to reverse engineering a simple Windows desktop game made with Unity. I took a look on some reference but found that the setup can be a bit frustrating. This post is attempting to make the setup clearer and more followable. Reference links are listed below.
+Tools Our target is to decompile and debug the Assembly-CSharp.dll inside the folder &lt;game root folder&gt;\&lt;GANE_NAME&gt;_Data\Managed\, which contains custom code the game developer wrote, not the code of Unity or other frameworks.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/reverse-engineering/unity-game-reversing-1/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/reverse-engineering/unity-game-reversing-1/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Script Adults (Alt + H)">Script Adults</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/" title="Research">
+                    <span>Research</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Unity Game Reversing(1): Setup
+    </h1>
+    <div class="post-meta"><span title='2023-04-17 04:16:55 +0800 CST'>April 17, 2023</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#introduction" aria-label="Introduction">Introduction</a></li>
+                <li>
+                    <a href="#tools" aria-label="Tools">Tools</a></li>
+                <li>
+                    <a href="#setup" aria-label="Setup">Setup</a><ul>
+                        
+                <li>
+                    <a href="#step-1" aria-label="Step 1">Step 1</a></li>
+                <li>
+                    <a href="#step-2" aria-label="Step 2">Step 2</a></li>
+                <li>
+                    <a href="#step-3" aria-label="Step 3">Step 3</a></li>
+                <li>
+                    <a href="#step-4" aria-label="Step 4">Step 4</a></li>
+                <li>
+                    <a href="#step-5" aria-label="Step 5">Step 5</a></li>
+                <li>
+                    <a href="#step-6" aria-label="Step 6">Step 6</a></li>
+                <li>
+                    <a href="#step-7" aria-label="Step 7">Step 7</a></li></ul>
+                </li>
+                <li>
+                    <a href="#reference" aria-label="Reference">Reference</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
+<p>Recently I am trying to reverse engineering a simple Windows desktop game made with Unity. I took a look on some reference but found that the setup can be a bit frustrating. This post is attempting to make the setup clearer and more followable. Reference links are listed below.</p>
+<h2 id="tools">Tools<a hidden class="anchor" aria-hidden="true" href="#tools">#</a></h2>
+<p>Our target is to decompile and debug the <code>Assembly-CSharp.dll</code> inside the folder <code>&lt;game root folder&gt;\&lt;GANE_NAME&gt;_Data\Managed\</code>, which contains custom code the game developer wrote, not the code of Unity or other frameworks. It is written in <code>C#</code>. We need the below tools:</p>
+<ol>
+<li><a href="https://github.com/dnSpy/dnSpy/">dnSpy</a></li>
+<li><a href="https://www.jetbrains.com/decompiler/">dotPeek</a></li>
+<li><a href="https://github.com/earnol/de4dot/tree/dotPeek">(patched) de4dot</a></li>
+<li>Some files from official Unity</li>
+</ol>
+<h2 id="setup">Setup<a hidden class="anchor" aria-hidden="true" href="#setup">#</a></h2>
+<p>If you got a <code>DEBUG</code> build of the game, you are lucky, you can skip almost all the steps below and just use <code>dnSpy</code> to decompile, debug and modify the code (discussed below). But if you are not insider of the game development team and the team is not stupid enough (or, unfortunately, didn&rsquo;t get enough sleep) to release a debug build to production, you will be dealing with a <code>RELEASE</code> build.</p>
+<p>Fortunately, there is a way to tweak the release build to debug build.</p>
+<h3 id="step-1">Step 1<a hidden class="anchor" aria-hidden="true" href="#step-1">#</a></h3>
+<p>Check the version of Unity of the game. Open the file <code>&lt;game root folder&gt;\&lt;game name&gt;_Data\globalgamemanagers.assets</code> with notepad, the version of Unity will be shown at the beginning.</p>
+<p><img loading="lazy" src="/unity_reversing1/unity_version.png" alt=""  />
+</p>
+<h3 id="step-2">Step 2<a hidden class="anchor" aria-hidden="true" href="#step-2">#</a></h3>
+<p>Go to <code>https://unity.com/releases/editor/archive</code> and download the correct version of Unity. Install it.</p>
+<h3 id="step-3">Step 3<a hidden class="anchor" aria-hidden="true" href="#step-3">#</a></h3>
+<p>Go to <code>&lt;Unity root&gt;\Editor\Data\PlaybackEngines\windowsstandalonesupport\Variations\win32_development_mono</code> if the game is 32bit, otherwise go to <code>&lt;Unity root&gt;\Editor\Data\PlaybackEngines\windowsstandalonesupport\Variations\win64_development_mono</code>.</p>
+<p><img loading="lazy" src="/unity_reversing1/mono.png" alt=""  />
+</p>
+<ul>
+<li>Copy <code>Data\Managed</code> folder to the corr. folder of the game.</li>
+<li>Copy <code>WindowsPlayer.exe</code> and <code>UnityPlayer.dll</code>. Rename to <code>&lt;GAME_NAME&gt;.exe</code>.</li>
+<li>Copy <code>&lt;Unity root&gt;\Editor\Data\MonoBleedingEdge\bin\mono-2.0-bdwgc.dl</code> to <code>&lt;GAME_NAME&gt;\MonoBleedingEdge</code>.</li>
+<li>Create of edit <code>boot.config</code> and ensure the line <code>player-connection-debug=1</code> presents.</li>
+</ul>
+<h3 id="step-4">Step 4<a hidden class="anchor" aria-hidden="true" href="#step-4">#</a></h3>
+<p>Download <a href="https://github.com/earnol/de4dot/tree/dotPeek">this de4dot fork</a> and compile it locally by Visual Studio.</p>
+<h3 id="step-5">Step 5<a hidden class="anchor" aria-hidden="true" href="#step-5">#</a></h3>
+<p>Run <code>de4dot.exe -f Assembly-CSharp.dll -o &lt;output dll location&gt; -fpdb</code>. Remove the output <code>pdb</code> file.</p>
+<h3 id="step-6">Step 6<a hidden class="anchor" aria-hidden="true" href="#step-6">#</a></h3>
+<p>Load the output dll into dotPeek.</p>
+<ul>
+<li>Right click on the output dll and select <code>Export to Project</code></li>
+<li>Check the box <code>Create *.pdb file</code></li>
+<li>Export</li>
+</ul>
+<h3 id="step-7">Step 7<a hidden class="anchor" aria-hidden="true" href="#step-7">#</a></h3>
+<p>Run the following command:
+<code>&quot;%UNITY_MONO%\bin\mono.exe&quot; &quot;%UNITY_MONO%\lib\mono\4.5\pdb2mdb.exe&quot; &quot;&lt;target_assembly_dll&gt;&quot;</code>
+where <code>&quot;%UNITY_MONO%</code> is equal to <code>&lt;Unity root&gt;\Editor\Data\MonoBleedingEdge</code>.</p>
+<p>You will get a <code>.mdb</code> file. Now you can debug with <code>dnSpy</code> the dll located in the same folder.</p>
+<h2 id="reference">Reference<a hidden class="anchor" aria-hidden="true" href="#reference">#</a></h2>
+<ol>
+<li><a href="https://github.com/dnSpy/dnSpy/wiki/Debugging-Unity-Games">Debugging Unity Games</a></li>
+<li><a href="https://wiki.fireundubh.com/unity/turning-a-release-build-into-a-debug-build">Let&rsquo;s Play with Fire Wiki</a></li>
+<li><a href="https://stackoverflow.com/questions/31299157/dotpeek-pdb-generation-for-assemblies-without-debug-directory">DotPeek PDB generation for assemblies without debug directory</a></li>
+</ol>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/tutorials/">Tutorials</a></li>
+      <li><a href="http://localhost:1313/tags/unity/">Unity</a></li>
+      <li><a href="http://localhost:1313/tags/reversing/">Reversing</a></li>
+      <li><a href="http://localhost:1313/tags/dotnet/">Dotnet</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="http://localhost:1313/">Script Adults</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
