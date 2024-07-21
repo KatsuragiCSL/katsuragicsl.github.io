@@ -2,55 +2,55 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Blogs on Script Adults</title>
-    <link>http://localhost:1313/blogs/</link>
+    <link>https://katsuragicsl.github.io/blogs/</link>
     <description>Recent content in Blogs on Script Adults</description>
     <image>
       <title>Script Adults</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>https://katsuragicsl.github.io/images/papermod-cover.png</url>
+      <link>https://katsuragicsl.github.io/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 17 Apr 2023 04:16:55 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://katsuragicsl.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unity Game Reversing(1): Setup</title>
-      <link>http://localhost:1313/blogs/reverse-engineering/unity-game-reversing-1/</link>
+      <link>https://katsuragicsl.github.io/blogs/reverse-engineering/unity-game-reversing-1/</link>
       <pubDate>Mon, 17 Apr 2023 04:16:55 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/reverse-engineering/unity-game-reversing-1/</guid>
+      <guid>https://katsuragicsl.github.io/blogs/reverse-engineering/unity-game-reversing-1/</guid>
       <description>Introduction Recently I am trying to reverse engineering a simple Windows desktop game made with Unity. I took a look on some reference but found that the setup can be a bit frustrating. This post is attempting to make the setup clearer and more followable. Reference links are listed below.
 Tools Our target is to decompile and debug the Assembly-CSharp.dll inside the folder &amp;lt;game root folder&amp;gt;\&amp;lt;GANE_NAME&amp;gt;_Data\Managed\, which contains custom code the game developer wrote, not the code of Unity or other frameworks.</description>
     </item>
     <item>
       <title>LOTS Project - Paypal</title>
-      <link>http://localhost:1313/blogs/post-exploitation/lots-project-paypal/</link>
+      <link>https://katsuragicsl.github.io/blogs/post-exploitation/lots-project-paypal/</link>
       <pubDate>Sun, 02 Oct 2022 00:54:30 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/post-exploitation/lots-project-paypal/</guid>
+      <guid>https://katsuragicsl.github.io/blogs/post-exploitation/lots-project-paypal/</guid>
       <description>Introduction LOTS project, founded by mrd0x, is a collection of websites which is likely be trusted but can be used to evade detection when conducting phishing, C&amp;amp;C, exfiltration and downloading tools. In this post I will introduce a way to abusing PayPal and hopefully will be contributing to the LOTS project.
 This series is (intentively) for my ideas on novel exfiltration/ C&amp;amp;C channels.
 Exfiltraftion by Paypal In Paypal, one can dispute an order and upload his/ her evidence.</description>
     </item>
     <item>
       <title>Fuzzing nmap(1): a Dumb Approach</title>
-      <link>http://localhost:1313/blogs/fuzzing/fuzzing-nmap1-a-dumb-approach/</link>
+      <link>https://katsuragicsl.github.io/blogs/fuzzing/fuzzing-nmap1-a-dumb-approach/</link>
       <pubDate>Sat, 27 Aug 2022 18:06:09 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/fuzzing/fuzzing-nmap1-a-dumb-approach/</guid>
+      <guid>https://katsuragicsl.github.io/blogs/fuzzing/fuzzing-nmap1-a-dumb-approach/</guid>
       <description>Introduction Recently I am hooked on fuzzing. Apart from &amp;ldquo;normal&amp;rdquo; fuzzing following the textbook examples, I tried to fuzz nmap because
 It is fun Seems no blog posts about fuzzing nmap yet, it surprised me, and hence, it is fun, again. &amp;#x1f60f; As my first target, I am going to fuzz the nse of nmap. NSE (nmap scripting engine) parses the scripts provided in --script and provide additional scanning according to how the script is written.</description>
     </item>
     <item>
       <title>Prisma Cloud Defenders</title>
-      <link>http://localhost:1313/blogs/post-exploitation/prisma-cloud-defenders/</link>
+      <link>https://katsuragicsl.github.io/blogs/post-exploitation/prisma-cloud-defenders/</link>
       <pubDate>Wed, 20 Jul 2022 17:54:24 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/post-exploitation/prisma-cloud-defenders/</guid>
+      <guid>https://katsuragicsl.github.io/blogs/post-exploitation/prisma-cloud-defenders/</guid>
       <description>Tl;dr - unfixed information disclosure in Prisma Cloud defenders This post is about how to abuse a agent of a cloud security solution to get information which you should not know, like what security controls are applied, what assets the victim owns and the owners of the assets.
 Introduction A few months ago I was examining the Prisma Cloud configuration of my workplace and accidentally discovered an information disclosure issue of Prisma Cloud defender (the agent).</description>
     </item>
     <item>
       <title>Classic API Unhooking</title>
-      <link>http://localhost:1313/blogs/malware-development/classic-api-unhooking/</link>
+      <link>https://katsuragicsl.github.io/blogs/malware-development/classic-api-unhooking/</link>
       <pubDate>Thu, 14 Apr 2022 20:54:39 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/malware-development/classic-api-unhooking/</guid>
+      <guid>https://katsuragicsl.github.io/blogs/malware-development/classic-api-unhooking/</guid>
       <description>Introduction AV and EDR use API hoooking to monitor API calls of processes. This post will take a brief look on how does a hook look like and the classic solution for malwares to bypass API hooking.
 I tested the content of this blog in a windows 10 VM with BitDefender installed.
 You can get the sample code here.
