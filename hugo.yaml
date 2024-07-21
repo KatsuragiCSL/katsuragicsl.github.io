@@ -1,0 +1,70 @@
+baseURL: "https://katsuragicsl.github.io"
+title: "Script Adults"
+languageCode: en-us
+paginate: 5
+theme: ["PaperMod"]
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  defaultTheme: auto
+  ShowShareButtons: true
+  ShowReadingTime: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShareButtons: ["linkedin", "twitter", "reddit", "ycombinator"]
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowToc: true
+  images: ["images/papermod-cover.png"]
+
+  profileMode:
+    enabled: true
+    title: Script Adult
+    subtitle: "Mathematics, Computer Science, Hacking, Random thoughts"
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/KatsuragiCSL"
+    - name: X
+      url: "https://x.com/katsuragicsl"
+    - name: linkedin
+      url: https://www.linkedin.com/in/jack-shue-long-chan/
+
+menu:
+    main:
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 20
+    - identifier: research
+      name: Research
+      url: /research/
+      weight: 30
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 40
+    - identifier: search
+      name: Searach
+      url: /search/
+      weight: 20
+    - identifier: about
+      name: About
+      url: /about
+      weight: 50
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
