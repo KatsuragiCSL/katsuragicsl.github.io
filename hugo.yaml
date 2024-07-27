@@ -40,6 +40,12 @@ params:
     - name: linkedin
       url: https://www.linkedin.com/in/jack-shue-long-chan/
 
+  utteranc:
+    enabled: true
+    repo: "KatsuragiCSL/katsuragicsl.github.io"
+    issueTerm: "title"
+    theme: "photon-dark"
+
 menu:
     main:
     - identifier: archives

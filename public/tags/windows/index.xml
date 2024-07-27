@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Windows on Script Adults</title>
-    <link>https://katsuragicsl.github.io/tags/windows/</link>
+    <link>http://localhost:1313/tags/windows/</link>
     <description>Recent content in Windows on Script Adults</description>
-    <generator>Hugo</generator>
+    <image>
+      <title>Script Adults</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 Apr 2022 20:54:39 +0800</lastBuildDate>
-    <atom:link href="https://katsuragicsl.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Classic API Unhooking</title>
-      <link>https://katsuragicsl.github.io/blogs/malware-development/classic-api-unhooking/</link>
+      <link>http://localhost:1313/blogs/malware-development/classic-api-unhooking/</link>
       <pubDate>Thu, 14 Apr 2022 20:54:39 +0800</pubDate>
-      <guid>https://katsuragicsl.github.io/blogs/malware-development/classic-api-unhooking/</guid>
-      <description>Introduction AV and EDR use API hoooking to monitor API calls of processes. This post will take a brief look on how does a hook look like and the classic solution for malwares to bypass API hooking.&#xA;I tested the content of this blog in a windows 10 VM with BitDefender installed.&#xA;You can get the sample code here.&#xA;API hooking On the Windows VM with BitDefender installed, if you load a PE into x64dbg and look for NtMapViewOfSection, you will see the first instruction is jmp to something.</description>
+      <guid>http://localhost:1313/blogs/malware-development/classic-api-unhooking/</guid>
+      <description>Introduction AV and EDR use API hoooking to monitor API calls of processes. This post will take a brief look on how does a hook look like and the classic solution for malwares to bypass API hooking.
+I tested the content of this blog in a windows 10 VM with BitDefender installed.
+You can get the sample code here.
+API hooking On the Windows VM with BitDefender installed, if you load a PE into x64dbg and look for NtMapViewOfSection, you will see the first instruction is jmp to something.</description>
     </item>
   </channel>
 </rss>

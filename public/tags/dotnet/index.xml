@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Dotnet on Script Adults</title>
-    <link>https://katsuragicsl.github.io/tags/dotnet/</link>
+    <link>http://localhost:1313/tags/dotnet/</link>
     <description>Recent content in Dotnet on Script Adults</description>
-    <generator>Hugo</generator>
+    <image>
+      <title>Script Adults</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 17 Apr 2023 04:16:55 +0800</lastBuildDate>
-    <atom:link href="https://katsuragicsl.github.io/tags/dotnet/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/dotnet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unity Game Reversing(1): Setup</title>
-      <link>https://katsuragicsl.github.io/blogs/reverse-engineering/unity-game-reversing-1/</link>
+      <link>http://localhost:1313/blogs/reverse-engineering/unity-game-reversing-1/</link>
       <pubDate>Mon, 17 Apr 2023 04:16:55 +0800</pubDate>
-      <guid>https://katsuragicsl.github.io/blogs/reverse-engineering/unity-game-reversing-1/</guid>
-      <description>Introduction Recently I am trying to reverse engineering a simple Windows desktop game made with Unity. I took a look on some reference but found that the setup can be a bit frustrating. This post is attempting to make the setup clearer and more followable. Reference links are listed below.&#xA;Tools Our target is to decompile and debug the Assembly-CSharp.dll inside the folder &amp;lt;game root folder&amp;gt;\&amp;lt;GANE_NAME&amp;gt;_Data\Managed\, which contains custom code the game developer wrote, not the code of Unity or other frameworks.</description>
+      <guid>http://localhost:1313/blogs/reverse-engineering/unity-game-reversing-1/</guid>
+      <description>Introduction Recently I am trying to reverse engineering a simple Windows desktop game made with Unity. I took a look on some reference but found that the setup can be a bit frustrating. This post is attempting to make the setup clearer and more followable. Reference links are listed below.
+Tools Our target is to decompile and debug the Assembly-CSharp.dll inside the folder &amp;lt;game root folder&amp;gt;\&amp;lt;GANE_NAME&amp;gt;_Data\Managed\, which contains custom code the game developer wrote, not the code of Unity or other frameworks.</description>
     </item>
   </channel>
 </rss>

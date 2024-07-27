@@ -2,7 +2,7 @@
 title: "Visualizing Attack Surface Mapping"
 date: 2024-06-24T01:16:11+08:00
 draft: true
-showshowToc: false
+TocOpen: true
 categories: ["thoughts"]
 tags: ['methodology']
 ---
