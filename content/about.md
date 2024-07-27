@@ -5,8 +5,6 @@ searchHidden: true
 unlisted: true
 ---
 
-I am [Jack Chan](https://www.linkedin.com/in/jack-shue-long-chan/), with a fancy online name `KatsuragiCSL` as  the "social norm" is apparently that you need a fancy nickname online if you post nerdy things online. 
+I am Chan Shue Long, you can also call me Jack, which is a made-up name just like many asians do when they assimilate the "western" circles. Or your can call me with my online name `KatsuragiCSL` as the "social norm" is apparently that you need a fancy nickname if you post nerdy things online. ~~Maybe Chan Shue Long is not my real name too, who knows.~~
 
-This blog is a place for me to share what I learnt, what I experimented, occationally shitposting and some "tutorial series" that are unlikely to be finished. 
-
-Potential original thoughts are in research section. Other categories are for things I found beautiful.
+This blog is a place for me to share what I learnt, what deeply moved me (and not too annoying to write a blog post for it, apparently.). And occationally shitposting and some "tutorials" that are unlikely to be finished. 

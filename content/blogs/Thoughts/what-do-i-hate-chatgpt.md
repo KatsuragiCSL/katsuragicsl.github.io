@@ -34,4 +34,4 @@ Moreover, if the service is provided by someone else, namely big techs at this m
 
 Maybe I am too unreconstructed for this generation, but I think we are entering the age of impatience and chatGPT is just yet another product which encourages the culture of impatience.
 
-[^1]: From https://www.rebootonline.com/blog/men-bing-from-mars-women-google-from-venus/
+[^1]: From https://www.rebootonline.com/blog/men-bing-from-mars-women-google-from-venus/. Disclaimer: nothing sexism such as suggesting women are doing worse here. Just posting the reference of that imaginery search string which was a classic years ago.

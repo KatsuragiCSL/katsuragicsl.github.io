@@ -47,15 +47,5 @@ Exfiltraftion by Paypal In Paypal, one can dispute an order and upload his/ her 
       <description>Tl;dr - unfixed information disclosure in Prisma Cloud defenders This post is about how to abuse a agent of a cloud security solution to get information which you should not know, like what security controls are applied, what assets the victim owns and the owners of the assets.
 Introduction A few months ago I was examining the Prisma Cloud configuration of my workplace and accidentally discovered an information disclosure issue of Prisma Cloud defender (the agent).</description>
     </item>
-    <item>
-      <title>Classic API Unhooking</title>
-      <link>https://katsuragicsl.github.io/blogs/malware-development/classic-api-unhooking/</link>
-      <pubDate>Thu, 14 Apr 2022 20:54:39 +0800</pubDate>
-      <guid>https://katsuragicsl.github.io/blogs/malware-development/classic-api-unhooking/</guid>
-      <description>Introduction AV and EDR use API hoooking to monitor API calls of processes. This post will take a brief look on how does a hook look like and the classic solution for malwares to bypass API hooking.
-I tested the content of this blog in a windows 10 VM with BitDefender installed.
-You can get the sample code here.
-API hooking On the Windows VM with BitDefender installed, if you load a PE into x64dbg and look for NtMapViewOfSection, you will see the first instruction is jmp to something.</description>
-    </item>
   </channel>
 </rss>
