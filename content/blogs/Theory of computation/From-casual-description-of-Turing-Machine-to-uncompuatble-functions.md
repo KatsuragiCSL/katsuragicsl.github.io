@@ -1,6 +1,6 @@
 ---
 title: "From casual description of Turing Machine to uncomputable functions"
-date: 2024-07-22T02:36:11+08:00
+date: 2024-07-31T02:36:11+08:00
 draft: true
 TocOpen: true
 categories: ["theory-of-computation"]

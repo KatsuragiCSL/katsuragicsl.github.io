@@ -2,75 +2,75 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://katsuragicsl.github.io/tags/ai/</loc>
+    <loc>http://localhost:1313/tags/ai/</loc>
     <lastmod>2024-07-27T23:39:11+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/blogs/</loc>
+    <loc>http://localhost:1313/blogs/</loc>
     <lastmod>2024-07-27T23:39:11+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2024-07-27T23:39:11+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/tags/learning/</loc>
+    <loc>http://localhost:1313/tags/learning/</loc>
     <lastmod>2024-07-27T23:39:11+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-07-27T23:39:11+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-07-27T23:39:11+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/categories/thoughts/</loc>
+    <loc>http://localhost:1313/categories/thoughts/</loc>
     <lastmod>2024-07-27T23:39:11+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/blogs/thoughts/what-do-i-hate-chatgpt/</loc>
+    <loc>http://localhost:1313/blogs/thoughts/what-do-i-hate-chatgpt/</loc>
     <lastmod>2024-07-27T23:39:11+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/search/</loc>
+    <loc>http://localhost:1313/search/</loc>
     <lastmod>2024-07-21T21:26:08+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2024-07-21T20:34:37+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/tags/dotnet/</loc>
+    <loc>http://localhost:1313/tags/dotnet/</loc>
     <lastmod>2023-04-17T04:16:55+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/tags/reversing/</loc>
+    <loc>http://localhost:1313/tags/reversing/</loc>
     <lastmod>2023-04-17T04:16:55+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/categories/reversing/</loc>
+    <loc>http://localhost:1313/categories/reversing/</loc>
     <lastmod>2023-04-17T04:16:55+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/tags/tutorials/</loc>
+    <loc>http://localhost:1313/tags/tutorials/</loc>
     <lastmod>2023-04-17T04:16:55+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/tags/unity/</loc>
+    <loc>http://localhost:1313/tags/unity/</loc>
     <lastmod>2023-04-17T04:16:55+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/blogs/reverse-engineering/unity-game-reversing-1/</loc>
+    <loc>http://localhost:1313/blogs/reverse-engineering/unity-game-reversing-1/</loc>
     <lastmod>2023-04-17T04:16:55+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/tags/exfiltration/</loc>
+    <loc>http://localhost:1313/tags/exfiltration/</loc>
     <lastmod>2022-10-02T00:54:30+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/tags/lots-project/</loc>
+    <loc>http://localhost:1313/tags/lots-project/</loc>
     <lastmod>2022-10-02T00:54:30+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/blogs/post-exploitation/lots-project-paypal/</loc>
+    <loc>http://localhost:1313/blogs/post-exploitation/lots-project-paypal/</loc>
     <lastmod>2022-10-02T00:54:30+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/categories/post-exploitation/</loc>
+    <loc>http://localhost:1313/categories/post-exploitation/</loc>
     <lastmod>2022-10-02T00:54:30+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/tags/lateral-movement/</loc>
+    <loc>http://localhost:1313/tags/lateral-movement/</loc>
     <lastmod>2022-08-03T22:14:05+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/tags/prisma-cloud/</loc>
+    <loc>http://localhost:1313/tags/prisma-cloud/</loc>
     <lastmod>2022-08-03T22:14:05+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/blogs/post-exploitation/prisma-cloud-defenders/</loc>
+    <loc>http://localhost:1313/blogs/post-exploitation/prisma-cloud-defenders/</loc>
     <lastmod>2022-08-03T22:14:05+08:00</lastmod>
   </url><url>
-    <loc>https://katsuragicsl.github.io/archives/</loc>
+    <loc>http://localhost:1313/archives/</loc>
   </url>
 </urlset>
