@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Script Adults</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://katsuragicsl.github.io/categories/</link>
     <description>Recent content in Categories on Script Adults</description>
     <image>
       <title>Script Adults</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>https://katsuragicsl.github.io/images/papermod-cover.png</url>
+      <link>https://katsuragicsl.github.io/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 27 Jul 2024 23:39:11 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://katsuragicsl.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thoughts</title>
-      <link>http://localhost:1313/categories/thoughts/</link>
+      <link>https://katsuragicsl.github.io/categories/thoughts/</link>
       <pubDate>Sat, 27 Jul 2024 23:39:11 +0800</pubDate>
-      <guid>http://localhost:1313/categories/thoughts/</guid>
+      <guid>https://katsuragicsl.github.io/categories/thoughts/</guid>
       <description></description>
     </item>
     <item>
       <title>Reversing</title>
-      <link>http://localhost:1313/categories/reversing/</link>
+      <link>https://katsuragicsl.github.io/categories/reversing/</link>
       <pubDate>Mon, 17 Apr 2023 04:16:55 +0800</pubDate>
-      <guid>http://localhost:1313/categories/reversing/</guid>
+      <guid>https://katsuragicsl.github.io/categories/reversing/</guid>
       <description></description>
     </item>
     <item>
       <title>Post-Exploitation</title>
-      <link>http://localhost:1313/categories/post-exploitation/</link>
+      <link>https://katsuragicsl.github.io/categories/post-exploitation/</link>
       <pubDate>Sun, 02 Oct 2022 00:54:30 +0800</pubDate>
-      <guid>http://localhost:1313/categories/post-exploitation/</guid>
+      <guid>https://katsuragicsl.github.io/categories/post-exploitation/</guid>
       <description></description>
     </item>
   </channel>
