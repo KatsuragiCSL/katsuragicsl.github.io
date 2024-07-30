@@ -4,6 +4,8 @@ date: 2024-07-30T23:39:11+08:00
 TocOpen: true
 categories: ["thoughts"]
 tags: ['AI', 'learning']
+cover:
+  image: "https://images.unsplash.com/photo-1710993012000-f109972e3b8f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ---
 
 ### My pc is overheated how do i cool it down because it is my life[^1]
