@@ -1,6 +1,6 @@
 ---
 title: "Why do I hate using chatGPT to replace search engines"
-date: 2024-07-27T23:39:11+08:00
+date: 2024-07-30T23:39:11+08:00
 TocOpen: true
 categories: ["thoughts"]
 tags: ['AI', 'learning']

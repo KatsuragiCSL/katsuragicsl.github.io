@@ -18,7 +18,8 @@ params:
   displayFullLangName: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShareButtons: ["linkedin", "twitter", "reddit", "ycombinator"]
+  #ShareButtons: ["linkedin", "twitter", "reddit", "ycombinator"]
+  ShowShareButtons: true
   ShowReadingTime: true
   ShowCodeCopyButtons: true
   ShowRssButtonInSectionTermList: true
