@@ -2,8 +2,8 @@
 title: "From casual description of Turing Machine to the density of uncomputable functions"
 date: 2024-08-09T01:23:55+08:00
 TocOpen: true
-categories: ["theory-of-computation"]
-tags: ['maths', 'computability-theory']
+categories: ["computer-science"]
+tags: ['topology', 'measure-theory', 'theory-of-computation']
 math: true
 ---
 
