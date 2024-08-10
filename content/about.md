@@ -5,6 +5,8 @@ searchHidden: true
 unlisted: true
 ---
 
-I am Chan Shue Long, you can also call me Jack, which is a made-up name just like many asians do when they assimilate the "western" circles. Or your can call me with my online name `KatsuragiCSL` as the "social norm" is apparently that you need a fancy nickname if you post nerdy things online. ~~Maybe Chan Shue Long is not my real name too, who knows.~~
+I am Chan Shue Long, you can also call me Jack, which is a made-up name just like many asians do when they assimilate the "western" circles.
 
-This blog is a place for me to share what I learnt, what deeply moved me (and not too annoying to write a blog post for it, apparently.). And occationally shitposting and some "tutorials" that are unlikely to be finished. 
+Mathematics is my first love. I am also into computer science, philosophy, chinese literatures and sports. I ended up working in security industry and I also love it - to explore the "applied" side of things.
+
+This blog is a place for me to share what I learnt, what wheels I reinvented and what deeply moved me. And occationally shitposting and some "tutorials" that are unlikely to be finished. 
