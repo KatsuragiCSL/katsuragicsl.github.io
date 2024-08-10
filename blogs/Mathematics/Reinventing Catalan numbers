@@ -1,0 +1,39 @@
+---
+title: "Reinventing Catalan numbers"
+date: 2024-08-06T02:43:19+08:00
+TocOpen: true
+categories: ["theory-of-computation"]
+tags: ['maths', 'computability-theory']
+---
+
+### Counting binary trees
+
+I was thinking about of the problem of balancing a binary tree, and my mind stumbled across to the question "How many different binary trees with labelled nodes can you make without changing the traversal order?". Afterwards I realized that the numbers of such binary trees are just [Catalan numebrs](https://en.wikipedia.org/wiki/Catalan_number) (I was not really into combinatorics - now I am).
+
+For example, the following has traversal order 1->2->3->4->5->6->7
+
+```mermaid
+graph TB;
+    A((4))-->B((2))
+    A-->C((6));
+    B-->E((1))
+    B-->F((3))
+    C-->H((5))
+    C-->I((7))
+```
+But the following also has the same traversal order:
+
+```mermaid
+graph TB;
+    A((4))-->B((3))
+    A-->C((5))
+    B-->E((1))
+    B~~~Hidden1:::hidden
+    E~~~Hidden2:::hidden
+    E-->X((2))
+    C~~~Hidden3:::hidden
+    C-->I((7))
+    I-->J((6))
+    I~~~Hidden4:::hidden
+classDef hidden display: none;
+```
