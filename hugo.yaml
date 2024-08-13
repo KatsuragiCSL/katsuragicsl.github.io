@@ -3,6 +3,13 @@ title: "Script Adults"
 languageCode: en-us
 paginate: 5
 theme: ["PaperMod"]
+enableGitInfo: true
+frontmatter:
+  lastmod:
+  - lastmod
+  - :git
+  - date
+  - publishDate
 enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDrafts: false

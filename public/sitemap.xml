@@ -3,82 +3,91 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/blogs/</loc>
-    <lastmod>2024-08-10T17:59:01+08:00</lastmod>
+    <lastmod>2024-08-11T00:34:57+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2024-08-10T17:59:01+08:00</lastmod>
+    <lastmod>2024-08-11T00:34:57+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/combinatorics/</loc>
+    <lastmod>2024-08-11T00:34:57+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/computability-theory/</loc>
-    <lastmod>2024-08-10T17:59:01+08:00</lastmod>
+    <lastmod>2024-08-11T00:34:57+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/mathematics/</loc>
-    <lastmod>2024-08-10T17:59:01+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/maths/</loc>
-    <lastmod>2024-08-10T17:59:01+08:00</lastmod>
+    <lastmod>2024-08-11T00:34:57+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blogs/mathematics/reinventing-catalan-numbers/</loc>
-    <lastmod>2024-08-10T17:59:01+08:00</lastmod>
+    <lastmod>2024-08-11T00:34:57+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-08-10T17:59:01+08:00</lastmod>
+    <lastmod>2024-08-11T00:34:57+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-08-10T17:59:01+08:00</lastmod>
+    <lastmod>2024-08-11T00:34:57+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/computer-science/</loc>
+    <lastmod>2024-08-10T21:52:54+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blogs/computer-science/from-casual-description-of-turing-machine-to-uncompuatble-functions/</loc>
-    <lastmod>2024-08-09T01:23:55+08:00</lastmod>
+    <lastmod>2024-08-10T21:52:54+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/theory-of-computation/</loc>
-    <lastmod>2024-08-09T01:23:55+08:00</lastmod>
+    <loc>http://localhost:1313/tags/measure-theory/</loc>
+    <lastmod>2024-08-10T21:52:54+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/theory-of-computation/</loc>
+    <lastmod>2024-08-10T21:52:54+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/topology/</loc>
+    <lastmod>2024-08-10T21:52:54+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ai/</loc>
-    <lastmod>2024-07-30T23:39:11+08:00</lastmod>
+    <lastmod>2024-07-30T23:47:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/learning/</loc>
-    <lastmod>2024-07-30T23:39:11+08:00</lastmod>
+    <lastmod>2024-07-30T23:47:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/thoughts/</loc>
-    <lastmod>2024-07-30T23:39:11+08:00</lastmod>
+    <lastmod>2024-07-30T23:47:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blogs/thoughts/why-do-i-hate-chatgpt/</loc>
-    <lastmod>2024-07-30T23:39:11+08:00</lastmod>
+    <lastmod>2024-07-30T23:47:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/search/</loc>
-    <lastmod>2024-07-21T21:26:08+08:00</lastmod>
+    <lastmod>2024-07-21T23:11:36+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
-    <lastmod>2024-07-21T20:34:37+08:00</lastmod>
+    <lastmod>2024-08-10T21:48:18+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/dotnet/</loc>
-    <lastmod>2023-04-17T04:16:55+08:00</lastmod>
+    <lastmod>2024-08-10T21:48:18+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/reversing/</loc>
-    <lastmod>2023-04-17T04:16:55+08:00</lastmod>
+    <lastmod>2024-08-10T21:48:18+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/reversing/</loc>
-    <lastmod>2023-04-17T04:16:55+08:00</lastmod>
+    <lastmod>2024-08-10T21:48:18+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/tutorials/</loc>
-    <lastmod>2023-04-17T04:16:55+08:00</lastmod>
+    <lastmod>2024-08-10T21:48:18+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/unity/</loc>
-    <lastmod>2023-04-17T04:16:55+08:00</lastmod>
+    <lastmod>2024-08-10T21:48:18+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blogs/software-hacking/unity-game-reversing-1/</loc>
-    <lastmod>2023-04-17T04:16:55+08:00</lastmod>
+    <lastmod>2024-08-10T21:48:18+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/exfiltration/</loc>
-    <lastmod>2022-10-02T00:54:30+08:00</lastmod>
+    <lastmod>2024-07-21T22:58:42+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/lots-project/</loc>
-    <lastmod>2022-10-02T00:54:30+08:00</lastmod>
+    <lastmod>2024-07-21T22:58:42+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blogs/post-exploitation/lots-project-paypal/</loc>
-    <lastmod>2022-10-02T00:54:30+08:00</lastmod>
+    <lastmod>2024-07-21T22:58:42+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/post-exploitation/</loc>
-    <lastmod>2022-10-02T00:54:30+08:00</lastmod>
+    <lastmod>2024-07-21T22:58:42+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/lateral-movement/</loc>
     <lastmod>2022-08-03T22:14:05+08:00</lastmod>
@@ -90,5 +99,6 @@
     <lastmod>2022-08-03T22:14:05+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/archives/</loc>
+    <lastmod>2024-07-21T22:58:42+08:00</lastmod>
   </url>
 </urlset>
