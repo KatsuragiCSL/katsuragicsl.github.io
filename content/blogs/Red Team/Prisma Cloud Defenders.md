@@ -5,7 +5,7 @@ lastmod: 2022-08-03T22:14:05+08:00
 showToc: true
 TocOpen: true 
 tags: ["prisma cloud", "lateral movement"]
-categories: ["post-exploitation"]
+categories: ["red-team"]
 ---
 
 ## Tl;dr - unfixed information disclosure in Prisma Cloud defenders

@@ -11,8 +11,16 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Aug 2024 00:34:57 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 01 Sep 2024 00:37:21 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Relaxation is the result of mastery. With thoughts about problem solving</title>
+      <link>http://localhost:1313/blogs/thoughts/relaxation-is-the-result-of-mastery-with-thoughts-about-problem-solving/</link>
+      <pubDate>Sun, 01 Sep 2024 00:37:21 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/thoughts/relaxation-is-the-result-of-mastery-with-thoughts-about-problem-solving/</guid>
+      <description>Relaxation as a result of mastery, instead of a prerequisites In many sports/ crafts that I have experienced, relaxation is considered by many the prerequisites of mastery:
+In playing piano, your fingers, wrists, arms and shoulders have to be relax or you will find it extremely hard to press the right keys fluently; In online games that require fast reactions, rookies hands are stiff and they press buttons with unnecessary strength and range of motion, which stops them from pressing right buttons at the right time smoothly; In jiujitsu, being reasonably relax helps you to perform efficient moves, saving your energy and gives you more choices in different situations in which you have to adapt and react quickly.</description>
+    </item>
     <item>
       <title>Reinventing Catalan numbers</title>
       <link>http://localhost:1313/blogs/mathematics/reinventing-catalan-numbers/</link>
@@ -57,18 +65,18 @@ Tools Our target is to decompile and debug the Assembly-CSharp.dll inside the fo
     </item>
     <item>
       <title>LOTS Project - Paypal</title>
-      <link>http://localhost:1313/blogs/post-exploitation/lots-project-paypal/</link>
+      <link>http://localhost:1313/blogs/red-team/lots-project-paypal/</link>
       <pubDate>Sun, 02 Oct 2022 00:54:30 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/post-exploitation/lots-project-paypal/</guid>
+      <guid>http://localhost:1313/blogs/red-team/lots-project-paypal/</guid>
       <description>Introduction LOTS project, founded by mrd0x, is a collection of websites which is likely be trusted but can be used to evade detection when conducting phishing, C&amp;amp;C, exfiltration and downloading tools. In this post I will introduce a way to abusing PayPal and hopefully will be contributing to the LOTS project.
 This series is (intentively) for my ideas on novel exfiltration/ C&amp;amp;C channels.
 Exfiltraftion by Paypal In Paypal, one can dispute an order and upload his/ her evidence.</description>
     </item>
     <item>
       <title>Prisma Cloud Defenders</title>
-      <link>http://localhost:1313/blogs/post-exploitation/prisma-cloud-defenders/</link>
+      <link>http://localhost:1313/blogs/red-team/prisma-cloud-defenders/</link>
       <pubDate>Wed, 20 Jul 2022 17:54:24 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/post-exploitation/prisma-cloud-defenders/</guid>
+      <guid>http://localhost:1313/blogs/red-team/prisma-cloud-defenders/</guid>
       <description>Tl;dr - unfixed information disclosure in Prisma Cloud defenders This post is about how to abuse a agent of a cloud security solution to get information which you should not know, like what security controls are applied, what assets the victim owns and the owners of the assets.
 Introduction A few months ago I was examining the Prisma Cloud configuration of my workplace and accidentally discovered an information disclosure issue of Prisma Cloud defender (the agent).</description>
     </item>
