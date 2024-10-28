@@ -5,7 +5,7 @@ searchHidden: true
 unlisted: true
 ---
 
-I am Chan Shue Long, you can also call me Jack, which is a made-up name just like many asians do when they assimilate the "western" circles.
+I am Chan Shue Long, you can also call me Jack, which is a made-up name just like many asians do when they assimilate the "western" circles. I use the handle "KatsuragiCSL" occationally (that's why the Github username and the domain name of this site).
 
 Mathematics is my first love. I am also into computer science, philosophy, chinese literatures and sports. I ended up working in security industry and I also love it - to explore the "applied" side of things.
 
