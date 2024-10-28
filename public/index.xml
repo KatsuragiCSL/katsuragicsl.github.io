@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Sep 2024 00:37:21 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 28 Oct 2024 23:05:50 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Work at the level of abstraction that works for you</title>
+      <link>http://localhost:1313/blogs/thoughts/level-of-abstraction/</link>
+      <pubDate>Tue, 29 Oct 2024 00:20:01 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/thoughts/level-of-abstraction/</guid>
+      <description>Ladder of abstraction Well the title is obviously a tweak of the &amp;ldquo;ladder of abstraction&amp;rdquo;. For those who does not know, &amp;ldquo;ladder of abstraction&amp;rdquo; refers to the classic essay by Bret Victor. I am kind of stealing this terminilogy for the reader to visualize climbing up and down on the ladder of abstraction to make it easier to explain the nature of different jobs. The main question this blog post deals with is:</description>
+    </item>
     <item>
       <title>Relaxation is the result of mastery. With thoughts about problem solving</title>
       <link>http://localhost:1313/blogs/thoughts/relaxation-is-the-result-of-mastery-with-thoughts-about-problem-solving/</link>
@@ -51,9 +58,8 @@ When we were kids and learnt how to use search engines, we acquired the skills o
       <link>http://localhost:1313/about/</link>
       <pubDate>Sun, 21 Jul 2024 20:34:37 +0800</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>I am Chan Shue Long, you can also call me Jack, which is a made-up name just like many asians do when they assimilate the &amp;ldquo;western&amp;rdquo; circles.
-Mathematics is my first love. I am also into computer science, philosophy, chinese literatures and sports. I ended up working in security industry and I also love it - to explore the &amp;ldquo;applied&amp;rdquo; side of things.
-This blog is a place for me to share what I learnt, what wheels I reinvented and what deeply moved me.</description>
+      <description>I am Chan Shue Long, you can also call me Jack, which is a made-up name just like many asians do when they assimilate the &amp;ldquo;western&amp;rdquo; circles. I use the handle &amp;ldquo;KatsuragiCSL&amp;rdquo; occationally (that&amp;rsquo;s why the Github username and the domain name of this site).
+Mathematics is my first love. I am also into computer science, philosophy, chinese literatures and sports. I ended up working in security industry and I also love it - to explore the &amp;ldquo;applied&amp;rdquo; side of things.</description>
     </item>
     <item>
       <title>Unity Game Reversing(1): Setup</title>
