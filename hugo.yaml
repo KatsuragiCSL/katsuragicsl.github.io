@@ -52,7 +52,7 @@ params:
     enabled: true
     repo: "KatsuragiCSL/katsuragicsl.github.io"
     issueTerm: "title"
-    theme: "photon-dark"
+    theme: "preferred-color-scheme"
 
 menu:
     main:

@@ -3,7 +3,7 @@ title: "Reinventing Catalan numbers"
 date: 2024-08-10T17:59:01+08:00
 TocOpen: true
 categories: ["mathematics"]
-tags: ['combinatorics', 'computability-theory']
+tags: ['combinatorics', 'computability-theory', 'wheel-reinvention']
 math: true
 ---
 
