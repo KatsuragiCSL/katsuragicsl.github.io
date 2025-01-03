@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Philosophy on Script Adults</title>
+    <link>http://localhost:1313/tags/philosophy/</link>
+    <description>Recent content in Philosophy on Script Adults</description>
+    <image>
+      <title>Script Adults</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Jan 2025 23:59:58 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/philosophy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Our legal (and moral) system flavors the jerks</title>
+      <link>http://localhost:1313/blogs/thoughts/our-legal-and-moral-system-flavors-jerks/</link>
+      <pubDate>Thu, 02 Jan 2025 23:59:58 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/thoughts/our-legal-and-moral-system-flavors-jerks/</guid>
+      <description>Disclaimer: The author&amp;rsquo;s knowledge about the legal system by no means applies to anywhere outside of his homeland. But what is legal or illegal should be similar enough for the discussion below - at least for first world countries, I guess.
+That said, the author is not a lawyer and does not have accurate knowledge of any concrete laws. But one does not need to know (too many of) them for this article.</description>
+    </item>
+  </channel>
+</rss>
