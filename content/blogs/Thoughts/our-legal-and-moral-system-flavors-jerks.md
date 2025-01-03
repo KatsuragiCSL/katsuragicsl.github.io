@@ -1,6 +1,7 @@
 ---
 title: "Our legal (and moral) system flavors the jerks"
 subtitle: "the unfair game that traps good people"
+math: true
 date: 2025-01-03T23:50:58+08:00
 TocOpen: true
 categories: ["thoughts"]
@@ -40,7 +41,7 @@ Another problem is that there are some jerky behaviors that you wouldn't have to
 3. **Call the police.** \
 Meh. Most jerky behaviors are barely legal as we said. Cops are either unable to or not willing to do much.
 
-So, the "best" option here is to suck it, just like what most people do. What is so bad is that, the "best option" is always letting the good people "lose" and the jerks "win". The rationally best choice gives the shittiest outcomes, since we believe that the society should not flavor the jerks.
+So, the "best" option here is to suck it, just like what most people do. What is so bad is that, the "best option" is always letting the good people "lose" and the jerks "win". The rationally best choice gives the shittiest outcomes.
 
 Understand that facing criminals is a differnt story. If someone is commiting crimes on you, you won't be bothered by the same problem. You can legally fight back. And if the crime is serious enough, you won't hesitate to pay the cost of time, effort and money to fight back by any means, if you are able to do so. Of cause most of the time you don't even have the ability to fight back immediately in the case of serious crimes, but that is another issue. For example, when someone is commiting physical assault on you, assuming you are 50/ 50 with him in a fight, then you options will look like this:
 
@@ -56,7 +57,7 @@ Moral system works well for a group of people who know each other and will live 
 
 However, morals does not work for strangers. If someone is almost sure that he/ she will see you only once in a lifetime, he/ she can literally do anything on you without consequences (except the legal consequences). There is nothing we can do about it. You can condemn those who are not kind-hearted and curse them with the ugliest words you know, nothing would happen in reality, except that you are damaged and angry.
 
-The reason is that such environment puts everyone in the circle in a game similar to prisoners' dilemma with infinite or unknown number of rounds. If there is only one round (you only see each other once in a life time), the "best" strategy is to betray. Only when you don't know when will the relationship with someone end, there is possibility to cooperate.
+This is just like the difference between normal prisoners' dilemma and prisoners' dilemma with infinite or unknown number of rounds. If there is only one round (you only see each other once in a life time), the "best" strategy is to betray. Only when you don't know when will the relationship with someone end, there is possibility to cooperate.
 
 It sounds horrible to those innocent, but that is how it works.
 
