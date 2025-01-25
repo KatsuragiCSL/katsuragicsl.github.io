@@ -68,6 +68,17 @@
         });
     });
 </script>
+<script>
+    document.addEventListener("tikzjax-load-finished", function(e) {
+        const svgEl = e.target;
+		let svg = svgEl.outerHTML;
+
+        svg = svg.replaceAll(/("#000"|"black")/g, `"currentColor"`)
+				.replaceAll(/("#fff"|"white")/g, `"var(--background-tikz)"`);
+
+		svgEl.outerHTML = svg;
+    });
+</script>
   
 
 <meta property="og:title" content="Archive" />
@@ -222,7 +233,7 @@
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">Added tikzjax support
         </h3>
-        <div class="archive-meta"><span title='2025-01-25 17:37:38 +0800 CST'>January 25, 2025</span>&nbsp;·&nbsp;<span title='2025-01-25 17:37:38 +0800 CST'>updated January 25, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;<a href="/categories/meta"> meta</a></div>
+        <div class="archive-meta"><span title='2025-01-25 17:37:38 +0800 CST'>January 25, 2025</span>&nbsp;·&nbsp;<span title='2025-01-25 18:21:51 +0800 CST'>updated January 25, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;<a href="/categories/meta"> meta</a></div>
         <a class="entry-link" aria-label="post link to Added tikzjax support" href="http://localhost:1313/blogs/meta/added-tikzjax-support/"></a>
       </div>
       <div class="archive-entry">
