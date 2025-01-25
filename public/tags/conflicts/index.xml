@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Conflicts on Script Adults</title>
+    <link>http://localhost:1313/tags/conflicts/</link>
+    <description>Recent content in Conflicts on Script Adults</description>
+    <image>
+      <title>Script Adults</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Jan 2025 00:35:02 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/conflicts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Asymmetry of time cost</title>
+      <link>http://localhost:1313/blogs/thoughts/asymmetry-of-time-cost/</link>
+      <pubDate>Sat, 25 Jan 2025 00:35:02 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/thoughts/asymmetry-of-time-cost/</guid>
+      <description>This is somewhat a sequel of the previous post about the game played between the jerks and the normal people. This post also talks about some social dynamics, especially about conflicts, but not necessarily related to ethics.
+Exploiting the difference in time costs is a well-known trick&amp;hellip;for a special case Same amount of time does not cost everyone the same. We all know that, especially good negotiators:
+But if we look at the more general case, as long as there are significant gap between the time costs of two players, it could be exploited.</description>
+    </item>
+  </channel>
+</rss>
