@@ -7,6 +7,7 @@ categories: ["meta"]
 
 Just added support for tikzjax since I received some feedback about my hand-drawn diagrams are hard to read...now I can use nice graphs like these:
 
+*source: https://tikzjax.com/*
 {{< tikz >}}
 \usepackage{tikz-cd}
 \tikzcdset{scale cd/.style={every label/.append style={scale=#1},
@@ -21,7 +22,7 @@ Just added support for tikzjax since I received some feedback about my hand-draw
 \end{document}
 {{< /tikz >}}
 
-
+*source: https://tikzjax.com/*
 {{< tikz >}}
 \usepackage{tikz-cd}
 \begin{document}
@@ -31,6 +32,7 @@ Just added support for tikzjax since I received some feedback about my hand-draw
 \end{document}
 {{< /tikz >}}
 
+*source: https://tikz.net/*
 {{< tikz >}}
 \usepackage{chemfig}
 \begin{document}
@@ -38,6 +40,7 @@ Just added support for tikzjax since I received some feedback about my hand-draw
 \end{document}
 {{< /tikz >}}
 
+*source: https://tikz.net/*
 {{< tikz >}}
 \usepackage{tikz}
 \usepackage{tikz-3dplot}
