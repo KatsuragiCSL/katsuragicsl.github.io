@@ -69,6 +69,17 @@ Tools Our target is to decompile and debug the Assembly-CSharp.dll inside the fo
         });
     });
 </script>
+<script>
+    document.addEventListener("tikzjax-load-finished", function(e) {
+        const svgEl = e.target;
+		let svg = svgEl.outerHTML;
+
+        svg = svg.replaceAll(/("#000"|"black")/g, `"currentColor"`)
+				.replaceAll(/("#fff"|"white")/g, `"var(--background-tikz)"`);
+
+		svgEl.outerHTML = svg;
+    });
+</script>
   
 
 <meta property="og:title" content="Unity Game Reversing(1): Setup" />

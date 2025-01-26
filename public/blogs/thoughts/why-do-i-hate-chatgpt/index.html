@@ -70,6 +70,17 @@ When we were kids and learnt how to use search engines, we acquired the skills o
         });
     });
 </script>
+<script>
+    document.addEventListener("tikzjax-load-finished", function(e) {
+        const svgEl = e.target;
+		let svg = svgEl.outerHTML;
+
+        svg = svg.replaceAll(/("#000"|"black")/g, `"currentColor"`)
+				.replaceAll(/("#fff"|"white")/g, `"var(--background-tikz)"`);
+
+		svgEl.outerHTML = svg;
+    });
+</script>
   
 
 <meta property="og:title" content="Why do I hate using chatGPT to replace search engines" />

@@ -70,6 +70,17 @@ Exfiltraftion by Paypal In Paypal, one can dispute an order and upload his/ her 
         });
     });
 </script>
+<script>
+    document.addEventListener("tikzjax-load-finished", function(e) {
+        const svgEl = e.target;
+		let svg = svgEl.outerHTML;
+
+        svg = svg.replaceAll(/("#000"|"black")/g, `"currentColor"`)
+				.replaceAll(/("#fff"|"white")/g, `"var(--background-tikz)"`);
+
+		svgEl.outerHTML = svg;
+    });
+</script>
   
 
 <meta property="og:title" content="LOTS Project - Paypal" />

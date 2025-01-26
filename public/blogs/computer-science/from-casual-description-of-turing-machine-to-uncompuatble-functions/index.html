@@ -72,6 +72,17 @@ M = “On input &lt;B, w&gt;, where B is a DFA and w is a string: 1. Simulate B 
         });
     });
 </script>
+<script>
+    document.addEventListener("tikzjax-load-finished", function(e) {
+        const svgEl = e.target;
+		let svg = svgEl.outerHTML;
+
+        svg = svg.replaceAll(/("#000"|"black")/g, `"currentColor"`)
+				.replaceAll(/("#fff"|"white")/g, `"var(--background-tikz)"`);
+
+		svgEl.outerHTML = svg;
+    });
+</script>
   
 
 <meta property="og:title" content="From casual description of Turing Machine to the density of uncomputable functions" />

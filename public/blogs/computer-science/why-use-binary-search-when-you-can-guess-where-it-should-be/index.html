@@ -71,6 +71,17 @@
         });
     });
 </script>
+<script>
+    document.addEventListener("tikzjax-load-finished", function(e) {
+        const svgEl = e.target;
+		let svg = svgEl.outerHTML;
+
+        svg = svg.replaceAll(/("#000"|"black")/g, `"currentColor"`)
+				.replaceAll(/("#fff"|"white")/g, `"var(--background-tikz)"`);
+
+		svgEl.outerHTML = svg;
+    });
+</script>
   
 
 <meta property="og:title" content="Why use binary search when you can guess where it should be" />
