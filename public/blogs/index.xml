@@ -14,6 +14,13 @@
     <lastBuildDate>Sun, 26 Jan 2025 23:12:20 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Asymmetry of time cost</title>
+      <link>http://localhost:1313/blogs/thoughts/asymmetry-of-time-cost/</link>
+      <pubDate>Wed, 29 Jan 2025 00:43:14 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/thoughts/asymmetry-of-time-cost/</guid>
+      <description>This is somewhat a sequel of the previous post about the game played between the jerks and the normal people. This post also talks about some social dynamics, especially about conflicts, but not necessarily related to ethics. The order of sections in this post does not follow a strict waterfall model. It is not like a story telling or trying to prove some points by gradually elaborating it. It consists of a few thoughts that I had related to the same topic, hence some sections might look like standalone.</description>
+    </item>
+    <item>
       <title>Added tikzjax support</title>
       <link>http://localhost:1313/blogs/meta/added-tikzjax-support/</link>
       <pubDate>Sat, 25 Jan 2025 17:37:38 +0800</pubDate>

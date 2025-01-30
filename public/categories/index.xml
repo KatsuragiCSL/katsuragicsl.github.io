@@ -14,17 +14,17 @@
     <lastBuildDate>Sun, 26 Jan 2025 23:12:20 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Thoughts</title>
+      <link>http://localhost:1313/categories/thoughts/</link>
+      <pubDate>Wed, 29 Jan 2025 00:43:14 +0800</pubDate>
+      <guid>http://localhost:1313/categories/thoughts/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Meta</title>
       <link>http://localhost:1313/categories/meta/</link>
       <pubDate>Sat, 25 Jan 2025 17:37:38 +0800</pubDate>
       <guid>http://localhost:1313/categories/meta/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Thoughts</title>
-      <link>http://localhost:1313/categories/thoughts/</link>
-      <pubDate>Fri, 03 Jan 2025 23:50:58 +0800</pubDate>
-      <guid>http://localhost:1313/categories/thoughts/</guid>
       <description></description>
     </item>
     <item>
