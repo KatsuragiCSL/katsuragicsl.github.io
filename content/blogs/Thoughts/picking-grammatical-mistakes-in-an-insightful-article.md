@@ -15,6 +15,8 @@ After the huge attention gained by deepseek R1, I have seen a good amount of peo
 
 Deepseek did make some techonological breakthroughs. Indeed the censorship is a defect of such a great product. However making jokes on it with its censorships is just like catching grammatical errors in an insightful article and disdain the article because of that. Yes, grammatical errors are errors, catching itself could be useful, but doing that for attacking an insightsul article is another thing. It just misses the point.
 
+If you see China as a rival, it is also like laughing at your enemy's weapons just because they "look" funny.
+
 If you want to disdain an insightful article, disdain by its ideas.
 
 The accuses about cheating with OpenAI data are even more related and look less like jokes. (if ignore the validity of those accuses)
