@@ -11,14 +11,30 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jan 2025 23:12:20 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 22 Feb 2025 23:02:22 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Asymmetry of time cost</title>
-      <link>http://localhost:1313/blogs/thoughts/asymmetry-of-time-cost/</link>
-      <pubDate>Wed, 29 Jan 2025 00:43:14 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/thoughts/asymmetry-of-time-cost/</guid>
-      <description>This is somewhat a sequel of the previous post about the game played between the jerks and the normal people. This post also talks about some social dynamics, especially about conflicts, but not necessarily related to ethics. The order of sections in this post does not follow a strict waterfall model. It is not like a story telling or trying to prove some points by gradually elaborating it. It consists of a few thoughts that I had related to the same topic, hence some sections might look like standalone.</description>
+      <title>Centrality: What CVSS missed</title>
+      <link>http://localhost:1313/blogs/security/centrality-what-cvss-missed/</link>
+      <pubDate>Sat, 22 Feb 2025 23:02:22 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/security/centrality-what-cvss-missed/</guid>
+      <description>Not all P5 are equal Let&amp;rsquo;s start with an example:
+As the CVSS scoring system^[1] evolves over these years, it becomes more and more complicated,</description>
+    </item>
+    <item>
+      <title>Bug bounty performance as a performance metric of pentesters</title>
+      <link>http://localhost:1313/blogs/security/bug-bounty-as-performance-metrics-of-pentesters/</link>
+      <pubDate>Sun, 02 Feb 2025 00:43:14 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/security/bug-bounty-as-performance-metrics-of-pentesters/</guid>
+      <description>What measures the quality of work of pentesters? Every job needs performance metrics.</description>
+    </item>
+    <item>
+      <title>Picking grammatical mistakes in an insightful article</title>
+      <link>http://localhost:1313/blogs/thoughts/picking-grammatical-mistakes-in-an-insightful-article/</link>
+      <pubDate>Fri, 31 Jan 2025 00:15:38 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/thoughts/picking-grammatical-mistakes-in-an-insightful-article/</guid>
+      <description>After the huge attention gained by deepseek R1, I have seen a good amount of people immediately went to looking for censorships (which are expected to exist), laughed at it, and looked down on it. They totally missed the points and these behaviors made them look like slaves of their very own defense mechanism1.
+Deepseek did make some techonological breakthroughs. Indeed the censorship is a defect of such a great product.</description>
     </item>
     <item>
       <title>Added tikzjax support</title>
@@ -85,26 +101,26 @@ When we were kids and learnt how to use search engines, we acquired the skills o
     </item>
     <item>
       <title>Unity Game Reversing(1): Setup</title>
-      <link>http://localhost:1313/blogs/software-hacking/unity-game-reversing-1/</link>
+      <link>http://localhost:1313/blogs/security/unity-game-reversing-1/</link>
       <pubDate>Mon, 17 Apr 2023 04:16:55 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/software-hacking/unity-game-reversing-1/</guid>
+      <guid>http://localhost:1313/blogs/security/unity-game-reversing-1/</guid>
       <description>Introduction Recently I am trying to reverse engineering a simple Windows desktop game made with Unity. I took a look on some reference but found that the setup can be a bit frustrating. This post is attempting to make the setup clearer and more followable. Reference links are listed below.
 Tools Our target is to decompile and debug the Assembly-CSharp.dll inside the folder &amp;lt;game root folder&amp;gt;\&amp;lt;GANE_NAME&amp;gt;_Data\Managed\, which contains custom code the game developer wrote, not the code of Unity or other frameworks.</description>
     </item>
     <item>
       <title>LOTS Project - Paypal</title>
-      <link>http://localhost:1313/blogs/red-team/lots-project-paypal/</link>
+      <link>http://localhost:1313/blogs/security/lots-project-paypal/</link>
       <pubDate>Sun, 02 Oct 2022 00:54:30 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/red-team/lots-project-paypal/</guid>
+      <guid>http://localhost:1313/blogs/security/lots-project-paypal/</guid>
       <description>Introduction LOTS project, founded by mrd0x, is a collection of websites which is likely be trusted but can be used to evade detection when conducting phishing, C&amp;amp;C, exfiltration and downloading tools. In this post I will introduce a way to abusing PayPal and hopefully will be contributing to the LOTS project.
 This series is (intentively) for my ideas on novel exfiltration/ C&amp;amp;C channels.
 Exfiltraftion by Paypal In Paypal, one can dispute an order and upload his/ her evidence.</description>
     </item>
     <item>
       <title>Prisma Cloud Defenders</title>
-      <link>http://localhost:1313/blogs/red-team/prisma-cloud-defenders/</link>
+      <link>http://localhost:1313/blogs/security/prisma-cloud-defenders/</link>
       <pubDate>Wed, 20 Jul 2022 17:54:24 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/red-team/prisma-cloud-defenders/</guid>
+      <guid>http://localhost:1313/blogs/security/prisma-cloud-defenders/</guid>
       <description>Tl;dr - unfixed information disclosure in Prisma Cloud defenders This post is about how to abuse a agent of a cloud security solution to get information which you should not know, like what security controls are applied, what assets the victim owns and the owners of the assets.
 Introduction A few months ago I was examining the Prisma Cloud configuration of my workplace and accidentally discovered an information disclosure issue of Prisma Cloud defender (the agent).</description>
     </item>

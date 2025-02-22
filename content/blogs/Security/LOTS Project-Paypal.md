@@ -3,8 +3,7 @@ title: "LOTS Project - Paypal"
 date: 2022-10-02T00:54:30+08:00
 showToc: true
 tags: ["lots project", "exfiltration"]
-categories: ["red-team"]
-series: ["lots_project"]
+categories: ["security"]
 TocOpen: true 
 ---
 

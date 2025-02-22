@@ -11,13 +11,13 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Sep 2024 15:02:25 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 02 Oct 2022 00:54:30 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/lots-project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LOTS Project - Paypal</title>
-      <link>http://localhost:1313/blogs/red-team/lots-project-paypal/</link>
+      <link>http://localhost:1313/blogs/security/lots-project-paypal/</link>
       <pubDate>Sun, 02 Oct 2022 00:54:30 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/red-team/lots-project-paypal/</guid>
+      <guid>http://localhost:1313/blogs/security/lots-project-paypal/</guid>
       <description>Introduction LOTS project, founded by mrd0x, is a collection of websites which is likely be trusted but can be used to evade detection when conducting phishing, C&amp;amp;C, exfiltration and downloading tools. In this post I will introduce a way to abusing PayPal and hopefully will be contributing to the LOTS project.
 This series is (intentively) for my ideas on novel exfiltration/ C&amp;amp;C channels.
 Exfiltraftion by Paypal In Paypal, one can dispute an order and upload his/ her evidence.</description>

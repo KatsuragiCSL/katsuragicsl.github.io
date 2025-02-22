@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jan 2025 00:15:38 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 23 Feb 2025 02:59:19 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Centrality: how we actually perceive the severity of a bug</title>
+      <link>http://localhost:1313/blogs/security/centrality-what-cvss-missed/</link>
+      <pubDate>Sun, 23 Feb 2025 02:59:19 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/security/centrality-what-cvss-missed/</guid>
+      <description>An empty business lingo or a good quantification? We hope to, and probably need to, quantify the severity of security bugs. The &amp;ldquo;need&amp;rdquo; mainly come from that we have to provide an interface to management: we need to have a reasonably objective quantification to tell how serious an issue is (and show that we would not overplay/downplay something for our own self-interest), and that lay the ground of the establishment of a bug handling standard that the engineering team would follow.</description>
+    </item>
     <item>
       <title>Picking grammatical mistakes in an insightful article</title>
       <link>http://localhost:1313/blogs/thoughts/picking-grammatical-mistakes-in-an-insightful-article/</link>
@@ -94,26 +101,26 @@ Mathematics is my first love. I am also into computer science, philosophy, chine
     </item>
     <item>
       <title>Unity Game Reversing(1): Setup</title>
-      <link>http://localhost:1313/blogs/software-hacking/unity-game-reversing-1/</link>
+      <link>http://localhost:1313/blogs/security/unity-game-reversing-1/</link>
       <pubDate>Mon, 17 Apr 2023 04:16:55 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/software-hacking/unity-game-reversing-1/</guid>
+      <guid>http://localhost:1313/blogs/security/unity-game-reversing-1/</guid>
       <description>Introduction Recently I am trying to reverse engineering a simple Windows desktop game made with Unity. I took a look on some reference but found that the setup can be a bit frustrating. This post is attempting to make the setup clearer and more followable. Reference links are listed below.
 Tools Our target is to decompile and debug the Assembly-CSharp.dll inside the folder &amp;lt;game root folder&amp;gt;\&amp;lt;GANE_NAME&amp;gt;_Data\Managed\, which contains custom code the game developer wrote, not the code of Unity or other frameworks.</description>
     </item>
     <item>
       <title>LOTS Project - Paypal</title>
-      <link>http://localhost:1313/blogs/red-team/lots-project-paypal/</link>
+      <link>http://localhost:1313/blogs/security/lots-project-paypal/</link>
       <pubDate>Sun, 02 Oct 2022 00:54:30 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/red-team/lots-project-paypal/</guid>
+      <guid>http://localhost:1313/blogs/security/lots-project-paypal/</guid>
       <description>Introduction LOTS project, founded by mrd0x, is a collection of websites which is likely be trusted but can be used to evade detection when conducting phishing, C&amp;amp;C, exfiltration and downloading tools. In this post I will introduce a way to abusing PayPal and hopefully will be contributing to the LOTS project.
 This series is (intentively) for my ideas on novel exfiltration/ C&amp;amp;C channels.
 Exfiltraftion by Paypal In Paypal, one can dispute an order and upload his/ her evidence.</description>
     </item>
     <item>
       <title>Prisma Cloud Defenders</title>
-      <link>http://localhost:1313/blogs/red-team/prisma-cloud-defenders/</link>
+      <link>http://localhost:1313/blogs/security/prisma-cloud-defenders/</link>
       <pubDate>Wed, 20 Jul 2022 17:54:24 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/red-team/prisma-cloud-defenders/</guid>
+      <guid>http://localhost:1313/blogs/security/prisma-cloud-defenders/</guid>
       <description>Tl;dr - unfixed information disclosure in Prisma Cloud defenders This post is about how to abuse a agent of a cloud security solution to get information which you should not know, like what security controls are applied, what assets the victim owns and the owners of the assets.
 Introduction A few months ago I was examining the Prisma Cloud configuration of my workplace and accidentally discovered an information disclosure issue of Prisma Cloud defender (the agent).</description>
     </item>

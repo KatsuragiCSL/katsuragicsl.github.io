@@ -2,9 +2,8 @@
 title: "Unity Game Reversing(1): Setup"
 date: 2023-04-17T04:16:55+08:00
 showToc: true
-categories: ["software-hacking"]
+categories: ["security"]
 tags: ['tutorials', 'unity', 'reversing', 'dotnet']
-series: ["unity_game_reversing"]
 ---
 
 ## Introduction
