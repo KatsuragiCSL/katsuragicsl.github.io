@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Red-Team on Script Adults</title><link>https://katsuragicsl.github.io/categories/red-team/</link><description>Recent content in Red-Team on Script Adults</description><image><title>Script Adults</title><url>https://katsuragicsl.github.io/images/papermod-cover.png</url><link>https://katsuragicsl.github.io/images/papermod-cover.png</link></image><generator>Hugo -- 0.128.2</generator><language>en-us</language><lastBuildDate>Sun, 01 Sep 2024 15:02:25 +0800</lastBuildDate><atom:link href="https://katsuragicsl.github.io/categories/red-team/index.xml" rel="self" type="application/rss+xml"/><item><title>LOTS Project - Paypal</title><link>https://katsuragicsl.github.io/blogs/red-team/lots-project-paypal/</link><pubDate>Sun, 02 Oct 2022 00:54:30 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/red-team/lots-project-paypal/</guid><description>Introduction LOTS project, founded by mrd0x, is a collection of websites which is likely be trusted but can be used to evade detection when conducting phishing, C&amp;amp;C, exfiltration and downloading tools. In this post I will introduce a way to abusing PayPal and hopefully will be contributing to the LOTS project.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Red-Team on Script Adults</title>
+    <link>http://localhost:1313/categories/red-team/</link>
+    <description>Recent content in Red-Team on Script Adults</description>
+    <image>
+      <title>Script Adults</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Sep 2024 15:02:25 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/red-team/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LOTS Project - Paypal</title>
+      <link>http://localhost:1313/blogs/red-team/lots-project-paypal/</link>
+      <pubDate>Sun, 02 Oct 2022 00:54:30 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/red-team/lots-project-paypal/</guid>
+      <description>Introduction LOTS project, founded by mrd0x, is a collection of websites which is likely be trusted but can be used to evade detection when conducting phishing, C&amp;amp;C, exfiltration and downloading tools. In this post I will introduce a way to abusing PayPal and hopefully will be contributing to the LOTS project.
 This series is (intentively) for my ideas on novel exfiltration/ C&amp;amp;C channels.
-Exfiltraftion by Paypal In Paypal, one can dispute an order and upload his/ her evidence.</description></item><item><title>Prisma Cloud Defenders</title><link>https://katsuragicsl.github.io/blogs/red-team/prisma-cloud-defenders/</link><pubDate>Wed, 20 Jul 2022 17:54:24 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/red-team/prisma-cloud-defenders/</guid><description>Tl;dr - unfixed information disclosure in Prisma Cloud defenders This post is about how to abuse a agent of a cloud security solution to get information which you should not know, like what security controls are applied, what assets the victim owns and the owners of the assets.
-Introduction A few months ago I was examining the Prisma Cloud configuration of my workplace and accidentally discovered an information disclosure issue of Prisma Cloud defender (the agent).</description></item></channel></rss>
+Exfiltraftion by Paypal In Paypal, one can dispute an order and upload his/ her evidence.</description>
+    </item>
+    <item>
+      <title>Prisma Cloud Defenders</title>
+      <link>http://localhost:1313/blogs/red-team/prisma-cloud-defenders/</link>
+      <pubDate>Wed, 20 Jul 2022 17:54:24 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/red-team/prisma-cloud-defenders/</guid>
+      <description>Tl;dr - unfixed information disclosure in Prisma Cloud defenders This post is about how to abuse a agent of a cloud security solution to get information which you should not know, like what security controls are applied, what assets the victim owns and the owners of the assets.
+Introduction A few months ago I was examining the Prisma Cloud configuration of my workplace and accidentally discovered an information disclosure issue of Prisma Cloud defender (the agent).</description>
+    </item>
+  </channel>
+</rss>
