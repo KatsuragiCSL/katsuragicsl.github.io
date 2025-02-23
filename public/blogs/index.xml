@@ -11,22 +11,14 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Feb 2025 23:02:22 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 23 Feb 2025 03:03:17 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Centrality: What CVSS missed</title>
+      <title>Centrality: how we actually perceive the severity of a bug</title>
       <link>http://localhost:1313/blogs/security/centrality-what-cvss-missed/</link>
-      <pubDate>Sat, 22 Feb 2025 23:02:22 +0800</pubDate>
+      <pubDate>Sun, 23 Feb 2025 02:59:19 +0800</pubDate>
       <guid>http://localhost:1313/blogs/security/centrality-what-cvss-missed/</guid>
-      <description>Not all P5 are equal Let&amp;rsquo;s start with an example:
-As the CVSS scoring system^[1] evolves over these years, it becomes more and more complicated,</description>
-    </item>
-    <item>
-      <title>Bug bounty performance as a performance metric of pentesters</title>
-      <link>http://localhost:1313/blogs/security/bug-bounty-as-performance-metrics-of-pentesters/</link>
-      <pubDate>Sun, 02 Feb 2025 00:43:14 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/security/bug-bounty-as-performance-metrics-of-pentesters/</guid>
-      <description>What measures the quality of work of pentesters? Every job needs performance metrics.</description>
+      <description>An empty business lingo or a good quantification? We hope to, and probably need to, quantify the severity of security bugs. The “need” mainly comes from the fact that we have to provide an interface to management: We need to have a reasonably objective quantification to tell how serious an issue is (and show that we would not overplay/downplay something for our own self-interest), and that would lay the groundwork for the establishment of a bug handling standard that the engineering team would follow.</description>
     </item>
     <item>
       <title>Picking grammatical mistakes in an insightful article</title>
