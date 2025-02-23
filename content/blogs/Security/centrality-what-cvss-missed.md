@@ -17,7 +17,7 @@ We hope to, and probably need to, quantify the severity of security bugs. The �
 
 But do our quantifications accurately reflect the severity of the bugs? Or do they reduce themselves to merely buzzwords and props for business talks?
 
-Business lingo usually does not match the aesthetics of technical people: sometimes they are even allergic to the vocabulary of business talk so much that they want to escape from it, like Nero in the traders' story in **Fooled by randomness**[^1] (except when they have to boast or to look for jobs on LinkedIn, of course, since after all we have to feed ourselves right? :smirk:). So when something annoys technical people and they complain about the technical inaccuracy, most of the time it is because the thing contains a bit too much business lingo.
+Business lingo usually does not match the aesthetics of technical people: sometimes they are even allergic to the vocabulary of business talk so much that they want to escape from it, like Nero in the traders' story in *Fooled by randomness*[^1] (except when they have to boast or to look for jobs on LinkedIn, of course, since after all we have to feed ourselves right? :smirk:). So when something annoys technical people and they complain about the technical inaccuracy, most of the time it is because the thing contains a bit too much business lingo.
 
 As the CVSS scoring system[^2] evolves over these years, it becomes more and more complicated, and yet still addressing the severity of bugs in a not very ideal way. I and my colleagues have ranted about it, `curl`’s author also [complained](https://daniel.haxx.se/blog/2025/01/23/cvss-is-dead-to-us/) about it - I believe there are more people out there who are not happy with it.
 
