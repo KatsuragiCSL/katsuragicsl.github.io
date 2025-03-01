@@ -1,5 +1,5 @@
 ---
-title: "Centrality: how we actually perceive the severity of a bug"
+title: "[Updated 20250301]Centrality: how we actually perceive the severity of a bug"
 subtitle: "...and the deficiency of the CVSS scoring and other such quantification systems"
 math: true
 tikz: true
@@ -10,6 +10,11 @@ tags: ['philosophy']
 cover:
   image: https://images.unsplash.com/photo-1664526936810-ec0856d31b92?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 ---
+
+{{< notice info >}}
+**Updates**:\
+After giving a second thought on the topic and reorganizing the materials, I had a sharing session with my teammates and decided to update this article accordingly. Updates include more suitable examples and graphics.
+{{< /notice >}}
 
 ### An empty business lingo or a good quantification?
 

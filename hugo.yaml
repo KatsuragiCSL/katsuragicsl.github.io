@@ -2,7 +2,7 @@ baseURL: "https://katsuragicsl.github.io"
 title: "Script Adults"
 languageCode: en-us
 paginate: 5
-theme: ["PaperMod"]
+theme: ["hugo-notice", "PaperMod"]
 enableGitInfo: true
 frontmatter:
   lastmod:
