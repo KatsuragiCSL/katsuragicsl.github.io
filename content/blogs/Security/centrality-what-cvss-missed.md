@@ -34,28 +34,59 @@ To be fair, usually it is not a serious problem to those who have solid experien
 
 Let’s start with an imaginary yet realistic example:
 
-Consider two bugs. Bug 1 is a “Missing ‘HttpOnly’ Cookie Attribute”. Bug 2 is a theoretical cryptographical weakness in the signing algorithm used in a JWT (which is in the cookie and is used for authenticating users).
+Consider two bugs. \
+Bug 1 is a “Missing Secure Cookie Attribute”. \
+Bug 2 is a Weird input reflection: the input in a `GET` parameter is splitted into 2 parts and reflected into 2 different places in the same page, but no one could find a valid XSS, and sanitization is in place.
 
-I am pretty sure both will get a very low score in the CVSS system or a P5/informational in Bugcrowd’s vulnerability rating. But after marking the scores/ P-level for them, how strongly do you feel that we should fix these issues? Although both of them are not serious problems, I feel a much stronger urge to fix bug 2, and I believe many people would feel the same way. But why do we feel this way?
+Now bug 1 is a standard low severity issue, in fact, in practice it is quite often to be treated as informational. For bug 2, it falls under the category of a standard informational issue (user input reflection) although its behavior is not quite standard among the issues in that category. 
 
-The naive approach to explain it is with the ratio of “hardness to exploit” to “impact”. But that’s actually the high level approach of CVSS, CVSS already broke it down for you: attack complexity, user interaction, privilege required, etc. are just a breakdown of “hardness to exploit”, and the CIA scoring is the breakdown of “impact”. Both bug 1 and bug 2 have almost zero exploitability and very similar impact. That’s exactly why the CVSS framework cannot explain the distinction.
+So in reality they will both be treated as with roughly the same severity, the input reflection one will probably be lower.
 
-However, if we introspect we will find that the perceived severity is affected by whether the issue is the “real meat” or not:
-Missing HTTPOnly cookie attribute could surely lead to cookie stealing, but it is like the last straw on the camel’s back, it’s peripheral, boring, not important, and far away from being one of the “key steps” in stealing cookies. In contrast, the signing algorithm is the bread and butter of JWT, it is a crucial part.
+However, if you could only fix one of them, which one would you choose? (In reality you could choose "both", but let's pretend, for the sake of thought experiments).
 
-But how do we articulate that?
+I would choose the input reflection one. Let's do some analysis. The core idea of CVSS and the usual practice of how people evalute severity today can be summarized as calculating the ratio of "how hard/likely to exploit" to "how bad is the impact". Let's see the comparison on "how hard/likely to exploit":
+
+| Cookie without secure flag             | Input reflection    |
+|:---------------------------------------|:--------------------|
+| Need to have the target website allow HTTP   | Need a way to bypass sanitization                                 |
+| Need to trick the user to click on HTTP link | Need a way to trigger the payload correctly after the input split |
+| Need MITM to capture the cookie              | Need user to click the link for the reflected XSS                 |
+
+For the impact part:
+
+| Cookie without secure flag             | Input reflection    |
+|:---------------------------------------|:--------------------|
+| Stealing the cookie (you get the MITM) | Stealing the cookie |
+| Leaking the cookie to whoever has MITM | Further phishing    |
+
+You would probably agree that their "how hard/likely to exploit" to "how bad is the impact" ratio look quite close.
+
+However, if you break down how exactly are they being "unlikely to happen/hard to exploit", you will have a different point of view. We can do so by asking questions like "how do they fit in to a bigger picture?", "how can I manipulate it in a different way?". So here is another table:
+
+| Cookie without secure flag             | Input reflection    |
+|:---------------------------------------|:--------------------|
+| Only relevant to cleartext transmission issue between the user and the web server Not linked to many different things | There might be a way to trigger the input split in an useful way                                                                        |
+|   | The sanitization library might have bugs  |
+|   | If there are subdomains that gets data from the site which has the reflection issue, and they do some "weird" manipulation to the data...   |
+
+There are way more ways to play with the input reflection issue, it is connected with more things.
+
+The “use cases” of the reflection issue is all extremely hypothetical. But they cast more shades over our analysis: it feels like there is a black swan in one of the corners in the world, you just know it is unlikely to be the next corner you are going to turn.
+
+Meanwhile, dealing with the Cookie Secure flag issue is (almost) like walking on a straight road. You see a fierce dog in front of you which look like going to bite you if you come close. Well Ok, I can just stop walking. Nothing scaring hiding in shadow.
+
+But how do we articulate the analysis above? What is the concept behind it?
 
 
 ### Centrality
 
 I first learned the concept of centrality from Timothy Gowers's talk on 2022 Fields Medal Symposium[^3]. He used centrality (as one of the factors) to explain why we consider some problems to be more “interesting” than others. I found that this concept can be applied in similar ways to explain several things out of the mathematical realm, including how we perceive the severity of a bug.
 
-In short, the more centrality a bug has, the more important and fix-worthy it is.
+If you plot out all the "connections", the more connections a thing have, the more they will look more “central” in the graph:
 
-If you plot out all the attack/defense mechanisms and other components related to the component in concern, the more important a component is, the more connections with other things in the graph it will have. They will look more “central” in the graph.
+![](/centrality/centrality.png)
 
-If you plot such a graph for the cryptography of the JWT you will see multiple attack techniques linked to it: changing the algo, breaking the encryption, abusing symmetric encryption, etc. \
-But the httponly cookie attribute is sitting humbly at the border with just one connection: “given XSS exists, retrieve the cookie” (there could be more, but in any case, it is way less than that of the JWT), and if we consider the bigger picture of XSS, most of the connections happen at the node that represents the data that got inserted into js.
+A more abstract example:
 
 Imagine you need to flow some water from the sources to the end like in the graph below:
 
@@ -139,16 +170,17 @@ Which situation triggers you more? Is it when the “center” node has a minor 
 {{< /tikz >}}
 
 
-In the case of the dysfunctioning worsening/getting “exploited”, both case stops water flow from the source to the ends, but the center node case just looks more critical. Even if we assume the cost of fixing the issue is the same in both cases (say we can just click a button and a new node for replacing will be spawned like magic).
+In the case of the dysfunctioning worsening/getting “exploited”, both case stops water flow from the source to the ends, but the center node case just looks more critical. Even if we assume the cost of fixing the issue is the same in both cases (say we can just click a button and a new node for replacing will be spawned like magic). But you probably feel more urge to look at the center node as it looks like there are more things you could dig into.
 
-Is that feeling an illusion, i.e. none of the above situations is worse than another? I believe not:
+Centrality causes a few things: 
 
-More connections mean more uncertainty in evaluation: maybe we missed something even though our investigation says it is all fine.
+- Bring uncertainty into play
+- Hidden implications
+- More flexibility (hence more likely to have some new ways to break known defenses)
 
-More connections also mean more hidden implications, a currently harmless issue (sometimes we describe as “weridness”, “not the best practice”) may be already quitely changing the behaviors of other things that are related, and those changes might chain up and cause some other weirdness.
+Also...although it does not affect the severity, but it does courage us to pay more attention on things that have more centrality: more transferable lessons you will learn from dealing with it.
 
-More connections also mean the experience we gain by looking into it is possibly more useful in the future.
-
+Hence, centrality is definitely one of the factors for evaluating the severity of a bug, the more centrality the more severe. However it is missed in the current quantification systems and not even mentioned by people although they might be using it in a daily basis.
 
 [^1]: Taleb, Nassim Nicholas, 1960-. (2001). Fooled by randomness : the hidden role of chance in the markets and in life. Penguin Books.
 [^2]: At the time of writing, the latest version is CVSS 4.0: https://www.first.org/cvss/v4-0/. I, as a security worker, find it a bit painful to use as well.
