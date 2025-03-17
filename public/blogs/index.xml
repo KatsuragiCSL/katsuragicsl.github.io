@@ -119,5 +119,12 @@ Exfiltraftion by Paypal In Paypal, one can dispute an order and upload his/ her 
       <description>Tl;dr - unfixed information disclosure in Prisma Cloud defenders This post is about how to abuse a agent of a cloud security solution to get information which you should not know, like what security controls are applied, what assets the victim owns and the owners of the assets.
 Introduction A few months ago I was examining the Prisma Cloud configuration of my workplace and accidentally discovered an information disclosure issue of Prisma Cloud defender (the agent).</description>
     </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/blogs/thoughts/wtever-law/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/thoughts/wtever-law/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

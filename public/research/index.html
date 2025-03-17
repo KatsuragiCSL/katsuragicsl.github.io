@@ -10,7 +10,7 @@
 <meta name="description" content="Researches - Script Adults">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/research/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.faaf531dd5fc0b14c9c68bb6551209d5c8d240410303257c723bcff3ac4d4100.css" integrity="sha256-&#43;q9THdX8CxTJxou2VRIJ1cjSQEEDAyV8cjvP86xNQQA=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -58,6 +58,7 @@
     </style>
 </noscript>
 
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
@@ -66,6 +67,17 @@
                 {left: "$", right: "$", display: false}
             ]
         });
+    });
+</script>
+<script>
+    document.addEventListener("tikzjax-load-finished", function(e) {
+        const svgEl = e.target;
+		let svg = svgEl.outerHTML;
+
+        svg = svg.replaceAll(/("#000"|"black")/g, `"currentColor"`)
+				.replaceAll(/("#fff"|"white")/g, `"var(--background-tikz)"`);
+
+		svgEl.outerHTML = svg;
     });
 </script>
   
@@ -181,10 +193,22 @@
     </a>
   </h1>
 </header>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">CONNECTEDNESS: A DIMENSION OF SECURITY BUG SEVERITY ASSESSMENT TO MEASURE UNCERTAINTY
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> Previous Next     / [pdf] View the PDF file here. </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-17 13:10:18 +0800 CST'>March 17, 2025</span>&nbsp;·&nbsp;<span title='2025-03-17 13:10:18 +0800 CST'>updated March 17, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;<a href="/categories/research"> research</a></footer>
+  <a class="entry-link" aria-label="post link to CONNECTEDNESS: A DIMENSION OF SECURITY BUG SEVERITY ASSESSMENT TO MEASURE UNCERTAINTY" href="http://localhost:1313/research/connectedness/"></a>
+</article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2024 <a href="http://localhost:1313/">Script Adults</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Script Adults</a></span> · 
 
     <span>
         Powered by

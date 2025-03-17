@@ -60,10 +60,10 @@ menu:
       name: Archives
       url: /archives/
       weight: 10
-    #- identifier: research
-    #  name: Research
-    #  url: /research/
-    #  weight: 20
+    - identifier: preprint
+      name: Preprints
+      url: /preprints/
+      weight: 20
     - identifier: categories
       name: Categories
       url: /categories/

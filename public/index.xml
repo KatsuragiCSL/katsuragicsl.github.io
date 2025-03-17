@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Mar 2025 23:10:42 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 17 Mar 2025 13:10:18 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CONNECTEDNESS: A DIMENSION OF SECURITY BUG SEVERITY ASSESSMENT TO MEASURE UNCERTAINTY</title>
+      <link>http://localhost:1313/preprints/connectedness/</link>
+      <pubDate>Mon, 17 Mar 2025 13:10:18 +0800</pubDate>
+      <guid>http://localhost:1313/preprints/connectedness/</guid>
+      <description> Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. </description>
+    </item>
     <item>
       <title>[Updated 20250301]Centrality: how we actually perceive the severity of a bug</title>
       <link>http://localhost:1313/blogs/security/centrality-what-cvss-missed/</link>
@@ -126,6 +133,13 @@ Exfiltraftion by Paypal In Paypal, one can dispute an order and upload his/ her 
       <guid>http://localhost:1313/blogs/security/prisma-cloud-defenders/</guid>
       <description>Tl;dr - unfixed information disclosure in Prisma Cloud defenders This post is about how to abuse a agent of a cloud security solution to get information which you should not know, like what security controls are applied, what assets the victim owns and the owners of the assets.
 Introduction A few months ago I was examining the Prisma Cloud configuration of my workplace and accidentally discovered an information disclosure issue of Prisma Cloud defender (the agent).</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/blogs/thoughts/wtever-law/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/thoughts/wtever-law/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>
