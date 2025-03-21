@@ -313,36 +313,36 @@
   @-webkit-keyframes spin {
     to { -webkit-transform: rotate(360deg); }
   }
-  </style><div class="embed-pdf-container" id="embed-pdf-container-b50d1bf6">
-    <div class="pdf-loadingWrapper" id="pdf-loadingWrapper-b50d1bf6">
-        <div class="pdf-loading" id="pdf-loading-b50d1bf6"></div>
+  </style><div class="embed-pdf-container" id="embed-pdf-container-d33ffd1f">
+    <div class="pdf-loadingWrapper" id="pdf-loadingWrapper-d33ffd1f">
+        <div class="pdf-loading" id="pdf-loading-d33ffd1f"></div>
     </div>
     <div id="overlayText">
-      <a href="/preprints/Connectedness_preprint.pdf" aria-label="Download" download>
+      <a href="/preprints/Connectedness__preprint_.pdf" aria-label="Download" download>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
             <path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z" />
         </svg>
       </a>
     </div>
-    <canvas class="pdf-canvas" id="pdf-canvas-b50d1bf6"></canvas>
+    <canvas class="pdf-canvas" id="pdf-canvas-d33ffd1f"></canvas>
 </div>
 
-<div class="pdf-paginator" id="pdf-paginator-b50d1bf6">
-    <button id="pdf-prev-b50d1bf6">Previous</button>
-    <button id="pdf-next-b50d1bf6">Next</button> &nbsp; &nbsp;
+<div class="pdf-paginator" id="pdf-paginator-d33ffd1f">
+    <button id="pdf-prev-d33ffd1f">Previous</button>
+    <button id="pdf-next-d33ffd1f">Next</button> &nbsp; &nbsp;
     <span>
-      <span class="pdf-pagenum" id="pdf-pagenum-b50d1bf6"></span> / <span class="pdf-pagecount" id="pdf-pagecount-b50d1bf6"></span>
+      <span class="pdf-pagenum" id="pdf-pagenum-d33ffd1f"></span> / <span class="pdf-pagecount" id="pdf-pagecount-d33ffd1f"></span>
     </span>
-    <a class="pdf-source" id="pdf-source-b50d1bf6" href="/preprints/Connectedness_preprint.pdf">[pdf]</a>
+    <a class="pdf-source" id="pdf-source-d33ffd1f" href="/preprints/Connectedness__preprint_.pdf">[pdf]</a>
 </div>
 
 <noscript>
-View the PDF file <a class="pdf-source" id="pdf-source-noscript-b50d1bf6" href="/preprints/Connectedness_preprint.pdf">here</a>.
+View the PDF file <a class="pdf-source" id="pdf-source-noscript-d33ffd1f" href="/preprints/Connectedness__preprint_.pdf">here</a>.
 </noscript>
 
 <script type="text/javascript">
     (function(){
-    var url = '\/preprints\/Connectedness_preprint.pdf';
+    var url = '\/preprints\/Connectedness__preprint_.pdf';
 
     var hidePaginator = "" === "true";
     var hideLoader = "" === "true";
@@ -361,10 +361,10 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-b50d1bf6" href="
         pageRendering = false,
         pageNumPending = null,
         scale = 3,
-        canvas = document.getElementById('pdf-canvas-b50d1bf6'),
+        canvas = document.getElementById('pdf-canvas-d33ffd1f'),
         ctx = canvas.getContext('2d'),
-        paginator = document.getElementById("pdf-paginator-b50d1bf6"),
-        loadingWrapper = document.getElementById('pdf-loadingWrapper-b50d1bf6');
+        paginator = document.getElementById("pdf-paginator-d33ffd1f"),
+        loadingWrapper = document.getElementById('pdf-loadingWrapper-d33ffd1f');
 
 
     
@@ -402,7 +402,7 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-b50d1bf6" href="
       });
 
       
-      document.getElementById('pdf-pagenum-b50d1bf6').textContent = num;
+      document.getElementById('pdf-pagenum-d33ffd1f').textContent = num;
     }
 
     
@@ -446,7 +446,7 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-b50d1bf6" href="
       pageNum--;
       queueRenderPage(pageNum);
     }
-    document.getElementById('pdf-prev-b50d1bf6').addEventListener('click', onPrevPage);
+    document.getElementById('pdf-prev-d33ffd1f').addEventListener('click', onPrevPage);
 
     
 
@@ -457,14 +457,14 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-b50d1bf6" href="
       pageNum++;
       queueRenderPage(pageNum);
     }
-    document.getElementById('pdf-next-b50d1bf6').addEventListener('click', onNextPage);
+    document.getElementById('pdf-next-d33ffd1f').addEventListener('click', onNextPage);
 
     
 
     pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
       pdfDoc = pdfDoc_;
       var numPages = pdfDoc.numPages;
-      document.getElementById('pdf-pagecount-b50d1bf6').textContent = numPages;
+      document.getElementById('pdf-pagecount-d33ffd1f').textContent = numPages;
 
       
       if(pageNum > numPages) {

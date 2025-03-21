@@ -6,4 +6,4 @@ categories: ["papers"]
 tags: ['security', 'philosophy', 'CVSS']
 ---
 
-{{< embed-pdf url="/preprints/Connectedness_preprint.pdf" >}}
+{{< embed-pdf url="/preprints/Connectedness__preprint_.pdf" >}}
