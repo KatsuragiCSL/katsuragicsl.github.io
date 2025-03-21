@@ -1,8 +1,8 @@
 ---
 title: "CONNECTEDNESS: A DIMENSION OF SECURITY BUG SEVERITY
-ASSESSMENT TO MEASURE UNCERTAINTY"
+ASSESSMENT FOR MEASURING UNCERTAINTY"
 date: 2025-03-17T13:10:18+08:00
-categories: ["preprints"]
+categories: ["papers"]
 tags: ['security', 'philosophy', 'CVSS']
 ---
 

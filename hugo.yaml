@@ -60,9 +60,9 @@ menu:
       name: Archives
       url: /archives/
       weight: 10
-    - identifier: preprint
-      name: Preprints
-      url: /preprints/
+    - identifier: papers
+      name: Papers
+      url: /papers/
       weight: 20
     - identifier: categories
       name: Categories
