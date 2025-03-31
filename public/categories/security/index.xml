@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Mar 2025 23:10:42 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 31 Mar 2025 23:45:51 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Updated 20250301]Centrality: how we actually perceive the severity of a bug</title>
@@ -21,7 +21,10 @@
       <description>Info
 Updates:
 After giving a second thought on the topic and reorganizing the materials, I had a sharing session with my teammates and decided to update this article accordingly. Updates include more suitable examples and graphics.
-An empty business lingo or a good quantification? We hope to, and probably need to, quantify the severity of security bugs. The “need” mainly comes from the fact that we have to provide an interface to management: We need to have a reasonably objective quantification to tell how serious an issue is (and show that we would not overplay/downplay something for our own self-interest), and that would lay the groundwork for the establishment of a bug handling standard that the engineering team would follow.</description>
+Info
+Updates 2:
+It is revised again and published as a preprint. Now you can see it at https://arxiv.org/abs/2503.17813 or https://katsuragicsl.github.io/papers/connectedness/
+An empty business lingo or a good quantification? We hope to, and probably need to, quantify the severity of security bugs.</description>
     </item>
     <item>
       <title>Unity Game Reversing(1): Setup</title>

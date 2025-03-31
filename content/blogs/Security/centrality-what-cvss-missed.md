@@ -1,5 +1,5 @@
 ---
-title: "[Updated 20250301]Centrality: how we actually perceive the severity of a bug"
+title: "[Updated 20250331]Centrality: how we actually perceive the severity of a bug"
 subtitle: "...and the deficiency of the CVSS scoring and other such quantification systems"
 math: true
 tikz: true
