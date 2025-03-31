@@ -16,6 +16,11 @@ cover:
 After giving a second thought on the topic and reorganizing the materials, I had a sharing session with my teammates and decided to update this article accordingly. Updates include more suitable examples and graphics.
 {{< /notice >}}
 
+{{< notice info >}}
+**Updates 2**:\
+It is revised again and published as a preprint. Now you can see it at https://arxiv.org/abs/2503.17813 or https://katsuragicsl.github.io/papers/connectedness/
+{{< /notice >}}
+
 ### An empty business lingo or a good quantification?
 
 We hope to, and probably need to, quantify the severity of security bugs. The “need” mainly comes from the fact that we have to provide an interface to management: We need to have a reasonably objective quantification to tell how serious an issue is (and show that we would not overplay/downplay something for our own self-interest), and that would lay the groundwork for the establishment of a bug handling standard that the engineering team would follow.
