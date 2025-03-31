@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Mar 2025 21:18:07 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 21 Mar 2025 22:45:56 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CONNECTEDNESS: A DIMENSION OF SECURITY BUG SEVERITY ASSESSMENT FOR MEASURING UNCERTAINTY</title>
@@ -140,6 +140,13 @@ Introduction A few months ago I was examining the Prisma Cloud configuration of 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blogs/thoughts/wtever-law/</guid>
       <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/riscv-explainer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/riscv-explainer/</guid>
+      <description>&lt;!DOCTYPE html&gt; RISC-V Instruction Explainer RISC-V Instruction Explainer Explain Instructions Load Example </description>
     </item>
   </channel>
 </rss>
