@@ -11,13 +11,16 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 06 Apr 2025 00:05:27 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/elementary/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Elementary solution of a weird intergal problem (Putnam 1985 A5)</title>
+      <title>An elementary solution of a weird intergal problem (Putnam 1985 A5)</title>
       <link>http://localhost:1313/blogs/mathematics/elementary-solution-of-a-weird-integral-problem/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 05 Apr 2025 22:38:14 +0800</pubDate>
       <guid>http://localhost:1313/blogs/mathematics/elementary-solution-of-a-weird-integral-problem/</guid>
-      <description>Problem $x+1$</description>
+      <description>Problem Let $I_{m} = \int^{2\pi}_{0} \cos(x)\cos(2x)\dots\cos(mx) dx$. For $m$ in $1, 2, \dots, 10$, for which $m$ is $I_m \neq 0$ ?
+Solution $I_m$ is non-zero if and only if $m \equiv 0, 3 \pmod{4}$.
+Main idea The official(seemingly? It is in the putnam problem book and a few solutions I found online do the same.) solution is to substitute $\cos x = \frac{e^{ix} + e^{-ix}}{2}$ followed by grouping the terms into $\cos x \cos (2x) \dots \cos (mx) = e^{\text{something}}$, and analyze the something.</description>
     </item>
   </channel>
 </rss>

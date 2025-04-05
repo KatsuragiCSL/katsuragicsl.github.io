@@ -14,6 +14,7 @@ tags: ['putnam', 'elementary', 'fourier-analysis', 'symmetry']
 Let $I_{m} = \int^{2\pi}_{0} \cos(x)\cos(2x)\dots\cos(mx) dx$. For $m$ in $1, 2, \dots, 10$,
 for which $m$ is $I_m \neq 0$ ?
 
+
 ### Solution
 
 $I_m$ is non-zero if and only if $m \equiv 0, 3 \pmod{4}$.
@@ -24,11 +25,18 @@ $I_m$ is non-zero if and only if $m \equiv 0, 3 \pmod{4}$.
 The official(seemingly? It is in the putnam problem book and a few solutions I found online do the same.) solution is to substitute $\cos x = \frac{e^{ix} + e^{-ix}}{2}$ followed by grouping the terms into $\cos x \cos (2x) \dots \cos (mx) = e^{\text{something}}$, and analyze the `something`. This approach of cause is of cause good in its own right: it is exactly how you split up the $e^{in\theta}$ terms into triginometric polynomials (or ) in Fourier analysis 101. However it is a little bit annoying to manipulate those powers of $e$. And for this problem it could be done much in a much simpler and elementary way: exploiting the point of symmetry.
 
 Let $f_m(x) = \cos(x)\cos(2x)\dots\cos(mx)$ and $g_m(x) = \cos(mx)$. Notice that $g_m(x-\pi) = -g_m(x)$ if $m$ is odd and $ = g_m(x)$ if $m$ is even. \
-Hence $f_1(x-\pi) = -f_2(x)$ , $f_2(x-\pi) = -f_2(x)$ , $f_3(x-\pi) = f_3(x)$ \
+Hence $f_1(x-\pi) = -f_2(x)$ , $f_2(x-\pi) = -f_2(x)$ , $f_3(x-\pi) = f_3(x), \dots$ 
+
+So $\int^{2\pi}\_{0} f_m = \int^{2\pi}\_{\pi} f_m + \int^{\pi}_{0} f_m = \int^{\pi}\_{0} (af_m + f_m)$ by change of variable, where $a$ is $-1$ when $m$ has a value such that $f_m(x-\pi) = -f_m(x)$ and is $1$ otherwise. 
+
 If we note $0$ when the integral gives $0$ and $1$ if not, then it looks like:
 
 $$
-0, 0, 1, 1, 0, 0, 1, 1, \dots
+m = 1, 2, 3, 4, 5, 6, 7, 8, \dots
+$$
+
+$$
+\int f_m = 0, 0, 1, 1, 0, 0, 1, 1, \dots
 $$
 
 In general, the integral of $f$ is non-zero if and only if $m \equiv 0, 3 \pmod{4}$.

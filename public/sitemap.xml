@@ -2,14 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/assembly/</loc>
-    <lastmod>2025-03-31T23:42:17+08:00</lastmod>
+    <loc>http://localhost:1313/blogs/mathematics/elementary-solution-of-a-weird-integral-problem/</loc>
+    <lastmod>2025-04-06T00:05:27+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blogs/</loc>
-    <lastmod>2025-03-31T23:48:40+08:00</lastmod>
+    <lastmod>2025-04-06T00:05:27+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-03-31T23:48:40+08:00</lastmod>
+    <lastmod>2025-04-06T00:05:27+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/elementary/</loc>
+    <lastmod>2025-04-06T00:05:27+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/fourier-analysis/</loc>
+    <lastmod>2025-04-06T00:05:27+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/mathematics/</loc>
+    <lastmod>2025-04-06T00:05:27+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/putnam/</loc>
+    <lastmod>2025-04-06T00:05:27+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-04-06T00:05:27+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/symmetry/</loc>
+    <lastmod>2025-04-06T00:05:27+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-04-06T00:05:27+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/assembly/</loc>
+    <lastmod>2025-03-31T23:42:17+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/misc/</loc>
     <lastmod>2025-03-31T23:42:17+08:00</lastmod>
@@ -22,12 +46,6 @@
   </url><url>
     <loc>http://localhost:1313/blogs/misc/riscv-explainer/</loc>
     <lastmod>2025-03-31T23:42:17+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-03-31T23:48:40+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-03-31T23:48:40+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/papers/connectedness/</loc>
     <lastmod>2025-03-21T22:45:56+08:00</lastmod>
@@ -108,9 +126,6 @@
     <lastmod>2024-12-28T00:16:04+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/computability-theory/</loc>
-    <lastmod>2024-12-28T00:16:04+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/mathematics/</loc>
     <lastmod>2024-12-28T00:16:04+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blogs/mathematics/reinventing-catalan-numbers/</loc>
