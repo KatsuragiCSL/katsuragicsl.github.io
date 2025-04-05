@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Mar 2025 23:45:51 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 31 Mar 2025 23:48:40 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/philosophy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CONNECTEDNESS: A DIMENSION OF SECURITY BUG SEVERITY ASSESSMENT FOR MEASURING UNCERTAINTY</title>
@@ -21,7 +21,7 @@
       <description> Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. </description>
     </item>
     <item>
-      <title>[Updated 20250301]Centrality: how we actually perceive the severity of a bug</title>
+      <title>[Updated 20250331]Centrality: how we actually perceive the severity of a bug</title>
       <link>http://localhost:1313/blogs/security/centrality-what-cvss-missed/</link>
       <pubDate>Sun, 23 Feb 2025 02:59:19 +0800</pubDate>
       <guid>http://localhost:1313/blogs/security/centrality-what-cvss-missed/</guid>
