@@ -234,8 +234,9 @@ function explainInstruction(line) {
     if (!raw_instr)
         return 'Empty line';
     var instr = raw_instr.toLowerCase();
-    var operands = raw_operands.map(parseOperand);
+    
     try {
+        var operands = raw_operands.map(parseOperand);
         validFMT(instr, operands);
     }
     catch (error) {

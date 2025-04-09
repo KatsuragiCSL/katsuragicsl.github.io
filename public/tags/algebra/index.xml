@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Intuition on Script Adults</title>
-    <link>http://localhost:1313/tags/intuition/</link>
-    <description>Recent content in Intuition on Script Adults</description>
+    <title>Algebra on Script Adults</title>
+    <link>http://localhost:1313/tags/algebra/</link>
+    <description>Recent content in Algebra on Script Adults</description>
     <image>
       <title>Script Adults</title>
       <url>http://localhost:1313/images/papermod-cover.png</url>
@@ -12,7 +12,7 @@
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 10 Apr 2025 00:56:29 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/intuition/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/algebra/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A more visual and intuitive explanation of Burnside&#39;s lemma</title>
       <link>http://localhost:1313/blogs/mathematics/a-more-visual-and-intuitive-explanation-of-burnside-lemma/</link>

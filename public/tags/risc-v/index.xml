@@ -11,14 +11,17 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Mar 2025 23:42:17 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 Apr 2025 00:23:19 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/risc-v/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>RISC-V explainer</title>
+      <title>[Updated 20250408]RISC-V explainer</title>
       <link>http://localhost:1313/blogs/misc/riscv-explainer/</link>
       <pubDate>Mon, 31 Mar 2025 23:38:48 +0800</pubDate>
       <guid>http://localhost:1313/blogs/misc/riscv-explainer/</guid>
-      <description>I happen to have to learn (just a bit of) RISC-V assembly, so I made a simple risc-v instructions explainer so that I don&amp;rsquo;t have to do multiple google searches whenever I have troubles in reading some risc-v instructions.
+      <description>Info
+Updates on 20250408:
+Fixed a bug in parsing memory operand. Improved error message displaying.
+I happen to have to learn (just a bit of) RISC-V assembly, so I made a simple risc-v instructions explainer so that I don&amp;rsquo;t have to do multiple google searches whenever I have troubles in reading some risc-v instructions.
 It can fully run in the browser, feel free to try it out at https://katsuragicsl.github.io/riscv-explainer/.</description>
     </item>
   </channel>
