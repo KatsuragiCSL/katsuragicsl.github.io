@@ -1,6 +1,5 @@
 ---
 title: "A more intuitive explanation of Burnside's lemma"
-subtitle: "along with Orbit-Stabalizer theorem of cause"
 math: true
 tikz: true
 date: 2025-04-10T00:56:29+08:00
@@ -21,9 +20,9 @@ Here is the statement of the Burnside's lemma:
 
 Let $G$ be a group that actions on a set $X$. Denote $X^{g}$ the set of fixed points of $g$ i.e. $\\{x \in X | g \cdot x = x\\}$, then the number of orbits of the action is equal to $\dfrac{1}{|G|}\sum\limits_{g \in G} |X^g|$.
 
-### Let's pursuade ourselves that this is true first
+### Let's persuade ourselves that this is true first
 
-Instead of rushing to an attempt to prove, let's try to pursuade ourselves that this is true first.
+Instead of rushing to an attempt to prove, let's try to persuade ourselves that this is true first.
 
 If we think of the action of $G$ on $X$ as like stirring the soup and try to mix the ingredient evenly, then the more orbits you have, the less evenly you mixed it (of cause inside the orbit it could be well mixed, but imagine the extreme case when there are too many orbits so all orbits are small).
 
@@ -60,7 +59,7 @@ So in summary here is 3 thing we need:
 
 ### Connect the number of orbits with some sizes
 
-How can we deal with the annoyingly arbitrary sizes of orbits? When we have trouble in unifying things with different sizes is to **normalize** things by dividing by their sizes (think about normal vectors and how we construct orthonormal basis in linear algebra).
+How can we deal with the annoyingly arbitrary sizes of orbits? When we have trouble in unifying things with different sizes, the first thing to try is to **normalize** things by dividing by their sizes (think about normal vectors and how we construct orthonormal basis in linear algebra).
 
 With this idea, it is not hard to see that $\sum\limits_{x \in X} \dfrac{1}{|\mathcal{O}_x|} =$ number of orbits, where $\mathcal{O}_x$ is the orbit of $x$. This is well defined since orbits are disjoint.
 
@@ -143,6 +142,6 @@ Combine what we have, now it is obvious why Burnside's lemma is true: the number
 
 The first remark is that the above is not a rigorous proof, since we assumed $G$ and $X$ to be finite for the sake of intuitive explanation.
 
-The second remark: After I figured out the proof by myself, I went to google if there are any intuitive explanation online. Surprisingly none of the articles/discussions I found (the first-few-ish search results) provide a explanation with visual, intuitive AND ELEMENTARY flavour. Although some people did give explanation with "higer level" math, such as Tao[^1].
+The second remark: After I figured out the proof by myself, I went to google if there are any intuitive explanation online. Seems that none of the articles/discussions I found (the first-few-ish search results) provide a explanation with intuitive AND ELEMENTARY flavour. Although some people did give explanation with "higer level" math, such as Tao[^1].
 
 [^1]: https://mathoverflow.net/questions/50033/intuitive-explanation-of-burnsides-lemma
