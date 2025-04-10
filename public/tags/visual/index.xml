@@ -2,23 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Visual on Script Adults</title>
-    <link>http://localhost:1313/tags/visual/</link>
+    <link>https://katsuragicsl.github.io/tags/visual/</link>
     <description>Recent content in Visual on Script Adults</description>
     <image>
       <title>Script Adults</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>https://katsuragicsl.github.io/images/papermod-cover.png</url>
+      <link>https://katsuragicsl.github.io/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Apr 2025 00:56:29 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/visual/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Apr 2025 14:27:10 +0800</lastBuildDate>
+    <atom:link href="https://katsuragicsl.github.io/tags/visual/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>A more visual and intuitive explanation of Burnside&#39;s lemma</title>
-      <link>http://localhost:1313/blogs/mathematics/a-more-visual-and-intuitive-explanation-of-burnside-lemma/</link>
+      <title>A more intuitive explanation of Burnside&#39;s lemma</title>
+      <link>https://katsuragicsl.github.io/blogs/mathematics/a-more-intuitive-explanation-of-burnside-lemma/</link>
       <pubDate>Thu, 10 Apr 2025 00:56:29 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/mathematics/a-more-visual-and-intuitive-explanation-of-burnside-lemma/</guid>
-      <description> </description>
+      <guid>https://katsuragicsl.github.io/blogs/mathematics/a-more-intuitive-explanation-of-burnside-lemma/</guid>
+      <description>Warning
+You need to know some basic group theory terminology to appreciate(I hope you do) the following content.
+Burnside&amp;rsquo;s lemma Here is the statement of the Burnside&amp;rsquo;s lemma:
+Let $G$ be a group that actions on a set $X$. Denote $X^{g}$ the set of fixed points of $g$ i.e. $\{x \in X | g \cdot x = x\}$, then the number of orbits of the action is equal to $\dfrac{1}{|G|}\sum\limits_{g \in G} |X^g|$.</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>A more intuitive explanation of Burnside&#39;s lemma | Script Adults</title>
+<meta name="keywords" content="algebra, intuition, visual">
+<meta name="description" content="Warning
+You need to know some basic group theory terminology to appreciate(I hope you do) the following content.
+Burnside&rsquo;s lemma Here is the statement of the Burnside&rsquo;s lemma:
+Let $G$ be a group that actions on a set $X$. Denote $X^{g}$ the set of fixed points of $g$ i.e. $\{x \in X | g \cdot x = x\}$, then the number of orbits of the action is equal to $\dfrac{1}{|G|}\sum\limits_{g \in G} |X^g|$.">
+<meta name="author" content="">
+<link rel="canonical" href="https://katsuragicsl.github.io/blogs/mathematics/a-more-intuitive-explanation-of-burnside-lemma/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.faaf531dd5fc0b14c9c68bb6551209d5c8d240410303257c723bcff3ac4d4100.css" integrity="sha256-&#43;q9THdX8CxTJxou2VRIJ1cjSQEEDAyV8cjvP86xNQQA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://katsuragicsl.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://katsuragicsl.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://katsuragicsl.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://katsuragicsl.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://katsuragicsl.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://katsuragicsl.github.io/blogs/mathematics/a-more-intuitive-explanation-of-burnside-lemma/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+
+  
+  
+  
+  <link 
+    rel="stylesheet" 
+    type="text/css" 
+    href="/lib/tikzjax/fonts.bf05fc7f4d3719d6ae3f0aa8f94ee5a8a583b0f75dd21c1f9b9427f44829062746ba0c02202df1ff8f8857a9b63c6b36e7ae927216f02e43e3898faa20a2b1a1.css" 
+    integrity="sha512-vwX8f003GdauPwqo&#43;U7lqKWDsPdd0hwfm5Qn9EgpBidGugwCIC3x/4&#43;IV6m2PGs2566SchbwLkPjiY&#43;qIKKxoQ=="
+  >
+  
+  
+  <script defer 
+    src="/lib/tikzjax/tikzjax.020c03926ef9a49f95f358ccb26c5384fe9b30f75ea1e09ba3157fbedccd1e9024f7c759f57d97029dc7ca914a251482cc6dd085e34c11fb77255a37abb48099.js" 
+    integrity="sha512-AgwDkm75pJ&#43;V81jMsmxThP6bMPdeoeCboxV/vtzNHpAk98dZ9X2XAp3HypFKJRSCzG3QheNMEft3JVo3q7SAmQ=="
+  ></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+</script>
+<script>
+    document.addEventListener("tikzjax-load-finished", function(e) {
+        const svgEl = e.target;
+		let svg = svgEl.outerHTML;
+
+        svg = svg.replaceAll(/("#000"|"black")/g, `"currentColor"`)
+				.replaceAll(/("#fff"|"white")/g, `"var(--background-tikz)"`);
+
+		svgEl.outerHTML = svg;
+    });
+</script>
+  
+
+<meta property="og:title" content="A more intuitive explanation of Burnside&#39;s lemma" />
+<meta property="og:description" content="Warning
+You need to know some basic group theory terminology to appreciate(I hope you do) the following content.
+Burnside&rsquo;s lemma Here is the statement of the Burnside&rsquo;s lemma:
+Let $G$ be a group that actions on a set $X$. Denote $X^{g}$ the set of fixed points of $g$ i.e. $\{x \in X | g \cdot x = x\}$, then the number of orbits of the action is equal to $\dfrac{1}{|G|}\sum\limits_{g \in G} |X^g|$." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://katsuragicsl.github.io/blogs/mathematics/a-more-intuitive-explanation-of-burnside-lemma/" />
+<meta property="og:image" content="https://images.unsplash.com/photo-1488229297570-58520851e868?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8SW50dWl0aW9ufGVufDB8fDB8fHwy" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2025-04-10T00:56:29+08:00" />
+<meta property="article:modified_time" content="2025-04-10T14:27:10+08:00" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1488229297570-58520851e868?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8SW50dWl0aW9ufGVufDB8fDB8fHwy" />
+<meta name="twitter:title" content="A more intuitive explanation of Burnside&#39;s lemma"/>
+<meta name="twitter:description" content="Warning
+You need to know some basic group theory terminology to appreciate(I hope you do) the following content.
+Burnside&rsquo;s lemma Here is the statement of the Burnside&rsquo;s lemma:
+Let $G$ be a group that actions on a set $X$. Denote $X^{g}$ the set of fixed points of $g$ i.e. $\{x \in X | g \cdot x = x\}$, then the number of orbits of the action is equal to $\dfrac{1}{|G|}\sum\limits_{g \in G} |X^g|$."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "https://katsuragicsl.github.io/blogs/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "A more intuitive explanation of Burnside's lemma",
+      "item": "https://katsuragicsl.github.io/blogs/mathematics/a-more-intuitive-explanation-of-burnside-lemma/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "A more intuitive explanation of Burnside's lemma",
+  "name": "A more intuitive explanation of Burnside\u0027s lemma",
+  "description": "Warning\nYou need to know some basic group theory terminology to appreciate(I hope you do) the following content.\nBurnside\u0026rsquo;s lemma Here is the statement of the Burnside\u0026rsquo;s lemma:\nLet $G$ be a group that actions on a set $X$. Denote $X^{g}$ the set of fixed points of $g$ i.e. $\\{x \\in X | g \\cdot x = x\\}$, then the number of orbits of the action is equal to $\\dfrac{1}{|G|}\\sum\\limits_{g \\in G} |X^g|$.",
+  "keywords": [
+    "algebra", "intuition", "visual"
+  ],
+  "articleBody": " Warning\nYou need to know some basic group theory terminology to appreciate(I hope you do) the following content.\nBurnside’s lemma Here is the statement of the Burnside’s lemma:\nLet $G$ be a group that actions on a set $X$. Denote $X^{g}$ the set of fixed points of $g$ i.e. $\\{x \\in X | g \\cdot x = x\\}$, then the number of orbits of the action is equal to $\\dfrac{1}{|G|}\\sum\\limits_{g \\in G} |X^g|$.\nLet’s persuade ourselves that this is true first Instead of rushing to an attempt to prove, let’s try to persuade ourselves that this is true first.\nIf we think of the action of $G$ on $X$ as like stirring the soup and try to mix the ingredient evenly, then the more orbits you have, the less evenly you mixed it (of cause inside the orbit it could be well mixed, but imagine the extreme case when there are too many orbits so all orbits are small).\nHow about the formula $\\dfrac{1}{|G|}\\sum\\limits_{g \\in G} |X^g|$ ? Since it is a sum divided by $|G|$, we can think of it as the average of something. What is that “something”? Fix a $g \\in G$, imagine an $x \\in X$ is a particle in the soup, then $x \\in X^g$ means $g$ did not move $x$, so your stirring did not really stir $x$ at all! The larger $X^g$ you have, the more particles you did not move, hence the less evenly you mix the soup. So what the lemma say is, roughly:\nHow unevenly you stir your soup is the average number of particles you did not move for one stroke of stirring.\nSounds pretty legit!\nHigh level plan of attack How can we prove this lemma? Let’s contemplate the concepts involved in the statement, see what the gap is, explore what related concepts are in the gap.\nWhat we have:\nthe size of the set of what a given $g$ does not move the size of $G$ i.e. the number of $g$ the number of orbits What we want: a good relation between them(more precisely, an equality as the lemma stated).\nWell, since the size of each orbits can be all different, and they can be quite arbitrary, we may eventually need a way relates the sizes of orbits with some of the quantities above, otherwise the number of orbits can’t seem to bridge to the sizes of things.\nNow, since counting orbits is counting things in $X$, you might want to think about some “good” set of $g$ for a fixed $x$. Since we are already considering a set of $x$ that a given $g$ does not move, maybe it is good to consider a set of $g$ that a given $x$ does not move - That’s how we can come up with the concept of stabilizer.\nIf you already know Orbit-Stabilizer theorem you would have very likely thought of it since the concepts look so closely related. But even if you don’t, it is still likely that you can figure out that you need Orbit-Stabilizer theorem (and figure out its proof by yourself as well) with the above motivation. I am also going to give a intuitive explanation of Orbit-Stabilizer theorem below (I keep it short since it is mostly the same as how everyone think of it when they learnt it the first time).\nSo in summary here is 3 thing we need:\nConnect the number of orbits with some sizes Orbit-Stabilizer theorem Counting $\\sum\\limits_{g \\in G} |X^g|$ in a different way Connect the number of orbits with some sizes How can we deal with the annoyingly arbitrary sizes of orbits? When we have trouble in unifying things with different sizes, the first thing to try is to normalize things by dividing by their sizes (think about normal vectors and how we construct orthonormal basis in linear algebra).\nWith this idea, it is not hard to see that $\\sum\\limits_{x \\in X} \\dfrac{1}{|\\mathcal{O}_x|} =$ number of orbits, where $\\mathcal{O}_x$ is the orbit of $x$. This is well defined since orbits are disjoint.\nOne “free” observation: Since we already considering the sizes of orbits, it is natural to see that the sum of sizes of all the orbits is equal to the size of $G$.\nOrbit-Stabilizer theorem Fix a $x \\in X$, then the size of the orbit of $x$ multiplied by the size of the stabilizer is equal to $|G|$.\nIntuitive explanation: think about $G$ “modding out” what does not move $x$.\nDifferent ways to count edges Here come the next part: how to count $\\sum\\limits_{g \\in G} |X^g|$ ? Let’s draw a bipartite graph such that $x$ connects with $g$ when $g \\cdot x = x$. For instance:\nNow, what is $\\sum\\limits_{g \\in G} |X^g|$? - we pick $g$ one at a time, look at how many $x$ is connected with it, finally add up those numbers.\nThis is the same as counting the number of edges in the graph.\nSo what is another way to count the number of edges in the graph? - we can also pick $x$ one at a time, look at how many $g$ is connected with it, finally add up those numbers. And notice that for a given $x$, the number of $g$ connected with it is just the size of the stabilizer: $|G_x|$.\nHence, we can see that $\\sum\\limits_{g \\in G} |X^g| = \\sum\\limits_{x \\in X} |G_x|$.\nCombine what we have, now it is obvious why Burnside’s lemma is true: the number of orbits is just the sum of $\\dfrac{1}{|\\mathcal{O}_x|}$ over all $x$, which is $\\dfrac{1}{|G|}\\sum\\limits_{x \\in X} |G^x|$ (by Orbit-Stabilizer theorem), which is $\\dfrac{1}{|G|}\\sum\\limits_{g \\in G} |X^g|$.\nEpilogue The first remark is that the above is not a rigorous proof, since we assumed $G$ and $X$ to be finite for the sake of intuitive explanation.\nThe second remark: After I figured out the proof by myself, I went to google if there are any intuitive explanation online. Seems that none of the articles/discussions I found (the first-few-ish search results) provide a explanation with intuitive AND ELEMENTARY flavour. Although some people did give explanation with “higer level” math, such as Tao1.\nhttps://mathoverflow.net/questions/50033/intuitive-explanation-of-burnsides-lemma ↩︎\n",
+  "wordCount" : "1024",
+  "inLanguage": "en",
+  "image":"https://images.unsplash.com/photo-1488229297570-58520851e868?w=500\u0026auto=format\u0026fit=crop\u0026q=60\u0026ixlib=rb-4.0.3\u0026ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8SW50dWl0aW9ufGVufDB8fDB8fHwy","datePublished": "2025-04-10T00:56:29+08:00",
+  "dateModified": "2025-04-10T14:27:10+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://katsuragicsl.github.io/blogs/mathematics/a-more-intuitive-explanation-of-burnside-lemma/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Script Adults",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://katsuragicsl.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://katsuragicsl.github.io/" accesskey="h" title="Script Adults (Alt + H)">Script Adults</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://katsuragicsl.github.io/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://katsuragicsl.github.io/papers/" title="Papers">
+                    <span>Papers</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://katsuragicsl.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://katsuragicsl.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://katsuragicsl.github.io/about" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://katsuragicsl.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://katsuragicsl.github.io/blogs/">Blogs</a></div>
+    <h1 class="post-title entry-hint-parent">
+      A more intuitive explanation of Burnside&#39;s lemma
+    </h1>
+    
+    <div class="post-meta"><span title='2025-04-10 00:56:29 +0800 CST'>April 10, 2025</span>&nbsp;·&nbsp;<span title='2025-04-10 14:27:10 +0800 CST'>updated April 10, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;<a href="/categories/mathematics"> mathematics</a>
+
+</div>
+  </header> 
+<figure class="entry-cover"><img loading="eager" src="https://images.unsplash.com/photo-1488229297570-58520851e868?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8SW50dWl0aW9ufGVufDB8fDB8fHwy" alt="">
+        
+</figure><div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#burnsides-lemma" aria-label="Burnside&rsquo;s lemma">Burnside&rsquo;s lemma</a></li>
+                <li>
+                    <a href="#lets-persuade-ourselves-that-this-is-true-first" aria-label="Let&rsquo;s persuade ourselves that this is true first">Let&rsquo;s persuade ourselves that this is true first</a></li>
+                <li>
+                    <a href="#high-level-plan-of-attack" aria-label="High level plan of attack">High level plan of attack</a></li>
+                <li>
+                    <a href="#connect-the-number-of-orbits-with-some-sizes" aria-label="Connect the number of orbits with some sizes">Connect the number of orbits with some sizes</a></li>
+                <li>
+                    <a href="#orbit-stabilizer-theorem" aria-label="Orbit-Stabilizer theorem">Orbit-Stabilizer theorem</a></li>
+                <li>
+                    <a href="#different-ways-to-count-edges" aria-label="Different ways to count edges">Different ways to count edges</a></li>
+                <li>
+                    <a href="#epilogue" aria-label="Epilogue">Epilogue</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><style type="text/css">
+     
+    .notice {
+        --title-color: #fff;
+        --title-background-color: #6be;
+        --content-color: #444;
+        --content-background-color: #e7f2fa;
+    }
+
+    .notice.info {
+        --title-background-color: #fb7;
+        --content-background-color: #fec;
+    }
+
+    .notice.tip {
+        --title-background-color: #5a5;
+        --content-background-color: #efe;
+    }
+
+    .notice.warning {
+        --title-background-color: #c33;
+        --content-background-color: #fee;
+    }
+
+     
+    @media (prefers-color-scheme:dark) {
+        .notice {
+            --title-color: #fff;
+            --title-background-color: #069;
+            --content-color: #ddd;
+            --content-background-color: #023;
+        }
+
+        .notice.info {
+            --title-background-color: #a50;
+            --content-background-color: #420;
+        }
+
+        .notice.tip {
+            --title-background-color: #363;
+            --content-background-color: #121;
+        }
+
+        .notice.warning {
+            --title-background-color: #800;
+            --content-background-color: #400;
+        }
+    }
+
+    body.dark .notice {
+        --title-color: #fff;
+        --title-background-color: #069;
+        --content-color: #ddd;
+        --content-background-color: #023;
+    }
+
+    body.dark .notice.info {
+        --title-background-color: #a50;
+        --content-background-color: #420;
+    }
+
+    body.dark .notice.tip {
+        --title-background-color: #363;
+        --content-background-color: #121;
+    }
+
+    body.dark .notice.warning {
+        --title-background-color: #800;
+        --content-background-color: #400;
+    }
+
+     
+    .notice {
+        padding: 18px;
+        line-height: 24px;
+        margin-bottom: 24px;
+        border-radius: 4px;
+        color: var(--content-color);
+        background: var(--content-background-color);
+    }
+
+    .notice p:last-child {
+        margin-bottom: 0
+    }
+
+     
+    .notice-title {
+        margin: -18px -18px 12px;
+        padding: 4px 18px;
+        border-radius: 4px 4px 0 0;
+        font-weight: 700;
+        color: var(--title-color);
+        background: var(--title-background-color);
+    }
+
+     
+    .icon-notice {
+        display: inline-flex;
+        align-self: center;
+        margin-right: 8px;
+    }
+
+    .icon-notice img,
+    .icon-notice svg {
+        height: 1em;
+        width: 1em;
+        fill: currentColor;
+    }
+
+    .icon-notice img,
+    .icon-notice.baseline svg {
+        top: .125em;
+        position: relative;
+    }
+</style><div class="notice warning" >
+    <p class="notice-title">
+        <span class="icon-notice baseline">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="126 76.5 300 300">
+  <path d="M297.431 324.397v-34.255c0-3.245-2.344-5.95-5.358-5.95h-32.146c-3.014 0-5.358 2.705-5.358 5.95v34.255c0 3.245 2.344 5.95 5.358 5.95h32.146c3.014 0 5.358-2.705 5.358-5.95Zm-.335-67.428 3.014-82.753c0-1.081-.502-2.524-1.674-3.425-1.005-.902-2.512-1.983-4.019-1.983h-36.834c-1.507 0-3.014 1.081-4.019 1.983-1.172.901-1.674 2.704-1.674 3.786l2.846 82.392c0 2.344 2.512 4.146 5.693 4.146h30.975c3.013 0 5.525-1.803 5.692-4.146Zm-2.344-168.39L423.34 342.425c3.683 7.032 3.516 15.686-.335 22.717-3.85 7.031-10.883 11.358-18.417 11.358H147.413c-7.534 0-14.566-4.327-18.417-11.358-3.85-7.031-4.018-15.685-.335-22.716L257.248 88.578C260.93 81.188 268.13 76.5 276 76.5c7.87 0 15.069 4.688 18.752 12.08Z"/>
+</svg>
+
+        </span>Warning</p><p>You need to know some basic group theory terminology to appreciate(I hope you do) the following content.</p></div>
+
+<h3 id="burnsides-lemma">Burnside&rsquo;s lemma<a hidden class="anchor" aria-hidden="true" href="#burnsides-lemma">#</a></h3>
+<p>Here is the statement of the Burnside&rsquo;s lemma:</p>
+<p>Let $G$ be a group that actions on a set $X$. Denote $X^{g}$ the set of fixed points of $g$ i.e. $\{x \in X | g \cdot x = x\}$, then the number of orbits of the action is equal to $\dfrac{1}{|G|}\sum\limits_{g \in G} |X^g|$.</p>
+<h3 id="lets-persuade-ourselves-that-this-is-true-first">Let&rsquo;s persuade ourselves that this is true first<a hidden class="anchor" aria-hidden="true" href="#lets-persuade-ourselves-that-this-is-true-first">#</a></h3>
+<p>Instead of rushing to an attempt to prove, let&rsquo;s try to persuade ourselves that this is true first.</p>
+<p>If we think of the action of $G$ on $X$ as like stirring the soup and try to mix the ingredient evenly, then the more orbits you have, the less evenly you mixed it (of cause inside the orbit it could be well mixed, but imagine the extreme case when there are too many orbits so all orbits are small).</p>
+<p>How about the formula $\dfrac{1}{|G|}\sum\limits_{g \in G} |X^g|$ ? Since it is a sum divided by $|G|$, we can think of it as the average of something. What is that &ldquo;something&rdquo;? Fix a $g \in G$, imagine an $x \in X$ is a particle in the soup, then $x \in X^g$ means $g$ did not move $x$, so your stirring did not really stir $x$ at all! The larger $X^g$ you have, the more particles you did not move, hence the less evenly you mix the soup. So what the lemma say is, roughly:</p>
+<blockquote>
+<p>How unevenly you stir your soup is the average number of particles you did not move for one stroke of stirring.</p>
+</blockquote>
+<p>Sounds pretty legit!</p>
+<p><img loading="lazy" src="https://images.unsplash.com/photo-1624893464449-22a7e40de7c9?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fHN0aXJyaW5nfGVufDB8fDB8fHwy" alt=""  />
+</p>
+<h3 id="high-level-plan-of-attack">High level plan of attack<a hidden class="anchor" aria-hidden="true" href="#high-level-plan-of-attack">#</a></h3>
+<p>How can we prove this lemma? Let&rsquo;s contemplate the concepts involved in the statement, see what the gap is, explore what related concepts are in the gap.</p>
+<p>What we have:</p>
+<ul>
+<li>the size of the set of what a given $g$ does not move</li>
+<li>the size of $G$ i.e. the number of $g$</li>
+<li>the number of orbits</li>
+</ul>
+<p>What we want: a good relation between them(more precisely, an equality as the lemma stated).</p>
+<p>Well, since the size of each orbits can be all different, and they can be quite arbitrary, we may eventually need a way relates the sizes of orbits with some of the quantities above, otherwise the <strong>number</strong> of orbits can&rsquo;t seem to bridge to the <strong>sizes</strong> of things.</p>
+<p>Now, since counting orbits is counting things in $X$, you might want to think about some &ldquo;good&rdquo; set of $g$ for a fixed $x$. Since we are already considering a set of $x$ that a given $g$ does not move, maybe it is good to consider a set of $g$ that a given $x$ does not move - That&rsquo;s how we can come up with the concept of stabilizer.</p>
+<p>If you already know Orbit-Stabilizer theorem you would have very likely thought of it since the concepts look so closely related. But even if you don&rsquo;t, it is still likely that you can figure out that you need Orbit-Stabilizer theorem (and figure out its proof by yourself as well) with the above motivation. I am also going to give a intuitive explanation of Orbit-Stabilizer theorem below (I keep it short since it is mostly the same as how everyone think of it when they learnt it the first time).</p>
+<p>So in summary here is 3 thing we need:</p>
+<ol>
+<li>Connect the number of orbits with some sizes</li>
+<li>Orbit-Stabilizer theorem</li>
+<li>Counting $\sum\limits_{g \in G} |X^g|$ in a different way</li>
+</ol>
+<h3 id="connect-the-number-of-orbits-with-some-sizes">Connect the number of orbits with some sizes<a hidden class="anchor" aria-hidden="true" href="#connect-the-number-of-orbits-with-some-sizes">#</a></h3>
+<p>How can we deal with the annoyingly arbitrary sizes of orbits? When we have trouble in unifying things with different sizes, the first thing to try is to <strong>normalize</strong> things by dividing by their sizes (think about normal vectors and how we construct orthonormal basis in linear algebra).</p>
+<p>With this idea, it is not hard to see that $\sum\limits_{x \in X} \dfrac{1}{|\mathcal{O}_x|} =$ number of orbits, where $\mathcal{O}_x$ is the orbit of $x$. This is well defined since orbits are disjoint.</p>
+<p>One &ldquo;free&rdquo; observation: Since we already considering the sizes of orbits, it is natural to see that the sum of sizes of all the orbits is equal to the size of $G$.</p>
+<h3 id="orbit-stabilizer-theorem">Orbit-Stabilizer theorem<a hidden class="anchor" aria-hidden="true" href="#orbit-stabilizer-theorem">#</a></h3>
+<p>Fix a $x \in X$, then the size of the orbit of $x$ multiplied by the size of the stabilizer is equal to $|G|$.</p>
+<p>Intuitive explanation: think about $G$ &ldquo;modding out&rdquo; what does not move $x$.</p>
+<h3 id="different-ways-to-count-edges">Different ways to count edges<a hidden class="anchor" aria-hidden="true" href="#different-ways-to-count-edges">#</a></h3>
+<p>Here come the next part: how to count $\sum\limits_{g \in G} |X^g|$ ?
+Let&rsquo;s draw a bipartite graph such that $x$ connects with $g$ when $g \cdot x = x$. For instance:</p>
+
+<div class="flex" width="full" height="full">
+  
+  <div class="flex-grow"></div>
+  <script type="text/tikz">
+    
+      
+
+\usepackage{tikz}
+\usetikzlibrary{positioning,chains,fit,shapes,calc}
+
+\begin{document}
+
+\definecolor{myblue}{RGB}{80,80,160}
+\definecolor{mygreen}{RGB}{80,160,80}
+
+\begin{tikzpicture}[thick,
+  every node/.style={draw,circle},
+  fsnode/.style={fill=myblue},
+  ssnode/.style={fill=mygreen},
+  every fit/.style={ellipse,draw,inner sep=-2pt,text width=2cm},
+]
+
+% the vertices of X
+\begin{scope}[start chain=going below,node distance=7mm]
+\foreach \i in {1,2,...,6}
+  \node[fsnode,on chain] (f\i) [label=left: $x_{\i}$] {};
+\end{scope}
+
+% the vertices of G
+\begin{scope}[xshift=4cm,yshift=-0.5cm,start chain=going below,node distance=20mm]
+\foreach \i in {1,2,3}
+  \node[ssnode,on chain] (s\i) [label=right: $g_{\i}$] {};
+\end{scope}
+
+% the set X
+\node [myblue,fit=(f1) (f6),label=above:$X$] {};
+% the set G
+\node [mygreen,fit=(s1) (s3),label=above:$G$] {};
+
+% the edges
+\draw (f1) -- (s1);
+\draw (f1) -- (s2);
+\draw (f2) -- (s1);
+\draw (f3) -- (s1);
+
+\draw (f4) -- (s2);
+\draw (f5) -- (s2);
+
+\draw (f6) -- (s3);
+
+\end{tikzpicture}
+\end{document}
+
+
+    
+  </script>
+  <div class="flex-grow"></div>
+</div>
+<p>Now, what is $\sum\limits_{g \in G} |X^g|$? - we pick $g$ one at a time, look at how many $x$ is connected with it, finally add up those numbers.</p>
+<p>This is the same as counting the number of edges in the graph.</p>
+<p>So what is another way to count the number of edges in the graph? - we can also pick $x$ one at a time, look at how many $g$ is connected with it, finally add up those numbers. And notice that for a given $x$, the number of $g$ connected with it is just the size of the stabilizer: $|G_x|$.</p>
+<p>Hence, we can see that $\sum\limits_{g \in G} |X^g| = \sum\limits_{x \in X} |G_x|$.</p>
+<p>Combine what we have, now it is obvious why Burnside&rsquo;s lemma is true: the number of orbits is just the sum of $\dfrac{1}{|\mathcal{O}_x|}$ over all $x$, which is $\dfrac{1}{|G|}\sum\limits_{x \in X} |G^x|$ (by Orbit-Stabilizer theorem), which is $\dfrac{1}{|G|}\sum\limits_{g \in G} |X^g|$.</p>
+<h3 id="epilogue">Epilogue<a hidden class="anchor" aria-hidden="true" href="#epilogue">#</a></h3>
+<p>The first remark is that the above is not a rigorous proof, since we assumed $G$ and $X$ to be finite for the sake of intuitive explanation.</p>
+<p>The second remark: After I figured out the proof by myself, I went to google if there are any intuitive explanation online. Seems that none of the articles/discussions I found (the first-few-ish search results) provide a explanation with intuitive AND ELEMENTARY flavour. Although some people did give explanation with &ldquo;higer level&rdquo; math, such as Tao<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://mathoverflow.net/questions/50033/intuitive-explanation-of-burnsides-lemma">https://mathoverflow.net/questions/50033/intuitive-explanation-of-burnsides-lemma</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+
+  </div>
+  
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://katsuragicsl.github.io/tags/algebra/">Algebra</a></li>
+      <li><a href="https://katsuragicsl.github.io/tags/intuition/">Intuition</a></li>
+      <li><a href="https://katsuragicsl.github.io/tags/visual/">Visual</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://katsuragicsl.github.io/blogs/mathematics/elementary-solution-of-a-weird-integral-problem/">
+    <span class="title">Next »</span>
+    <br>
+    <span>An elementary solution of a weird intergal problem (Putnam 1985 A5)</span>
+  </a>
+</nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share A more intuitive explanation of Burnside&#39;s lemma on x"
+            href="https://x.com/intent/tweet/?text=A%20more%20intuitive%20explanation%20of%20Burnside%27s%20lemma&amp;url=https%3a%2f%2fkatsuragicsl.github.io%2fblogs%2fmathematics%2fa-more-intuitive-explanation-of-burnside-lemma%2f&amp;hashtags=algebra%2cintuition%2cvisual">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share A more intuitive explanation of Burnside&#39;s lemma on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fkatsuragicsl.github.io%2fblogs%2fmathematics%2fa-more-intuitive-explanation-of-burnside-lemma%2f&amp;title=A%20more%20intuitive%20explanation%20of%20Burnside%27s%20lemma&amp;summary=A%20more%20intuitive%20explanation%20of%20Burnside%27s%20lemma&amp;source=https%3a%2f%2fkatsuragicsl.github.io%2fblogs%2fmathematics%2fa-more-intuitive-explanation-of-burnside-lemma%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share A more intuitive explanation of Burnside&#39;s lemma on reddit"
+            href="https://reddit.com/submit?url=https%3a%2f%2fkatsuragicsl.github.io%2fblogs%2fmathematics%2fa-more-intuitive-explanation-of-burnside-lemma%2f&title=A%20more%20intuitive%20explanation%20of%20Burnside%27s%20lemma">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share A more intuitive explanation of Burnside&#39;s lemma on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fkatsuragicsl.github.io%2fblogs%2fmathematics%2fa-more-intuitive-explanation-of-burnside-lemma%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share A more intuitive explanation of Burnside&#39;s lemma on whatsapp"
+            href="https://api.whatsapp.com/send?text=A%20more%20intuitive%20explanation%20of%20Burnside%27s%20lemma%20-%20https%3a%2f%2fkatsuragicsl.github.io%2fblogs%2fmathematics%2fa-more-intuitive-explanation-of-burnside-lemma%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share A more intuitive explanation of Burnside&#39;s lemma on telegram"
+            href="https://telegram.me/share/url?text=A%20more%20intuitive%20explanation%20of%20Burnside%27s%20lemma&amp;url=https%3a%2f%2fkatsuragicsl.github.io%2fblogs%2fmathematics%2fa-more-intuitive-explanation-of-burnside-lemma%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share A more intuitive explanation of Burnside&#39;s lemma on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=A%20more%20intuitive%20explanation%20of%20Burnside%27s%20lemma&u=https%3a%2f%2fkatsuragicsl.github.io%2fblogs%2fmathematics%2fa-more-intuitive-explanation-of-burnside-lemma%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+    
+    <div class="buy-me-a-coffee">
+      <a href="https://buymeacoffee.com/katsuragicsl" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+    </div>
+    <script src="https://utteranc.es/client.js"
+            label="comment"
+            repo="KatsuragiCSL/katsuragicsl.github.io"
+            issue-term="title"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://katsuragicsl.github.io/">Script Adults</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

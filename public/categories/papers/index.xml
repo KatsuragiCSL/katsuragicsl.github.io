@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Papers on Script Adults</title>
-    <link>http://localhost:1313/categories/papers/</link>
+    <link>https://katsuragicsl.github.io/categories/papers/</link>
     <description>Recent content in Papers on Script Adults</description>
     <image>
       <title>Script Adults</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>https://katsuragicsl.github.io/images/papermod-cover.png</url>
+      <link>https://katsuragicsl.github.io/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 21 Mar 2025 22:45:56 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/papers/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://katsuragicsl.github.io/categories/papers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CONNECTEDNESS: A DIMENSION OF SECURITY BUG SEVERITY ASSESSMENT FOR MEASURING UNCERTAINTY</title>
-      <link>http://localhost:1313/papers/connectedness/</link>
+      <link>https://katsuragicsl.github.io/papers/connectedness/</link>
       <pubDate>Mon, 17 Mar 2025 13:10:18 +0800</pubDate>
-      <guid>http://localhost:1313/papers/connectedness/</guid>
+      <guid>https://katsuragicsl.github.io/papers/connectedness/</guid>
       <description> Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. </description>
     </item>
   </channel>

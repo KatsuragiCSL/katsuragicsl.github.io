@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Assembly on Script Adults</title>
-    <link>http://localhost:1313/tags/assembly/</link>
+    <link>https://katsuragicsl.github.io/tags/assembly/</link>
     <description>Recent content in Assembly on Script Adults</description>
     <image>
       <title>Script Adults</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>https://katsuragicsl.github.io/images/papermod-cover.png</url>
+      <link>https://katsuragicsl.github.io/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Apr 2025 00:23:19 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/assembly/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://katsuragicsl.github.io/tags/assembly/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Updated 20250408]RISC-V explainer</title>
-      <link>http://localhost:1313/blogs/misc/riscv-explainer/</link>
+      <link>https://katsuragicsl.github.io/blogs/misc/riscv-explainer/</link>
       <pubDate>Mon, 31 Mar 2025 23:38:48 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/misc/riscv-explainer/</guid>
+      <guid>https://katsuragicsl.github.io/blogs/misc/riscv-explainer/</guid>
       <description>Info
 Updates on 20250408:
 Fixed a bug in parsing memory operand. Improved error message displaying.

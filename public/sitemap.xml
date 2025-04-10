@@ -2,196 +2,208 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blogs/mathematics/elementary-solution-of-a-weird-integral-problem/</loc>
+    <loc>https://katsuragicsl.github.io/blogs/mathematics/a-more-intuitive-explanation-of-burnside-lemma/</loc>
+    <lastmod>2025-04-10T14:27:10+08:00</lastmod>
+  </url><url>
+    <loc>https://katsuragicsl.github.io/tags/algebra/</loc>
+    <lastmod>2025-04-10T14:27:10+08:00</lastmod>
+  </url><url>
+    <loc>https://katsuragicsl.github.io/blogs/</loc>
+    <lastmod>2025-04-10T14:27:10+08:00</lastmod>
+  </url><url>
+    <loc>https://katsuragicsl.github.io/categories/</loc>
+    <lastmod>2025-04-10T14:27:10+08:00</lastmod>
+  </url><url>
+    <loc>https://katsuragicsl.github.io/tags/intuition/</loc>
+    <lastmod>2025-04-10T14:27:10+08:00</lastmod>
+  </url><url>
+    <loc>https://katsuragicsl.github.io/categories/mathematics/</loc>
+    <lastmod>2025-04-10T14:27:10+08:00</lastmod>
+  </url><url>
+    <loc>https://katsuragicsl.github.io/</loc>
+    <lastmod>2025-04-10T14:27:10+08:00</lastmod>
+  </url><url>
+    <loc>https://katsuragicsl.github.io/tags/</loc>
+    <lastmod>2025-04-10T14:27:10+08:00</lastmod>
+  </url><url>
+    <loc>https://katsuragicsl.github.io/tags/visual/</loc>
+    <lastmod>2025-04-10T14:27:10+08:00</lastmod>
+  </url><url>
+    <loc>https://katsuragicsl.github.io/blogs/mathematics/elementary-solution-of-a-weird-integral-problem/</loc>
     <lastmod>2025-04-06T00:19:51+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/</loc>
-    <lastmod>2025-04-08T00:23:19+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-04-08T00:23:19+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/elementary/</loc>
+    <loc>https://katsuragicsl.github.io/tags/elementary/</loc>
     <lastmod>2025-04-06T00:19:51+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/fourier-analysis/</loc>
+    <loc>https://katsuragicsl.github.io/tags/fourier-analysis/</loc>
     <lastmod>2025-04-06T00:19:51+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/mathematics/</loc>
+    <loc>https://katsuragicsl.github.io/tags/putnam/</loc>
     <lastmod>2025-04-06T00:19:51+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/putnam/</loc>
+    <loc>https://katsuragicsl.github.io/tags/symmetry/</loc>
     <lastmod>2025-04-06T00:19:51+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://katsuragicsl.github.io/blogs/misc/riscv-explainer/</loc>
     <lastmod>2025-04-08T00:23:19+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/symmetry/</loc>
-    <lastmod>2025-04-06T00:19:51+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://katsuragicsl.github.io/tags/assembly/</loc>
     <lastmod>2025-04-08T00:23:19+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/misc/riscv-explainer/</loc>
+    <loc>https://katsuragicsl.github.io/categories/misc/</loc>
     <lastmod>2025-04-08T00:23:19+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/assembly/</loc>
+    <loc>https://katsuragicsl.github.io/tags/parsing/</loc>
     <lastmod>2025-04-08T00:23:19+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/misc/</loc>
+    <loc>https://katsuragicsl.github.io/tags/risc-v/</loc>
     <lastmod>2025-04-08T00:23:19+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/parsing/</loc>
-    <lastmod>2025-04-08T00:23:19+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/risc-v/</loc>
-    <lastmod>2025-04-08T00:23:19+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/papers/connectedness/</loc>
+    <loc>https://katsuragicsl.github.io/papers/connectedness/</loc>
     <lastmod>2025-03-21T22:45:56+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cvss/</loc>
+    <loc>https://katsuragicsl.github.io/tags/cvss/</loc>
     <lastmod>2025-03-21T22:45:56+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/papers/</loc>
+    <loc>https://katsuragicsl.github.io/papers/</loc>
     <lastmod>2025-03-21T22:45:56+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/papers/</loc>
+    <loc>https://katsuragicsl.github.io/categories/papers/</loc>
     <lastmod>2025-03-21T22:45:56+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/philosophy/</loc>
+    <loc>https://katsuragicsl.github.io/tags/philosophy/</loc>
     <lastmod>2025-03-31T23:48:40+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/security/</loc>
+    <loc>https://katsuragicsl.github.io/tags/security/</loc>
     <lastmod>2025-03-21T22:45:56+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/security/centrality-what-cvss-missed/</loc>
+    <loc>https://katsuragicsl.github.io/blogs/security/centrality-what-cvss-missed/</loc>
     <lastmod>2025-03-31T23:48:40+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/security/</loc>
+    <loc>https://katsuragicsl.github.io/categories/security/</loc>
     <lastmod>2025-03-31T23:48:40+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
+    <loc>https://katsuragicsl.github.io/tags/ai/</loc>
     <lastmod>2025-01-31T01:15:41+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/flaneur/</loc>
+    <loc>https://katsuragicsl.github.io/tags/flaneur/</loc>
     <lastmod>2025-01-31T01:15:41+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/thoughts/picking-grammatical-mistakes-in-an-insightful-article/</loc>
+    <loc>https://katsuragicsl.github.io/blogs/thoughts/picking-grammatical-mistakes-in-an-insightful-article/</loc>
     <lastmod>2025-01-31T01:15:41+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/thoughts/</loc>
+    <loc>https://katsuragicsl.github.io/categories/thoughts/</loc>
     <lastmod>2025-01-31T01:15:41+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/meta/added-tikzjax-support/</loc>
+    <loc>https://katsuragicsl.github.io/blogs/meta/added-tikzjax-support/</loc>
     <lastmod>2025-01-26T23:12:20+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/meta/</loc>
+    <loc>https://katsuragicsl.github.io/categories/meta/</loc>
     <lastmod>2025-01-26T23:12:20+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ethics/</loc>
+    <loc>https://katsuragicsl.github.io/tags/ethics/</loc>
     <lastmod>2025-01-05T00:30:56+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/thoughts/our-legal-and-moral-system-flavors-jerks/</loc>
+    <loc>https://katsuragicsl.github.io/blogs/thoughts/our-legal-and-moral-system-flavors-jerks/</loc>
     <lastmod>2025-01-05T00:30:56+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/algorithms/</loc>
+    <loc>https://katsuragicsl.github.io/tags/algorithms/</loc>
     <lastmod>2024-12-28T00:16:04+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/computer-science/</loc>
+    <loc>https://katsuragicsl.github.io/categories/computer-science/</loc>
     <lastmod>2024-12-28T00:16:04+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/wheel-reinvention/</loc>
+    <loc>https://katsuragicsl.github.io/tags/wheel-reinvention/</loc>
     <lastmod>2024-12-28T00:16:04+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/computer-science/why-use-binary-search-when-you-can-guess-where-it-should-be/</loc>
+    <loc>https://katsuragicsl.github.io/blogs/computer-science/why-use-binary-search-when-you-can-guess-where-it-should-be/</loc>
     <lastmod>2024-12-28T00:16:04+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/jobs/</loc>
+    <loc>https://katsuragicsl.github.io/tags/jobs/</loc>
     <lastmod>2024-10-29T00:32:29+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/thoughts/level-of-abstraction/</loc>
+    <loc>https://katsuragicsl.github.io/blogs/thoughts/level-of-abstraction/</loc>
     <lastmod>2024-10-29T00:32:29+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/learning/</loc>
+    <loc>https://katsuragicsl.github.io/tags/learning/</loc>
     <lastmod>2024-09-01T15:02:25+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/problem-solving/</loc>
+    <loc>https://katsuragicsl.github.io/tags/problem-solving/</loc>
     <lastmod>2024-09-01T15:02:25+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/thoughts/relaxation-is-the-result-of-mastery-with-thoughts-about-problem-solving/</loc>
+    <loc>https://katsuragicsl.github.io/blogs/thoughts/relaxation-is-the-result-of-mastery-with-thoughts-about-problem-solving/</loc>
     <lastmod>2024-09-01T15:02:25+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/combinatorics/</loc>
+    <loc>https://katsuragicsl.github.io/tags/combinatorics/</loc>
     <lastmod>2024-12-28T00:16:04+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/computability-theory/</loc>
+    <loc>https://katsuragicsl.github.io/tags/computability-theory/</loc>
     <lastmod>2024-12-28T00:16:04+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/mathematics/reinventing-catalan-numbers/</loc>
+    <loc>https://katsuragicsl.github.io/blogs/mathematics/reinventing-catalan-numbers/</loc>
     <lastmod>2024-12-28T00:16:04+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/computer-science/from-casual-description-of-turing-machine-to-uncompuatble-functions/</loc>
+    <loc>https://katsuragicsl.github.io/blogs/computer-science/from-casual-description-of-turing-machine-to-uncompuatble-functions/</loc>
     <lastmod>2024-09-01T15:02:25+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/measure-theory/</loc>
+    <loc>https://katsuragicsl.github.io/tags/measure-theory/</loc>
     <lastmod>2024-09-01T15:02:25+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/theory-of-computation/</loc>
+    <loc>https://katsuragicsl.github.io/tags/theory-of-computation/</loc>
     <lastmod>2024-09-01T15:02:25+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/topology/</loc>
+    <loc>https://katsuragicsl.github.io/tags/topology/</loc>
     <lastmod>2024-09-01T15:02:25+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/thoughts/why-do-i-hate-chatgpt/</loc>
+    <loc>https://katsuragicsl.github.io/blogs/thoughts/why-do-i-hate-chatgpt/</loc>
     <lastmod>2024-08-13T22:42:56+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://katsuragicsl.github.io/about/</loc>
     <lastmod>2024-10-28T23:05:50+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/dotnet/</loc>
+    <loc>https://katsuragicsl.github.io/tags/dotnet/</loc>
     <lastmod>2025-02-23T03:03:17+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/reversing/</loc>
+    <loc>https://katsuragicsl.github.io/tags/reversing/</loc>
     <lastmod>2025-02-23T03:03:17+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tutorials/</loc>
+    <loc>https://katsuragicsl.github.io/tags/tutorials/</loc>
     <lastmod>2025-02-23T03:03:17+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/unity/</loc>
+    <loc>https://katsuragicsl.github.io/tags/unity/</loc>
     <lastmod>2025-02-23T03:03:17+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/security/unity-game-reversing-1/</loc>
+    <loc>https://katsuragicsl.github.io/blogs/security/unity-game-reversing-1/</loc>
     <lastmod>2025-02-23T03:03:17+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/exfiltration/</loc>
+    <loc>https://katsuragicsl.github.io/tags/exfiltration/</loc>
     <lastmod>2025-02-23T03:03:17+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/lots-project/</loc>
+    <loc>https://katsuragicsl.github.io/tags/lots-project/</loc>
     <lastmod>2025-02-23T03:03:17+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/security/lots-project-paypal/</loc>
+    <loc>https://katsuragicsl.github.io/blogs/security/lots-project-paypal/</loc>
     <lastmod>2025-02-23T03:03:17+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/lateral-movement/</loc>
+    <loc>https://katsuragicsl.github.io/tags/lateral-movement/</loc>
     <lastmod>2022-08-03T22:14:05+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/prisma-cloud/</loc>
+    <loc>https://katsuragicsl.github.io/tags/prisma-cloud/</loc>
     <lastmod>2022-08-03T22:14:05+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/security/prisma-cloud-defenders/</loc>
+    <loc>https://katsuragicsl.github.io/blogs/security/prisma-cloud-defenders/</loc>
     <lastmod>2022-08-03T22:14:05+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/thoughts/wtever-law/</loc>
+    <loc>https://katsuragicsl.github.io/blogs/thoughts/wtever-law/</loc>
     <lastmod>2025-03-17T13:15:17+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/riscv-explainer/</loc>
+    <loc>https://katsuragicsl.github.io/riscv-explainer/</loc>
     <lastmod>2025-03-31T23:35:55+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://katsuragicsl.github.io/archives/</loc>
     <lastmod>2024-07-21T22:58:42+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://katsuragicsl.github.io/search/</loc>
     <lastmod>2024-12-28T00:16:04+08:00</lastmod>
   </url>
 </urlset>

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Jobs on Script Adults</title>
-    <link>http://localhost:1313/tags/jobs/</link>
+    <link>https://katsuragicsl.github.io/tags/jobs/</link>
     <description>Recent content in Jobs on Script Adults</description>
     <image>
       <title>Script Adults</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>https://katsuragicsl.github.io/images/papermod-cover.png</url>
+      <link>https://katsuragicsl.github.io/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 29 Oct 2024 00:32:29 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/jobs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://katsuragicsl.github.io/tags/jobs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Work at the level of abstraction that works for you</title>
-      <link>http://localhost:1313/blogs/thoughts/level-of-abstraction/</link>
+      <link>https://katsuragicsl.github.io/blogs/thoughts/level-of-abstraction/</link>
       <pubDate>Tue, 29 Oct 2024 00:20:01 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/thoughts/level-of-abstraction/</guid>
+      <guid>https://katsuragicsl.github.io/blogs/thoughts/level-of-abstraction/</guid>
       <description>Ladder of abstraction Well the title is obviously a tweak of the &amp;ldquo;ladder of abstraction&amp;rdquo;. For those who does not know, &amp;ldquo;ladder of abstraction&amp;rdquo; refers to the classic essay by Bret Victor. I am kind of stealing this terminilogy for the reader to visualize climbing up and down on the ladder of abstraction to make it easier to explain the nature of different jobs. The main question this blog post deals with is:</description>
     </item>
   </channel>
