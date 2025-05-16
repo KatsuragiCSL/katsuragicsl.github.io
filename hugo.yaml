@@ -38,7 +38,7 @@ params:
   profileMode:
     enabled: true
     title: Script Adult
-    subtitle: "Mathematics, Computer Science, Hacking, Random thoughts"
+    subtitle: "A big boy playing on the sea-shore, sharing the wonder he gets when he finds smooth pebbles and pretty shells."
 
   socialIcons:
     - name: github

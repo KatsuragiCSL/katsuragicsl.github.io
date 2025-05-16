@@ -5,8 +5,9 @@ searchHidden: true
 unlisted: true
 ---
 
-I am Chan Shue Long, you can also call me Jack, which is a made-up name just like many asians do when they assimilate the "western" circles. I use the handle "KatsuragiCSL" occationally (that's why the Github username and the domain name of this site).
+Once you got struck by the elegance of something, you will be its slave your whole life.
 
-Mathematics is my first love. I am also into computer science, philosophy, chinese literatures and sports. I ended up working in security industry and I also love it - to explore the "applied" side of things.
+I could not get away from the wonder I got from many beautiful ideas, and will likely keep looking for the same wonder over and over, like a mouse in a conditioning experiment. This blog attempt to record my thoughts and let those wonder out by writing them down. \
+...with occationally some miscellaneous things: pretentious "tutorial" series (that never finish), personally thoughts about a bit vulgar matters.
 
-This blog is a place for me to share what I learnt, what wheels I reinvented and what deeply moved me. And occationally shitposting and some "tutorials" that are unlikely to be finished. 
+My name is Chan Shue Long, you can also call me Jack. I use the handle "KatsuragiCSL" on the internet occationally (that's why the Github username).
