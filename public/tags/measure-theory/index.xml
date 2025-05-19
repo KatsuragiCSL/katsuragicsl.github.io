@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Measure-Theory on Script Adults</title>
-    <link>https://katsuragicsl.github.io/tags/measure-theory/</link>
+    <link>http://localhost:1313/tags/measure-theory/</link>
     <description>Recent content in Measure-Theory on Script Adults</description>
     <image>
       <title>Script Adults</title>
-      <url>https://katsuragicsl.github.io/images/papermod-cover.png</url>
-      <link>https://katsuragicsl.github.io/images/papermod-cover.png</link>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 01 Sep 2024 15:02:25 +0800</lastBuildDate>
-    <atom:link href="https://katsuragicsl.github.io/tags/measure-theory/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/measure-theory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>From casual description of Turing Machine to the density of uncomputable functions</title>
-      <link>https://katsuragicsl.github.io/blogs/computer-science/from-casual-description-of-turing-machine-to-uncompuatble-functions/</link>
+      <link>http://localhost:1313/blogs/computer-science/from-casual-description-of-turing-machine-to-uncompuatble-functions/</link>
       <pubDate>Fri, 09 Aug 2024 01:23:55 +0800</pubDate>
-      <guid>https://katsuragicsl.github.io/blogs/computer-science/from-casual-description-of-turing-machine-to-uncompuatble-functions/</guid>
+      <guid>http://localhost:1313/blogs/computer-science/from-casual-description-of-turing-machine-to-uncompuatble-functions/</guid>
       <description>Defining the machine by describing it In Sipser&amp;rsquo;s Introduction to the theory of computation, a alternative way of defining a Turing machine (other than defining the formal 7-tuple, which is a PITA) - by its &amp;ldquo;description&amp;rdquo;. Example (from the proof of $A_{TM}$ is deciable):
 M = “On input &amp;lt;B, w&amp;gt;, where B is a DFA and w is a string: 1. Simulate B on input w. 2. If the simulation ends in an accept state, accept .</description>
     </item>

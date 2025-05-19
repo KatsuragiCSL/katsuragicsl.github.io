@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ethics on Script Adults</title>
-    <link>https://katsuragicsl.github.io/tags/ethics/</link>
+    <link>http://localhost:1313/tags/ethics/</link>
     <description>Recent content in Ethics on Script Adults</description>
     <image>
       <title>Script Adults</title>
-      <url>https://katsuragicsl.github.io/images/papermod-cover.png</url>
-      <link>https://katsuragicsl.github.io/images/papermod-cover.png</link>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Jan 2025 00:30:56 +0800</lastBuildDate>
-    <atom:link href="https://katsuragicsl.github.io/tags/ethics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ethics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Our legal (and moral) system flavors the jerks</title>
-      <link>https://katsuragicsl.github.io/blogs/thoughts/our-legal-and-moral-system-flavors-jerks/</link>
+      <link>http://localhost:1313/blogs/thoughts/our-legal-and-moral-system-flavors-jerks/</link>
       <pubDate>Fri, 03 Jan 2025 23:50:58 +0800</pubDate>
-      <guid>https://katsuragicsl.github.io/blogs/thoughts/our-legal-and-moral-system-flavors-jerks/</guid>
+      <guid>http://localhost:1313/blogs/thoughts/our-legal-and-moral-system-flavors-jerks/</guid>
       <description>Disclaimer: The author&amp;rsquo;s knowledge about the legal system by no means applies to anywhere outside of his homeland. But what is legal or illegal should be similar enough for the discussion below - at least for first world countries, I guess.
 That said, the author is not a lawyer and does not have accurate knowledge of any concrete laws. But one does not need to know (too many of) them for this article.</description>
     </item>
