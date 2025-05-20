@@ -59,6 +59,6 @@ Even Gauss, Mozart, John von Neumann and many other great people whose names are
 Now when I see someone do great things, I do not see the "talent", I see love.
 
 
-[^1]: https://x.com/yoshiharuhabu/status/1547832322564968448
+[^1]: https://x.com/yoshiharuhabu/status/1547832322564968448 . The twitter post is from a few years ago, but the original comes from his book "決断力" in 2005. 
 [^2]: Kinda insider joke: https://media1.tenor.com/m/EotZY3wxyOUAAAAd/jiang-zemin-too-simple.gif
 [^3]: I am not religious, but I couldn't find a better way to articulate it. Plain "not fully extending your talent" would be dull here.
