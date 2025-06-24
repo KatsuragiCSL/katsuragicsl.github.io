@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Algebra on Script Adults</title>
-    <link>http://localhost:1313/tags/algebra/</link>
-    <description>Recent content in Algebra on Script Adults</description>
+    <title>Algebraic Geometry on Script Adults</title>
+    <link>http://localhost:1313/tags/algebraic-geometry/</link>
+    <description>Recent content in Algebraic Geometry on Script Adults</description>
     <image>
       <title>Script Adults</title>
       <url>http://localhost:1313/images/papermod-cover.png</url>
@@ -12,7 +12,7 @@
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 13 May 2025 00:03:17 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/algebra/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/algebraic-geometry/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Amazed by how ring theory can be linked up to geometry</title>
       <link>http://localhost:1313/blogs/mathematics/linking-up-ring-and-geometry/</link>
@@ -21,16 +21,6 @@
       <description>I am reviewing some fundamental algebra, and I just learnt something beautifully suggesting the connection of ring theory and geometry, which made me eager to learn some algebraic geometry (which I was not very interested when I was in undergrad). It is an exercise in Aluffi&amp;rsquo;s book1.
 Lets&amp;rsquo; jump into it.
 The problem Let $K$ be a compact topological space, and let $R$ be the ring of continuous real-valued functions on $K$, with addition and multiplication defined pointwise.</description>
-    </item>
-    <item>
-      <title>A more intuitive explanation of Burnside&#39;s lemma</title>
-      <link>http://localhost:1313/blogs/mathematics/a-more-intuitive-explanation-of-burnside-lemma/</link>
-      <pubDate>Thu, 10 Apr 2025 00:56:29 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/mathematics/a-more-intuitive-explanation-of-burnside-lemma/</guid>
-      <description>Warning
-You need to know some basic group theory terminology to appreciate(I hope you do) the following content.
-Burnside&amp;rsquo;s lemma Here is the statement of the Burnside&amp;rsquo;s lemma:
-Let $G$ be a group that actions on a set $X$. Denote $X^{g}$ the set of fixed points of $g$ i.e. $\{x \in X | g \cdot x = x\}$, then the number of orbits of the action is equal to $\dfrac{1}{|G|}\sum\limits_{g \in G} |X^g|$.</description>
     </item>
   </channel>
 </rss>
