@@ -2,19 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blogs/</loc>
-    <lastmod>2025-06-24T23:43:22+08:00</lastmod>
+    <loc>http://localhost:1313/tags/algebra/</loc>
+    <lastmod>2025-06-25T17:40:44+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-06-24T23:43:22+08:00</lastmod>
+    <loc>http://localhost:1313/tags/algebraic-geometry/</loc>
+    <lastmod>2025-06-25T17:40:44+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blogs/mathematics/linking-up-ring-and-topology/</loc>
+    <lastmod>2025-06-25T17:40:44+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blogs/</loc>
+    <lastmod>2025-06-25T17:40:44+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-05-21T00:45:00+08:00</lastmod>
+    <lastmod>2025-06-25T17:40:44+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/learning/</loc>
-    <lastmod>2025-05-21T00:45:00+08:00</lastmod>
+    <loc>http://localhost:1313/tags/geometry/</loc>
+    <lastmod>2025-06-25T17:40:44+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/mathematics/</loc>
+    <lastmod>2025-06-25T17:40:44+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-06-25T17:40:44+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-06-25T17:40:44+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/learning/</loc>
     <lastmod>2025-05-21T00:45:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blogs/thoughts/true-talent-is-carry-on-with-passion/</loc>
@@ -26,13 +41,7 @@
     <loc>http://localhost:1313/blogs/mathematics/a-more-intuitive-explanation-of-burnside-lemma/</loc>
     <lastmod>2025-04-10T14:27:10+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/algebra/</loc>
-    <lastmod>2025-04-10T14:27:10+08:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/intuition/</loc>
-    <lastmod>2025-04-10T14:27:10+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/mathematics/</loc>
     <lastmod>2025-04-10T14:27:10+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/visual/</loc>

@@ -11,20 +11,20 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 May 2025 00:45:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 25 Jun 2025 17:40:44 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mathematics</title>
+      <link>http://localhost:1313/categories/mathematics/</link>
+      <pubDate>Tue, 24 Jun 2025 23:43:22 +0800</pubDate>
+      <guid>http://localhost:1313/categories/mathematics/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Thoughts</title>
       <link>http://localhost:1313/categories/thoughts/</link>
       <pubDate>Tue, 13 May 2025 00:03:17 +0800</pubDate>
       <guid>http://localhost:1313/categories/thoughts/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Mathematics</title>
-      <link>http://localhost:1313/categories/mathematics/</link>
-      <pubDate>Thu, 10 Apr 2025 00:56:29 +0800</pubDate>
-      <guid>http://localhost:1313/categories/mathematics/</guid>
       <description></description>
     </item>
     <item>

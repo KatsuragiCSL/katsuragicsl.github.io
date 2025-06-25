@@ -11,8 +11,17 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Apr 2025 14:27:10 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 25 Jun 2025 17:40:44 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Amazed by how ring theory can be linked up to topology</title>
+      <link>http://localhost:1313/blogs/mathematics/linking-up-ring-and-topology/</link>
+      <pubDate>Tue, 24 Jun 2025 23:43:22 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/mathematics/linking-up-ring-and-topology/</guid>
+      <description>I am reviewing some fundamental algebra, and I just learnt something beautifully suggesting the connection of ring theory and geometry, which made me eager to learn some algebraic geometry (which I was not very interested when I was in undergrad). It is an exercise in Aluffi&amp;rsquo;s book1.
+Lets&amp;rsquo; jump into it.
+The problem Let $K$ be a compact topological space, and let $R$ be the ring of continuous real-valued functions on $K$, with addition and multiplication defined pointwise.</description>
+    </item>
     <item>
       <title>A more intuitive explanation of Burnside&#39;s lemma</title>
       <link>http://localhost:1313/blogs/mathematics/a-more-intuitive-explanation-of-burnside-lemma/</link>
