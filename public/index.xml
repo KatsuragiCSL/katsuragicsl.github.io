@@ -11,17 +11,8 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 May 2025 00:45:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 24 Jun 2025 10:48:49 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Amazed by how ring theory can be linked up to geometry</title>
-      <link>http://localhost:1313/blogs/mathematics/linking-up-ring-and-geometry/</link>
-      <pubDate>Tue, 13 May 2025 00:03:17 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/mathematics/linking-up-ring-and-geometry/</guid>
-      <description>I am reviewing some fundamental algebra, and I just learnt something beautifully suggesting the connection of ring theory and geometry, which made me eager to learn some algebraic geometry (which I was not very interested when I was in undergrad). It is an exercise in Aluffi&amp;rsquo;s book1.
-Lets&amp;rsquo; jump into it.
-The problem Let $K$ be a compact topological space, and let $R$ be the ring of continuous real-valued functions on $K$, with addition and multiplication defined pointwise.</description>
-    </item>
     <item>
       <title>The true talent is the ability to carry on</title>
       <link>http://localhost:1313/blogs/thoughts/true-talent-is-carry-on-with-passion/</link>

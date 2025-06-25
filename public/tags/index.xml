@@ -14,31 +14,17 @@
     <lastBuildDate>Wed, 21 May 2025 00:45:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Algebra</title>
-      <link>http://localhost:1313/tags/algebra/</link>
-      <pubDate>Tue, 13 May 2025 00:03:17 +0800</pubDate>
-      <guid>http://localhost:1313/tags/algebra/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Algebraic Geometry</title>
-      <link>http://localhost:1313/tags/algebraic-geometry/</link>
-      <pubDate>Tue, 13 May 2025 00:03:17 +0800</pubDate>
-      <guid>http://localhost:1313/tags/algebraic-geometry/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Geometry</title>
-      <link>http://localhost:1313/tags/geometry/</link>
-      <pubDate>Tue, 13 May 2025 00:03:17 +0800</pubDate>
-      <guid>http://localhost:1313/tags/geometry/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Learning</title>
       <link>http://localhost:1313/tags/learning/</link>
       <pubDate>Tue, 13 May 2025 00:03:17 +0800</pubDate>
       <guid>http://localhost:1313/tags/learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Algebra</title>
+      <link>http://localhost:1313/tags/algebra/</link>
+      <pubDate>Thu, 10 Apr 2025 00:56:29 +0800</pubDate>
+      <guid>http://localhost:1313/tags/algebra/</guid>
       <description></description>
     </item>
     <item>
