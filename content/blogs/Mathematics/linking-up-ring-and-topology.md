@@ -109,14 +109,19 @@ So that makes an interesting connection between the structure of the maximal ide
 
 **What information about other topological properties can we deduce from studying those maximal ideals, or vice versa?**
 
-**What if we look at a subfield?** Will that tell us something about the subspace of $K$?
-
 These are probably questions that people already answered, but I came up with some quick thoughts here:
 
-- what if we take $K = \\{0, 1\\} \subset \mathbb{R}$? Obviously any function from $K$ to \mathbb{R} is continuous, so the ring of continuous function $C(\mathbb{R})$ is like $\mathbb{R} \times \mathbb{R}$ with pointwise addition and multiplication. It is easy to see that the only maximal ideals are $ I = 0 \times \mathbb{R}$ and $J = \mathbb{R} \times 0$. Note that there are many nonzero continuous functions belong to $I$ but not $J$ and vice versa. In general this is true for any finite discrete topological space.
-  - But even when $K$ is not discrete the similar is also true. \
-    When $K = [0, 1] \cup [2, 3]$, the ring of continuous functions from $K$ to $\mathbb{R}$ looks like $C([0, 1]) \times C([2, 3])$. This time by continuity if a function $f$ is not in $M_{p_0}$ for some $p_0$, there must be a family of $p$ such that $f$ is also not in $M_p$. However, since there are 2 components in $K$, one can divide the set of maximal ideals into 2 disjoint subset: $I = \\{M_p$ where $p \in [0,1] \\}$ and $J = \\{M_p$ where $p \in [2, 3] \\}$. Now it is possible to have many nonzero $f$ belongs to ALL ideals in $I$ but not in ALL ideals in $J$, and vice versa.
-  - So... it looks like if we can give a suitable topology to the set of maximal ideals, one can reflects the topology of $K$ :confused:
+1. what if we take $K = \\{0, 1\\} \subset \mathbb{R}$? Obviously any function from $K$ to \mathbb{R} is continuous, so the ring of continuous function $C(\mathbb{R})$ is like $\mathbb{R} \times \mathbb{R}$ with pointwise addition and multiplication. It is easy to see that the only maximal ideals are $ I = 0 \times \mathbb{R}$ and $J = \mathbb{R} \times 0$. Note that there are many nonzero continuous functions **belong to $I$ but not to $J$** and vice versa. In general this is true for any finite discrete topological space.
+    1. But even when $K$ is not discrete the similar is also true. \
+    When $K = [0, 1] \cup [2, 3]$, the ring of continuous functions from $K$ to $\mathbb{R}$ looks like $C([0, 1]) \times C([2, 3])$. This time by continuity if a function $f$ is not in $M_{p_0}$ for some $p_0$, there must be a family of $p$ such that $f$ is also not in $M_p$. \
+    However, since there are 2 components in $K$, one can divide the set of maximal ideals into 2 disjoint subset: $I = \\{M_p$ where $p \in [0,1] \\}$ and $J = \\{M_p$ where $p \in [2, 3] \\}$. Now it is possible to have many nonzero $f$ **belongs to ALL ideals in $I$ but not in ALL ideals in $J$**, and vice versa.
+    2. So... it looks like **if we can give a suitable topology to the set of maximal ideals, one can reflects the topology of $K$** :confused: for example for the case above when $K = [0, 1] \cup [2, 3]$ we hope $I$ and $J$ are open and closed, in order to reflect the corr. components of $K$.
+2. Conversely, given a (commutative) ring $R$ with its set of maximal ideals $\mathcal{M}$, it seems to be possible to study the algebraic structure of $R$ by studying how those maximal ideals interact. For examples:
+    1. If $\mathcal{M}$ "disconnected" (with a suitable topology) like we saw in (1), that suggests $R$ is "decomposable" to a product.
+    2. If $\mathcal{M}$ is a singleton then $R$ is a field
+    3. If the intersection of any two maximal ideals eqauls $(0)$
+
+
 
 [^1]: Aluffi, P. (2009). Algebra: Chapter 0. American Mathematical Society. \
 As a side note, Aluffi's book is really awesome as a book for brushing up algebra. Assuming you had "installed" some basic algebraic objects in your mind (i.e. know some basic group, ring, field theory), reviewing many concepts/ results through the categorical lens makes a lot of things clearer and much unified.
