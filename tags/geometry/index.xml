@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Geometry on Script Adults</title>
+    <link>http://localhost:1313/tags/geometry/</link>
+    <description>Recent content in Geometry on Script Adults</description>
+    <image>
+      <title>Script Adults</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Jun 2025 10:48:49 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/geometry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Amazed by how ring theory can be linked up to topology</title>
+      <link>http://localhost:1313/blogs/mathematics/linking-up-ring-and-geometry/</link>
+      <pubDate>Tue, 13 May 2025 00:03:17 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/mathematics/linking-up-ring-and-geometry/</guid>
+      <description>I am reviewing some fundamental algebra, and I just learnt something beautifully suggesting the connection of ring theory and geometry, which made me eager to learn some algebraic geometry (which I was not very interested when I was in undergrad). It is an exercise in Aluffi&amp;rsquo;s book1.
+Lets&amp;rsquo; jump into it.
+The problem Let $K$ be a compact topological space, and let $R$ be the ring of continuous real-valued functions on $K$, with addition and multiplication defined pointwise.</description>
+    </item>
+  </channel>
+</rss>
