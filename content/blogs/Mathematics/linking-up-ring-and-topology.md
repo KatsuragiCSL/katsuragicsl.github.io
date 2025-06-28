@@ -92,7 +92,7 @@ Now I can come up with a counterexample for when $K$ is not compact, consider th
   \addplot [green, domain=-5:4, samples=100] {-x - 5};
 
   % Add dots
-  \node[black, right] at (axis cs: -5,1) {...};
+  \node[black, right] at (axis cs: -5,0.5) {...};
 
   \end{axis}
 \end{tikzpicture}
