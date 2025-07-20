@@ -11,12 +11,12 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Jun 2025 17:40:44 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 29 Jun 2025 00:14:34 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/geometry/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Amazed by how ring theory can be linked up to topology</title>
       <link>http://localhost:1313/blogs/mathematics/linking-up-ring-and-topology/</link>
-      <pubDate>Tue, 24 Jun 2025 23:43:22 +0800</pubDate>
+      <pubDate>Thu, 26 Jun 2025 01:37:20 +0800</pubDate>
       <guid>http://localhost:1313/blogs/mathematics/linking-up-ring-and-topology/</guid>
       <description>I am reviewing some fundamental algebra, and I just learnt something beautifully suggesting the connection of ring theory and geometry, which made me eager to learn some algebraic geometry (which I was not very interested when I was in undergrad). It is an exercise in Aluffi&amp;rsquo;s book1.
 Lets&amp;rsquo; jump into it.
