@@ -1,5 +1,5 @@
 ---
-title: "Playful observations with a deformation retracts and path connected-ness"
+title: "Playful observations with deformation retracts and path connected-ness"
 date: 2025-07-21T01:47:45+08:00
 math: true
 tikz: true
