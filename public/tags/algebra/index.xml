@@ -11,8 +11,17 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Jun 2025 00:14:34 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 31 Jul 2025 23:28:34 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/algebra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The double dual trick to construct a better object from the existing one</title>
+      <link>http://localhost:1313/blogs/mathematics/the-double-dual-trick-to-construct-better-object-from-the-existing-one/</link>
+      <pubDate>Thu, 31 Jul 2025 23:28:34 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/mathematics/the-double-dual-trick-to-construct-better-object-from-the-existing-one/</guid>
+      <description>Stone–Čech compactification One of the proof of the Stone–Čech compactification is to consider the continuous functions from a given topological space $X$ to $[0, 1]$.
+Crux 1: constructing $[0, 1]^{C}$
+Let $C$ be the space of all continuous functions from $X$ to $[0, 1]$, consider $[0, 1]^{C}$, there is a natural map from $X$ to $[0, 1]^{C}$: for each $x \in X$, define $\phi(x) = f \mapsto f(x)$. With product topology $\phi$ is continuous.</description>
+    </item>
     <item>
       <title>Amazed by how ring theory can be linked up to topology</title>
       <link>http://localhost:1313/blogs/mathematics/linking-up-ring-and-topology/</link>

@@ -11,14 +11,25 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Jul 2025 18:34:45 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 31 Jul 2025 23:28:34 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Some playful observations with strong deformation retract</title>
-      <link>http://localhost:1313/blogs/mathematics/playing-with-strong-deformation-retract/</link>
-      <pubDate>Thu, 17 Jul 2025 18:34:45 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/mathematics/playing-with-strong-deformation-retract/</guid>
-      <description> </description>
+      <title>The double dual trick to construct a better object from the existing one</title>
+      <link>http://localhost:1313/blogs/mathematics/the-double-dual-trick-to-construct-better-object-from-the-existing-one/</link>
+      <pubDate>Thu, 31 Jul 2025 23:28:34 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/mathematics/the-double-dual-trick-to-construct-better-object-from-the-existing-one/</guid>
+      <description>Stone–Čech compactification One of the proof of the Stone–Čech compactification is to consider the continuous functions from a given topological space $X$ to $[0, 1]$.
+Crux 1: constructing $[0, 1]^{C}$
+Let $C$ be the space of all continuous functions from $X$ to $[0, 1]$, consider $[0, 1]^{C}$, there is a natural map from $X$ to $[0, 1]^{C}$: for each $x \in X$, define $\phi(x) = f \mapsto f(x)$. With product topology $\phi$ is continuous.</description>
+    </item>
+    <item>
+      <title>Playful observations with deformation retracts and path connected-ness</title>
+      <link>http://localhost:1313/blogs/mathematics/playful-observations-with-deformation-retracts-and-path-connected-ness/</link>
+      <pubDate>Mon, 21 Jul 2025 01:47:45 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/mathematics/playful-observations-with-deformation-retracts-and-path-connected-ness/</guid>
+      <description>I was going through a problem in Lee&amp;rsquo;s Topological Manifolds book1 (problem 7-12). It states that the infinite broom has a strong deformation retract to $(0, 0)$ but not for $(1, 0)$ (only a deformation retract).
+Below is some of my playful observations inspired by this problem. (Not restricted to the infinite broom space.)
+Inifinite Broom Note that the deformation retract to $(0, 0)$ itselfs imply the deformation retract to $(1, 0)$, since one can define the deformation retract to $(1, 0)$ by &amp;ldquo;first retract to $(0, 0)$, then push it to the point $(1, 0)$ along the line joining these two points&amp;rdquo;.</description>
     </item>
     <item>
       <title>Amazed by how ring theory can be linked up to topology</title>
@@ -192,13 +203,6 @@ Exfiltraftion by Paypal In Paypal, one can dispute an order and upload his/ her 
       <guid>http://localhost:1313/blogs/security/prisma-cloud-defenders/</guid>
       <description>Tl;dr - unfixed information disclosure in Prisma Cloud defenders This post is about how to abuse a agent of a cloud security solution to get information which you should not know, like what security controls are applied, what assets the victim owns and the owners of the assets.
 Introduction A few months ago I was examining the Prisma Cloud configuration of my workplace and accidentally discovered an information disclosure issue of Prisma Cloud defender (the agent).</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/blogs/mathematics/complex-and-harmonic/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/mathematics/complex-and-harmonic/</guid>
-      <description></description>
     </item>
     <item>
       <title></title>
