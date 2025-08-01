@@ -50,7 +50,7 @@ The classical way to introduce group abelianization is by introducing the **comm
 Let $A = \mathbb{Q}/\mathbb{Z}$. Note that $A$ is a cogenerator in the category of abelian groups by the following:
 
 **Lemma 1**\
-For any $x \neq e$ in an abelian group, there is a $\phi$ such that $\phi(x) \neq 0$. In fact, let $n$ be the order of $x$, we can map it to $\frac{1}{n}$ and everything else to 0.
+For any $x \neq e$ in an abelian group, there is a $\phi$ such that $\phi(x) \neq 0$. In fact, let $n$ be the order of $x$, if $n$ is finite we can map it to $\frac{1}{n}$ and everything else to 0; if $n$ is infinite then $\langle x \rangle \cong \mathbb{Z}$, we can also map $x$ to $\frac{1}{n}$, this is a homomorphism since it is essentially $\mathbb{Z} \to \mathbb{Z}/n\mathbb{Z}$
 
 **Corollary 1**\
 For any distinct element $x, y$ in an abelian group $G$, there is a homomorphism $\phi: G \to A$ such that $\phi(x) \neq \phi(y)$. Hence $A$ is a cogenerator.
