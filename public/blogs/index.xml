@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Oct 2025 22:17:17 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Oct 2025 22:17:46 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The H&#43; doner and acceptor analogy in universal coefficient theorem for homology</title>
@@ -21,6 +21,14 @@
       <description>Using fields to detect integral homology? So in the universal coefficient theorem, by taking $R = \mathbb{Z}$, we know that there is a short exact sequence:
 $0 \rightarrow H_n(C_{*}) \otimes_R M \rightarrow H_n(C_{*} \otimes_R M) \rightarrow Tor^R_1(H_{n-1}(C_*), M) \rightarrow 0$
 Some interesting cases are when $M = \mathbb{Z}_{p} \text{ or } \mathbb{Q}$ , do the homology over $\mathbb{Q}$ and $\mathbb{Z}_p$ tells us something about the integral homology? In particular, if $\tilde{H}(X; \mathbb{Q}) = 0$ and $\tilde{H}(X; \mathbb{Z}_p) = 0$ for all $p$, does it imply that $\tilde{H}(X) = 0$ ?</description>
+    </item>
+    <item>
+      <title>Homeostasis of mind</title>
+      <link>http://localhost:1313/blogs/thoughts/homeostasis-of-mind/</link>
+      <pubDate>Fri, 24 Oct 2025 00:43:14 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/thoughts/homeostasis-of-mind/</guid>
+      <description>Just a dumb appropriation from physiology: homeostasis means how your body regulates itself to maintain its stability even when the surrounding changes. Like if you eat something sweet and your blood sugar level rises, your pancreas secrete insulin and tell your skelectal muscles to take the sugar from your blood, so your blood sugar level will then come back down.
+Hmm, the same mechanism should also apply to anything that need stability to work, for example your mental state.</description>
     </item>
     <item>
       <title>Most hilarious exercise I have seen so far</title>

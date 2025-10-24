@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mental on Script Adults</title>
+    <link>http://localhost:1313/tags/mental/</link>
+    <description>Recent content in Mental on Script Adults</description>
+    <image>
+      <title>Script Adults</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Oct 2025 22:17:17 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mental/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homeostasis of mind</title>
+      <link>http://localhost:1313/blogs/thoughts/homeostasis-of-mind/</link>
+      <pubDate>Fri, 24 Oct 2025 00:43:14 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/thoughts/homeostasis-of-mind/</guid>
+      <description>Just a dumb appropriation from physiology: homeostasis means how your body regulates itself to maintain its stability even when the surrounding changes. Like if you eat something sweet and your blood sugar level rises, your pancreas secrete insulin and tell your skelectal muscles to take the sugar from your blood, so your blood sugar level will then come back down.
+Hmm, the same mechanism should also apply to anything that need stability to work, for example your mental state.</description>
+    </item>
+  </channel>
+</rss>

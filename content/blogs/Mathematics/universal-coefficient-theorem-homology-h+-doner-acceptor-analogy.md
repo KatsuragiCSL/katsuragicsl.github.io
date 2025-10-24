@@ -11,7 +11,7 @@ cover:
 
 ## Using fields to detect integral homology?
 
-So in the universal coefficient theorem, by taking $R = \mathbb{Z}$, we know that there is a short exact sequence:
+So in the universal coefficient theorem, by taking $R = \mathbb{Z}$, we know that there is a short exact sequence (which splits):
 
 $0 \rightarrow H_n(C_{\*}) \otimes_R M \rightarrow H_n(C_{\*} \otimes_R M) \rightarrow Tor^R_1(H_{n-1}(C_*), M) \rightarrow 0$
 
@@ -27,9 +27,11 @@ $\mathbb{Z_p}$ in $Tor_1(A, \mathbb{Z_p})$ is like a p-torsion elements doner. S
 
 $\mathbb{Z_p}$ in $A \otimes \mathbb{Z_p}$ is like a p-torsion elements receiver: easy to see this tensor product is $0$ only if every elements in $A$ can "donate" a factor $p$ for elements in $\mathbb{Z_p}$ to absorb.
 
+...So the universal coefficient theorem is rough saying "to find the homology over a module, you separate their torsion doners and acceptors, then just do the direct sum (due to the splittedness)." Hmm, sounds nice.
+
+## Back to the problem
+
 Can we have $H_{\*}(X) \neq 0$ but vanishes both when taking tensor product with $\mathbb{Z_p}$ and taking $Tor_1(- , \mathbb{Z_p})$ ? Sure, we just need an abelian group that always donate p factors but never acceptor it (like $O^-$ blood type. Ha, another chemistry/biology analogy). For example $\mathbb{Z}[\frac{1}{p}]$ does the job.
-
-
 
 Now similar thought process will tell you what happens when $M = \mathbb{Q}$. $\mathbb{Q}$ is torsion free, which means it never accepts torsion but only donates, so if $A$ has a non-torsion element $a$, then $a \otimes q$ for some $q$ is non-zero. So in order for $A \otimes \mathbb{Q}$ to be zero, $A$ must have all of its elements being torsion, which contradicts what we have seen above, unless $A = 0$.
 
