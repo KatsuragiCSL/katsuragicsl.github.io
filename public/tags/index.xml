@@ -11,8 +11,29 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Aug 2025 23:17:02 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Oct 2025 22:17:17 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alegbraic-Topology</title>
+      <link>http://localhost:1313/tags/alegbraic-topology/</link>
+      <pubDate>Fri, 24 Oct 2025 10:17:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/alegbraic-topology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homology</title>
+      <link>http://localhost:1313/tags/homology/</link>
+      <pubDate>Fri, 24 Oct 2025 10:17:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/homology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Intuition</title>
+      <link>http://localhost:1313/tags/intuition/</link>
+      <pubDate>Fri, 24 Oct 2025 10:17:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/intuition/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Differential-Equations</title>
       <link>http://localhost:1313/tags/differential-equations/</link>
@@ -74,13 +95,6 @@
       <link>http://localhost:1313/tags/learning/</link>
       <pubDate>Tue, 13 May 2025 00:03:17 +0800</pubDate>
       <guid>http://localhost:1313/tags/learning/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Intuition</title>
-      <link>http://localhost:1313/tags/intuition/</link>
-      <pubDate>Thu, 10 Apr 2025 00:56:29 +0800</pubDate>
-      <guid>http://localhost:1313/tags/intuition/</guid>
       <description></description>
     </item>
     <item>

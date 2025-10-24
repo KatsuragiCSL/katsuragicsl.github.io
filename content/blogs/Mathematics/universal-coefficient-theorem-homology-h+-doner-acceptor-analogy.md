@@ -1,7 +1,7 @@
 ---
 title: "The H+ doner and acceptor analogy in universal coefficient theorem for homology"
 math: true
-date: 2025-10-23T00:14:00+08:00
+date: 2025-10-24T10:17:00+08:00
 TocOpen: true
 categories: ["mathematics"]
 tags: ['alegbraic-topology', 'homology', 'intuition']
