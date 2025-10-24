@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Homology on Script Adults</title>
+    <link>http://localhost:1313/tags/homology/</link>
+    <description>Recent content in Homology on Script Adults</description>
+    <image>
+      <title>Script Adults</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Oct 2025 00:14:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/homology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The H&#43; doner and acceptor analogy in universal coefficient theorem for homology</title>
+      <link>http://localhost:1313/blogs/mathematics/universal-coefficient-theorem-homology-h&#43;-doner-acceptor-analogy/</link>
+      <pubDate>Fri, 24 Oct 2025 00:14:00 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/mathematics/universal-coefficient-theorem-homology-h&#43;-doner-acceptor-analogy/</guid>
+      <description>huh So in the universal coefficient theorem, by taking $R \eq \mathbb{Z}$, we know that there is a short exact sequence:
+$0 \longrightarrow H_n(C_) \otimes_R M \longrightarrow H_n(C_ \otimes_R M) \longrightarrow \operatorname{Tor}^R_1(H_{n-1}(C_*), M) \longrightarrow 0$
+Some interesting cases are when $M \eq \mathbb{Z}_{p} \text{ or } \mathbb{Q}$. This is a problem suggested in [Kup2020]1
+&amp;#160;&amp;#x21a9;&amp;#xfe0e; </description>
+    </item>
+  </channel>
+</rss>
