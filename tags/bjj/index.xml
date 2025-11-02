@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Bjj on Script Adults</title>
+    <link>http://localhost:1313/tags/bjj/</link>
+    <description>Recent content in Bjj on Script Adults</description>
+    <image>
+      <title>Script Adults</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Oct 2025 01:39:55 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/bjj/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crainial shift is not about cranium</title>
+      <link>http://localhost:1313/blogs/misc/cranial-shift-is-not-about-cranium/</link>
+      <pubDate>Tue, 28 Oct 2025 01:39:55 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/misc/cranial-shift-is-not-about-cranium/</guid>
+      <description>Info
+Updates on 20250408:
+Fixed a bug in parsing memory operand. Improved error message displaying.
+So in BJJ there is a term &amp;ldquo;cranial shift&amp;rdquo;, which is just a fancy way to say &amp;ldquo;shift to control your opponent&amp;rsquo;s head movement&amp;rdquo;
+Ironically the cranial shift is never about the cranium</description>
+    </item>
+  </channel>
+</rss>
