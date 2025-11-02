@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Oct 2025 22:17:46 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Oct 2025 01:39:55 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Misc</title>
+      <link>http://localhost:1313/categories/misc/</link>
+      <pubDate>Tue, 28 Oct 2025 01:39:55 +0800</pubDate>
+      <guid>http://localhost:1313/categories/misc/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Mathematics</title>
       <link>http://localhost:1313/categories/mathematics/</link>
@@ -23,15 +30,8 @@
     <item>
       <title>Thoughts</title>
       <link>http://localhost:1313/categories/thoughts/</link>
-      <pubDate>Fri, 24 Oct 2025 00:43:14 +0800</pubDate>
+      <pubDate>Tue, 13 May 2025 00:03:17 +0800</pubDate>
       <guid>http://localhost:1313/categories/thoughts/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Misc</title>
-      <link>http://localhost:1313/categories/misc/</link>
-      <pubDate>Fri, 08 Aug 2025 23:15:56 +0800</pubDate>
-      <guid>http://localhost:1313/categories/misc/</guid>
       <description></description>
     </item>
     <item>
