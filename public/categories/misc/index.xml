@@ -11,19 +11,8 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Oct 2025 01:39:55 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 08 Aug 2025 23:17:02 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/misc/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Crainial shift is not about cranium</title>
-      <link>http://localhost:1313/blogs/misc/cranial-shift-is-not-about-cranium/</link>
-      <pubDate>Tue, 28 Oct 2025 01:39:55 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/misc/cranial-shift-is-not-about-cranium/</guid>
-      <description>Info
-Updates on 20250408:
-Fixed a bug in parsing memory operand. Improved error message displaying.
-So in BJJ there is a term &amp;ldquo;cranial shift&amp;rdquo;, which is just a fancy way to say &amp;ldquo;shift to control your opponent&amp;rsquo;s head movement&amp;rdquo;
-Ironically the cranial shift is never about the cranium</description>
-    </item>
     <item>
       <title>Most hilarious exercise I have seen so far</title>
       <link>http://localhost:1313/blogs/misc/most-hilarious-exercise/</link>

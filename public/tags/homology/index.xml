@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Oct 2025 23:12:03 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Nov 2025 04:01:59 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/homology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Calculating the homology of Poincaré&#39;s sphere through dodecahedron</title>
+      <link>http://localhost:1313/blogs/mathematics/homology-of-poincare-sphere-through-dodecahedron/</link>
+      <pubDate>Mon, 10 Nov 2025 04:01:59 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/mathematics/homology-of-poincare-sphere-through-dodecahedron/</guid>
+      <description>Dodecahedron So in the universal coefficient theorem, by taking $R = \mathbb{Z}$, we know that there is a short exact sequence (which splits):</description>
+    </item>
     <item>
       <title>The H&#43; doner and acceptor analogy in universal coefficient theorem for homology</title>
       <link>http://localhost:1313/blogs/mathematics/universal-coefficient-theorem-homology-h&#43;-doner-acceptor-analogy/</link>

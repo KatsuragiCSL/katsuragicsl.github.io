@@ -2,46 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/anatomy/</loc>
-    <lastmod>2025-10-28T01:39:55+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/bjj/</loc>
-    <lastmod>2025-10-28T01:39:55+08:00</lastmod>
+    <loc>http://localhost:1313/tags/alegbraic-topology/</loc>
+    <lastmod>2025-11-10T04:01:59+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blogs/</loc>
-    <lastmod>2025-10-28T01:39:55+08:00</lastmod>
+    <lastmod>2025-11-10T04:01:59+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blogs/mathematics/homology-of-poincare-sphere-through-dodecahedron/</loc>
+    <lastmod>2025-11-10T04:01:59+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-10-28T01:39:55+08:00</lastmod>
+    <lastmod>2025-11-10T04:01:59+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/misc/cranial-shift-is-not-about-cranium/</loc>
-    <lastmod>2025-10-28T01:39:55+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/misc/</loc>
-    <lastmod>2025-10-28T01:39:55+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-10-28T01:39:55+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-10-28T01:39:55+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/alegbraic-topology/</loc>
-    <lastmod>2025-10-24T23:12:03+08:00</lastmod>
+    <loc>http://localhost:1313/tags/cw-complex/</loc>
+    <lastmod>2025-11-10T04:01:59+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/homology/</loc>
-    <lastmod>2025-10-24T23:12:03+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/intuition/</loc>
-    <lastmod>2025-10-24T23:12:03+08:00</lastmod>
+    <lastmod>2025-11-10T04:01:59+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/mathematics/</loc>
+    <lastmod>2025-11-10T04:01:59+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-11-10T04:01:59+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-11-10T04:01:59+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/intuition/</loc>
     <lastmod>2025-10-24T23:12:03+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blogs/mathematics/universal-coefficient-theorem-homology-h&#43;-doner-acceptor-analogy/</loc>
     <lastmod>2025-10-24T23:12:03+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/differential-equations/</loc>
+    <lastmod>2025-08-08T23:17:02+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/misc/</loc>
     <lastmod>2025-08-08T23:17:02+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blogs/misc/most-hilarious-exercise/</loc>
