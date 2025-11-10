@@ -174,7 +174,7 @@ Face A
 \R=2cm
 
 % face A
-\draw[fill=yellow] (270:\R)
+\draw[fill=yellow,opacity=0.8] (270:\R)
 \foreach [count=\n] \x in {342,414,486,...,630} {
 	-- (\x:\R) node (in-\n) {}
 };
@@ -394,8 +394,8 @@ Face B
 
 % face B
 
-\draw[fill=yellow,opacity=0.5] plot coordinates {(in-2) (in-3) (out-2) (out-1) (out-10)};
-\draw[fill=yellow,opacity=0.5] plot coordinates {(mid-4) (mid-5) (out-7) (out-6) (out-5)};
+\draw[fill=yellow,opacity=0.8] plot coordinates {(in-2) (in-3) (out-2) (out-1) (out-10)};
+\draw[fill=yellow,opacity=0.2] plot coordinates {(mid-4) (mid-5) (out-7) (out-6) (out-5)};
 \node at (100:2.3cm) {\huge B};
 
 \end{tikzpicture}
@@ -524,8 +524,8 @@ Face C
 
 % face C
 
-\draw[fill=yellow,opacity=0.5] plot coordinates {(in-3) (in-4) (out-4) (out-3) (out-2)};
-\draw[fill=yellow,opacity=0.5] plot coordinates {(mid-1) (mid-5) (out-7) (out-8) (out-9)};
+\draw[fill=yellow,opacity=0.8] plot coordinates {(in-3) (in-4) (out-4) (out-3) (out-2)};
+\draw[fill=yellow,opacity=0.2] plot coordinates {(mid-1) (mid-5) (out-7) (out-8) (out-9)};
 \node at (180:2.3cm) {\huge C};
 
 
@@ -655,8 +655,8 @@ Face D
 
 % face D
 
-\draw[fill=yellow,opacity=0.5] plot coordinates {(in-4) (in-5) (out-6) (out-5) (out-4)};
-\draw[fill=yellow,opacity=0.5] plot coordinates {(mid-1) (mid-2) (out-1) (out-10) (out-9)};
+\draw[fill=yellow,opacity=0.8] plot coordinates {(in-4) (in-5) (out-6) (out-5) (out-4)};
+\draw[fill=yellow,opacity=0.2] plot coordinates {(mid-1) (mid-2) (out-1) (out-10) (out-9)};
 \node at (250:2.3cm) {\huge D};
 
 
@@ -787,8 +787,8 @@ Face E
 
 % face E
 
-\draw[fill=yellow,opacity=0.5] plot coordinates {(in-5) (in-1) (out-8) (out-7) (out-6)};
-\draw[fill=yellow,opacity=0.5] plot coordinates {(mid-2) (mid-3) (out-3) (out-2) (out-1)};
+\draw[fill=yellow,opacity=0.8] plot coordinates {(in-5) (in-1) (out-8) (out-7) (out-6)};
+\draw[fill=yellow,opacity=0.2] plot coordinates {(mid-2) (mid-3) (out-3) (out-2) (out-1)};
 \node at (300:2.3cm) {\huge E};
 
 
@@ -920,9 +920,9 @@ Face F
 
 % face F
 
-\draw[fill=yellow,opacity=0.5] plot coordinates {(in-1) (in-2) (out-10) (out-9) (out-8)};
-\draw[fill=yellow,opacity=0.5] plot coordinates {(mid-3) (mid-4) (out-5) (out-4) (out-3)};
-\node at (180:2.3cm) {\huge F};
+\draw[fill=yellow,opacity=0.8] plot coordinates {(in-1) (in-2) (out-10) (out-9) (out-8)};
+\draw[fill=yellow,opacity=0.2] plot coordinates {(mid-3) (mid-4) (out-5) (out-4) (out-3)};
+\node at (30:2.3cm) {\huge F};
 
 
 \end{tikzpicture}
@@ -968,7 +968,19 @@ And here is the edges with their color code:
 {{< /tikz >}}
 
 
-So $d(A) = i+a+b+c+d$, $d(B)=-a+e-c+f+g$, $d(C)=-b-g-d-e+h$, $d(D)=-c-h-i+g+j$, $d(E)=-d-j+a+h+f$, $d(F)=-i-f-b+j-e$
+So 
+
+$d(A) = i+a+b+c+d$, 
+
+$d(B)=-a+e-c+f+g$,
+
+$d(C)=-b-g-d-e+h$, 
+
+$d(D)=-c-h-i+g+j$, 
+
+$d(E)=-d-j+a+h+f$, 
+
+$d(F)=-i-f-b+j-e$
 
 The differential of edges should be clear.
 
@@ -985,6 +997,8 @@ $A = \begin{pmatrix}  0 & 0 & 0 & -1 & 0 & -1 & 1 & 0 & 1 & 0 \\\\  1 & 0 & 0 & 
 
  (God I hate huge matrices)
 
- So $\texttt{ker} B = 0$, $\texttt{ker} A \cong \mathbb{Z}^6$ and we get $\tilde{H}_n (X) = \mathbb{Z}$ for $n = 3$ and $0$ otherwise, the same as $\mathbb{S}^3$.
+ So
+ 
+  $\texttt{ker} B = 0$, $\texttt{ker} A \cong \mathbb{Z}^6$ and we get $\tilde{H}_n (X) = \mathbb{Z}$ for $n = 3$ and $0$ otherwise, the same as $\mathbb{S}^3$.
 
  It's been a toil... maybe this is something like diagram chasing - not difficult, but better to do it in private :smile:

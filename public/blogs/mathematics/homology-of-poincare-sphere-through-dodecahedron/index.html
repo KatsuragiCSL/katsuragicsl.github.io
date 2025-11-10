@@ -108,7 +108,7 @@ The counterexample he found is very interesting, one of the way to construct it 
 <meta property="og:url" content="http://localhost:1313/blogs/mathematics/homology-of-poincare-sphere-through-dodecahedron/" />
 <meta property="og:image" content="https://media.sciencephoto.com/image/c0530106/800wm/C0530106-Dodecahedron_universe,_conceptual_illustration.jpg" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2025-11-10T04:01:59+08:00" />
-<meta property="article:modified_time" content="2025-11-10T15:41:30+08:00" />
+<meta property="article:modified_time" content="2025-11-10T17:40:58+08:00" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://media.sciencephoto.com/image/c0530106/800wm/C0530106-Dodecahedron_universe,_conceptual_illustration.jpg" />
@@ -147,11 +147,11 @@ The counterexample he found is very interesting, one of the way to construct it 
   "keywords": [
     "alegbraic-topology", "homology", "CW-complex"
   ],
-  "articleBody": "Homology sphere A homology sphere is a (closed connected oriented) $n$-mainfolds with the same homology as the $n$-sphere. Poincaré first conjectured that any $n$-manifolds homologous (i.e. having the same homology) to the $n$-sphere should be homeomorphic to the $n$-sphere, then later he found a counterexample, which led him to a modified conjecture (which is the Poincaré’s conjecture).\nThe counterexample he found is very interesting, one of the way to construct it is the folowing:\ntake a dodecahedron identify the pairs of opposite faces by rotating each of them by $\\dfrac{\\pi}{5}$ This will identify $4$ vertices into $1$, $3$ edges into $1$, and $2$ faces into $1$. The resulting manifold will be a CW-complex with $5$ $0$-cells, $10$ $1$-cells and $6$ $2$-cells. And it can be shown that it has the same homology as $\\mathbb{S}^3$, but I have never seen anyone worked it out…so I decided to do it by myself with nice diagrams, since it is quite hard to keep track of everything while computing, and I thought that it will be beautiful to draw them out 😃\nClumsy (but colorful) computation Below is a figure showing the identified vertices (with numbers) and edges (with colors) of the dodecahedron aftering taking quotient:\nWe will calculates its singular homology by CW-homology. To do so, we need to know the how the generators (the faces, edges, vertices) are mapped by the differential. Let’s do the differential on each faces first. There are 6 of them, I will mark them out below:\nFace A\nFace B\nFace C\nFace D\nFace E\nFace F\nAnd here is the edges with their color code:\nSo $d(A) = i+a+b+c+d$, $d(B)=-a+e-c+f+g$, $d(C)=-b-g-d-e+h$, $d(D)=-c-h-i+g+j$, $d(E)=-d-j+a+h+f$, $d(F)=-i-f-b+j-e$\nThe differential of edges should be clear.\nSo we have the following cellular chain:\n$\\mathbb{Z}^5 \\xleftarrow{A} \\mathbb{Z}^{10} \\xleftarrow{B} \\mathbb{Z}^6 \\xleftarrow{0} \\mathbb{Z}$\nwhere\n$A = \\begin{pmatrix} 0 \u0026 0 \u0026 0 \u0026 -1 \u0026 0 \u0026 -1 \u0026 1 \u0026 0 \u0026 1 \u0026 0 \\\\ 1 \u0026 0 \u0026 0 \u0026 0 \u0026 1 \u0026 0 \u0026 0 \u0026 1 \u0026 -1 \u0026 0 \\\\ -1 \u0026 1 \u0026 0 \u0026 0 \u0026 0 \u0026 0 \u0026 -1 \u0026 0 \u0026 0 \u0026 1 \\\\ 0 \u0026 -1 \u0026 1 \u0026 0 \u0026 0 \u0026 1 \u0026 0 \u0026 -1 \u0026 0 \u0026 0 \\\\ 0 \u0026 0 \u0026 -1 \u0026 1 \u0026 -1 \u0026 0 \u0026 0 \u0026 0 \u0026 0 \u0026 -1 \\end{pmatrix}$\n$B = \\begin{pmatrix} 1 \u0026 -1 \u0026 0 \u0026 0 \u0026 1 \u0026 0\\\\ 1 \u0026 0 \u0026 -1 \u0026 0 \u0026 0 \u0026 -1\\\\ 1 \u0026 -1 \u0026 0 \u0026 -1 \u0026 0 \u0026 0\\\\ 1 \u0026 0 \u0026 -1 \u0026 0 \u0026 -1 \u0026 0\\\\ 0 \u0026 1 \u0026 -1 \u0026 0 \u0026 0 \u0026 -1\\\\ 0 \u0026 1 \u0026 0 \u0026 0 \u0026 1 \u0026 -1\\\\ 0 \u0026 1 \u0026 -1 \u0026 1 \u0026 0 \u0026 0\\\\ 0 \u0026 0 \u0026 1 \u0026 -1 \u0026 1 \u0026 0\\\\ 1 \u0026 0 \u0026 0 \u0026 -1 \u0026 0 \u0026 -1\\\\ 0 \u0026 0 \u0026 0 \u0026 1 \u0026 -1 \u0026 1 \\end{pmatrix}$\n(God I hate huge matrices)\nSo $\\texttt{ker} B = 0$, $\\texttt{ker} A \\cong \\mathbb{Z}^6$ and we get $\\tilde{H}_n (X) = \\mathbb{Z}$ for $n = 3$ and $0$ otherwise, the same as $\\mathbb{S}^3$.\nIt’s been a toil… maybe this is something like diagram chasing - not difficult, but better to do it in private 😄\n",
+  "articleBody": "Homology sphere A homology sphere is a (closed connected oriented) $n$-mainfolds with the same homology as the $n$-sphere. Poincaré first conjectured that any $n$-manifolds homologous (i.e. having the same homology) to the $n$-sphere should be homeomorphic to the $n$-sphere, then later he found a counterexample, which led him to a modified conjecture (which is the Poincaré’s conjecture).\nThe counterexample he found is very interesting, one of the way to construct it is the folowing:\ntake a dodecahedron identify the pairs of opposite faces by rotating each of them by $\\dfrac{\\pi}{5}$ This will identify $4$ vertices into $1$, $3$ edges into $1$, and $2$ faces into $1$. The resulting manifold will be a CW-complex with $5$ $0$-cells, $10$ $1$-cells and $6$ $2$-cells. And it can be shown that it has the same homology as $\\mathbb{S}^3$, but I have never seen anyone worked it out…so I decided to do it by myself with nice diagrams, since it is quite hard to keep track of everything while computing, and I thought that it will be beautiful to draw them out 😃\nClumsy (but colorful) computation Below is a figure showing the identified vertices (with numbers) and edges (with colors) of the dodecahedron aftering taking quotient:\nWe will calculates its singular homology by CW-homology. To do so, we need to know the how the generators (the faces, edges, vertices) are mapped by the differential. Let’s do the differential on each faces first. There are 6 of them, I will mark them out below:\nFace A\nFace B\nFace C\nFace D\nFace E\nFace F\nAnd here is the edges with their color code:\nSo\n$d(A) = i+a+b+c+d$,\n$d(B)=-a+e-c+f+g$,\n$d(C)=-b-g-d-e+h$,\n$d(D)=-c-h-i+g+j$,\n$d(E)=-d-j+a+h+f$,\n$d(F)=-i-f-b+j-e$\nThe differential of edges should be clear.\nSo we have the following cellular chain:\n$\\mathbb{Z}^5 \\xleftarrow{A} \\mathbb{Z}^{10} \\xleftarrow{B} \\mathbb{Z}^6 \\xleftarrow{0} \\mathbb{Z}$\nwhere\n$A = \\begin{pmatrix} 0 \u0026 0 \u0026 0 \u0026 -1 \u0026 0 \u0026 -1 \u0026 1 \u0026 0 \u0026 1 \u0026 0 \\\\ 1 \u0026 0 \u0026 0 \u0026 0 \u0026 1 \u0026 0 \u0026 0 \u0026 1 \u0026 -1 \u0026 0 \\\\ -1 \u0026 1 \u0026 0 \u0026 0 \u0026 0 \u0026 0 \u0026 -1 \u0026 0 \u0026 0 \u0026 1 \\\\ 0 \u0026 -1 \u0026 1 \u0026 0 \u0026 0 \u0026 1 \u0026 0 \u0026 -1 \u0026 0 \u0026 0 \\\\ 0 \u0026 0 \u0026 -1 \u0026 1 \u0026 -1 \u0026 0 \u0026 0 \u0026 0 \u0026 0 \u0026 -1 \\end{pmatrix}$\n$B = \\begin{pmatrix} 1 \u0026 -1 \u0026 0 \u0026 0 \u0026 1 \u0026 0\\\\ 1 \u0026 0 \u0026 -1 \u0026 0 \u0026 0 \u0026 -1\\\\ 1 \u0026 -1 \u0026 0 \u0026 -1 \u0026 0 \u0026 0\\\\ 1 \u0026 0 \u0026 -1 \u0026 0 \u0026 -1 \u0026 0\\\\ 0 \u0026 1 \u0026 -1 \u0026 0 \u0026 0 \u0026 -1\\\\ 0 \u0026 1 \u0026 0 \u0026 0 \u0026 1 \u0026 -1\\\\ 0 \u0026 1 \u0026 -1 \u0026 1 \u0026 0 \u0026 0\\\\ 0 \u0026 0 \u0026 1 \u0026 -1 \u0026 1 \u0026 0\\\\ 1 \u0026 0 \u0026 0 \u0026 -1 \u0026 0 \u0026 -1\\\\ 0 \u0026 0 \u0026 0 \u0026 1 \u0026 -1 \u0026 1 \\end{pmatrix}$\n(God I hate huge matrices)\nSo\n$\\texttt{ker} B = 0$, $\\texttt{ker} A \\cong \\mathbb{Z}^6$ and we get $\\tilde{H}_n (X) = \\mathbb{Z}$ for $n = 3$ and $0$ otherwise, the same as $\\mathbb{S}^3$.\nIt’s been a toil… maybe this is something like diagram chasing - not difficult, but better to do it in private 😄\n",
   "wordCount" : "572",
   "inLanguage": "en",
   "image":"https://media.sciencephoto.com/image/c0530106/800wm/C0530106-Dodecahedron_universe,_conceptual_illustration.jpg","datePublished": "2025-11-10T04:01:59+08:00",
-  "dateModified": "2025-11-10T15:41:30+08:00",
+  "dateModified": "2025-11-10T17:40:58+08:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "http://localhost:1313/blogs/mathematics/homology-of-poincare-sphere-through-dodecahedron/"
@@ -245,7 +245,7 @@ The counterexample he found is very interesting, one of the way to construct it 
       Calculating the homology of Poincaré&#39;s homology sphere through dodecahedron and cellular homology
     </h1>
     
-    <div class="post-meta"><span title='2025-11-10 04:01:59 +0800 CST'>November 10, 2025</span>&nbsp;·&nbsp;<span title='2025-11-10 15:41:30 +0800 CST'>updated November 10, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;<a href="/categories/mathematics"> mathematics</a>
+    <div class="post-meta"><span title='2025-11-10 04:01:59 +0800 CST'>November 10, 2025</span>&nbsp;·&nbsp;<span title='2025-11-10 17:40:58 +0800 CST'>updated November 10, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;<a href="/categories/mathematics"> mathematics</a>
 
 </div>
   </header> 
@@ -439,7 +439,7 @@ The counterexample he found is very interesting, one of the way to construct it 
 \R=2cm
 
 % face A
-\draw[fill=yellow] (270:\R)
+\draw[fill=yellow,opacity=0.8] (270:\R)
 \foreach [count=\n] \x in {342,414,486,...,630} {
 	-- (\x:\R) node (in-\n) {}
 };
@@ -667,8 +667,8 @@ The counterexample he found is very interesting, one of the way to construct it 
 
 % face B
 
-\draw[fill=yellow,opacity=0.5] plot coordinates {(in-2) (in-3) (out-2) (out-1) (out-10)};
-\draw[fill=yellow,opacity=0.5] plot coordinates {(mid-4) (mid-5) (out-7) (out-6) (out-5)};
+\draw[fill=yellow,opacity=0.8] plot coordinates {(in-2) (in-3) (out-2) (out-1) (out-10)};
+\draw[fill=yellow,opacity=0.2] plot coordinates {(mid-4) (mid-5) (out-7) (out-6) (out-5)};
 \node at (100:2.3cm) {\huge B};
 
 \end{tikzpicture}
@@ -804,8 +804,8 @@ The counterexample he found is very interesting, one of the way to construct it 
 
 % face C
 
-\draw[fill=yellow,opacity=0.5] plot coordinates {(in-3) (in-4) (out-4) (out-3) (out-2)};
-\draw[fill=yellow,opacity=0.5] plot coordinates {(mid-1) (mid-5) (out-7) (out-8) (out-9)};
+\draw[fill=yellow,opacity=0.8] plot coordinates {(in-3) (in-4) (out-4) (out-3) (out-2)};
+\draw[fill=yellow,opacity=0.2] plot coordinates {(mid-1) (mid-5) (out-7) (out-8) (out-9)};
 \node at (180:2.3cm) {\huge C};
 
 
@@ -942,8 +942,8 @@ The counterexample he found is very interesting, one of the way to construct it 
 
 % face D
 
-\draw[fill=yellow,opacity=0.5] plot coordinates {(in-4) (in-5) (out-6) (out-5) (out-4)};
-\draw[fill=yellow,opacity=0.5] plot coordinates {(mid-1) (mid-2) (out-1) (out-10) (out-9)};
+\draw[fill=yellow,opacity=0.8] plot coordinates {(in-4) (in-5) (out-6) (out-5) (out-4)};
+\draw[fill=yellow,opacity=0.2] plot coordinates {(mid-1) (mid-2) (out-1) (out-10) (out-9)};
 \node at (250:2.3cm) {\huge D};
 
 
@@ -1080,8 +1080,8 @@ The counterexample he found is very interesting, one of the way to construct it 
 
 % face E
 
-\draw[fill=yellow,opacity=0.5] plot coordinates {(in-5) (in-1) (out-8) (out-7) (out-6)};
-\draw[fill=yellow,opacity=0.5] plot coordinates {(mid-2) (mid-3) (out-3) (out-2) (out-1)};
+\draw[fill=yellow,opacity=0.8] plot coordinates {(in-5) (in-1) (out-8) (out-7) (out-6)};
+\draw[fill=yellow,opacity=0.2] plot coordinates {(mid-2) (mid-3) (out-3) (out-2) (out-1)};
 \node at (300:2.3cm) {\huge E};
 
 
@@ -1218,9 +1218,9 @@ The counterexample he found is very interesting, one of the way to construct it 
 
 % face F
 
-\draw[fill=yellow,opacity=0.5] plot coordinates {(in-1) (in-2) (out-10) (out-9) (out-8)};
-\draw[fill=yellow,opacity=0.5] plot coordinates {(mid-3) (mid-4) (out-5) (out-4) (out-3)};
-\node at (180:2.3cm) {\huge F};
+\draw[fill=yellow,opacity=0.8] plot coordinates {(in-1) (in-2) (out-10) (out-9) (out-8)};
+\draw[fill=yellow,opacity=0.2] plot coordinates {(mid-3) (mid-4) (out-5) (out-4) (out-3)};
+\node at (30:2.3cm) {\huge F};
 
 
 \end{tikzpicture}
@@ -1275,7 +1275,13 @@ The counterexample he found is very interesting, one of the way to construct it 
   </script>
   <div class="flex-grow"></div>
 </div>
-<p>So $d(A) = i+a+b+c+d$, $d(B)=-a+e-c+f+g$, $d(C)=-b-g-d-e+h$, $d(D)=-c-h-i+g+j$, $d(E)=-d-j+a+h+f$, $d(F)=-i-f-b+j-e$</p>
+<p>So</p>
+<p>$d(A) = i+a+b+c+d$,</p>
+<p>$d(B)=-a+e-c+f+g$,</p>
+<p>$d(C)=-b-g-d-e+h$,</p>
+<p>$d(D)=-c-h-i+g+j$,</p>
+<p>$d(E)=-d-j+a+h+f$,</p>
+<p>$d(F)=-i-f-b+j-e$</p>
 <p>The differential of edges should be clear.</p>
 <p>So we have the following cellular chain:</p>
 <p>$\mathbb{Z}^5 \xleftarrow{A} \mathbb{Z}^{10} \xleftarrow{B} \mathbb{Z}^6 \xleftarrow{0} \mathbb{Z}$</p>
@@ -1283,7 +1289,8 @@ The counterexample he found is very interesting, one of the way to construct it 
 <p>$A = \begin{pmatrix}  0 &amp; 0 &amp; 0 &amp; -1 &amp; 0 &amp; -1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\  1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; -1 &amp; 0 \\ -1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; -1 &amp; 0 &amp; 0 &amp; 1 \\ 0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; -1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; -1 &amp; 1 &amp; -1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; -1  \end{pmatrix}$</p>
 <p>$B = \begin{pmatrix}  1 &amp; -1 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\  1 &amp; 0 &amp; -1 &amp; 0 &amp; 0 &amp; -1\\ 1 &amp; -1 &amp; 0 &amp; -1 &amp; 0 &amp; 0\\ 1 &amp; 0 &amp; -1 &amp; 0 &amp; -1 &amp; 0\\ 0 &amp; 1 &amp; -1 &amp; 0 &amp; 0 &amp; -1\\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; -1\\ 0 &amp; 1 &amp; -1 &amp; 1 &amp; 0 &amp; 0\\ 0 &amp; 0 &amp; 1 &amp; -1 &amp; 1 &amp; 0\\ 1 &amp; 0 &amp; 0 &amp; -1 &amp; 0 &amp; -1\\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; -1 &amp; 1  \end{pmatrix}$</p>
 <p>(God I hate huge matrices)</p>
-<p>So $\texttt{ker} B = 0$, $\texttt{ker} A \cong \mathbb{Z}^6$ and we get $\tilde{H}_n (X) = \mathbb{Z}$ for $n = 3$ and $0$ otherwise, the same as $\mathbb{S}^3$.</p>
+<p>So</p>
+<p>$\texttt{ker} B = 0$, $\texttt{ker} A \cong \mathbb{Z}^6$ and we get $\tilde{H}_n (X) = \mathbb{Z}$ for $n = 3$ and $0$ otherwise, the same as $\mathbb{S}^3$.</p>
 <p>It&rsquo;s been a toil&hellip; maybe this is something like diagram chasing - not difficult, but better to do it in private &#x1f604;</p>
 
 

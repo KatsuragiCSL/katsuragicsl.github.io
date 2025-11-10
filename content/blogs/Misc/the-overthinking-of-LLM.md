@@ -26,71 +26,66 @@ With `DeepThink` and `Search` (accessing internet), it "thought" for >15 minutes
 
 \begin{tikzpicture}[scale=2]
 
-% Define vertices for the Schlegel diagram
-% Outer pentagon (face 1)
-\coordinate (A) at (0,2);
-\coordinate (B) at (1.9,0.6);
-\coordinate (C) at (1.2,-1.6);
-\coordinate (D) at (-1.2,-1.6);
-\coordinate (E) at (-1.9,0.6);
+% Define the vertices of the cube Schlegel diagram
+% The cube has 8 vertices, but in Schlegel diagram we see 7 (one is "inside")
 
-% Middle ring vertices
-\coordinate (F) at (0,1.2);
-\coordinate (G) at (1.1,0.9);
-\coordinate (H) at (1.4,-0.4);
-\coordinate (I) at (0.7,-1.2);
-\coordinate (J) at (-0.7,-1.2);
-\coordinate (K) at (-1.4,-0.4);
-\coordinate (L) at (-1.1,0.9);
+% Outer square (face 1)
+\coordinate (A) at (0,0);
+\coordinate (B) at (2,0);
+\coordinate (C) at (2,2);
+\coordinate (D) at (0,2);
 
-% Inner pentagon (central face)
-\coordinate (M) at (0,0.4);
-\coordinate (N) at (0.6,0.2);
-\coordinate (O) at (0.4,-0.5);
-\coordinate (P) at (-0.4,-0.5);
-\coordinate (Q) at (-0.6,0.2);
+% Inner vertices (the "back" face projected inside)
+\coordinate (E) at (0.7,0.7);
+\coordinate (F) at (1.3,0.7);
+\coordinate (G) at (1.3,1.3);
+\coordinate (H) at (0.7,1.3);
 
 % Draw all edges
-% Outer pentagon (face 1)
-\draw[thick] (A) -- (B) -- (C) -- (D) -- (E) -- cycle;
+% Outer square (face 1)
+\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
 
-% Connections from outer to middle ring
-\draw[thick] (A) -- (F);
-\draw[thick] (A) -- (L);
+% Inner square (face 2 - the "back" face)
+\draw[thick] (E) -- (F) -- (G) -- (H) -- cycle;
+
+% Connecting edges (the other 4 faces)
+\draw[thick] (A) -- (E);
 \draw[thick] (B) -- (F);
-\draw[thick] (B) -- (G);
-\draw[thick] (C) -- (H);
-\draw[thick] (C) -- (I);
-\draw[thick] (D) -- (I);
-\draw[thick] (D) -- (J);
-\draw[thick] (E) -- (J);
-\draw[thick] (E) -- (K);
+\draw[thick] (C) -- (G);
+\draw[thick] (D) -- (H);
 
-% Middle ring connections
-\draw[thick] (F) -- (G) -- (H) -- (I) -- (J) -- (K) -- (L) -- cycle;
+% Diagonal edges to show the 3D structure
+\draw[thick] (E) -- (B);
+\draw[thick] (F) -- (C);
+\draw[thick] (G) -- (D);
+\draw[thick] (H) -- (A);
 
-% Connections from middle ring to inner pentagon
-\draw[thick] (F) -- (M);
-\draw[thick] (F) -- (N);
-\draw[thick] (G) -- (N);
-\draw[thick] (G) -- (O);
-\draw[thick] (H) -- (O);
-\draw[thick] (H) -- (P);
-\draw[thick] (I) -- (P);
-\draw[thick] (I) -- (Q);
-\draw[thick] (J) -- (Q);
-\draw[thick] (J) -- (M);
-\draw[thick] (K) -- (M);
-\draw[thick] (K) -- (N);
-\draw[thick] (L) -- (N);
-\draw[thick] (L) -- (Q);
+% Label vertices
+\node[below left] at (A) {A};
+\node[below right] at (B) {B};
+\node[above right] at (C) {C};
+\node[above left] at (D) {D};
+\node[below left] at (E) {E};
+\node[below right] at (F) {F};
+\node[above right] at (G) {G};
+\node[above left] at (H) {H};
 
-% Inner pentagon (central face)
-\draw[thick] (M) -- (N) -- (O) -- (P) -- (Q) -- cycle;
+% Label faces
+\node at (1,1) {Face 1 (Front)};
+\node at (1,0.3) {Face 2 (Bottom)};
+\node at (1.7,1) {Face 3 (Right)};
+\node at (1,1.7) {Face 4 (Top)};
+\node at (0.3,1) {Face 5 (Left)};
+\node at (1,1) {Face 6 (Back)};
 
-% Draw vertices as small dots
-\foreach \point in {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q}
-    \filldraw (\point) circle (1pt);
+% Add a legend
+\node[align=left, font=\small] at (3,1) {
+    Schlegel Diagram of a Cube\\
+    (Regular Hexahedron)\\
+    \textbf{6 faces}\\
+    \textbf{8 vertices}\\
+    \textbf{12 edges}
+};
 
 \end{tikzpicture}
 
@@ -104,71 +99,66 @@ With `DeepThink` and `Search` (accessing internet), it "thought" for >15 minutes
 
 \begin{tikzpicture}[scale=2]
 
-% Define vertices for the Schlegel diagram
-% Outer pentagon (face 1)
-\coordinate (A) at (0,2);
-\coordinate (B) at (1.9,0.6);
-\coordinate (C) at (1.2,-1.6);
-\coordinate (D) at (-1.2,-1.6);
-\coordinate (E) at (-1.9,0.6);
+% Define the vertices of the cube Schlegel diagram
+% The cube has 8 vertices, but in Schlegel diagram we see 7 (one is "inside")
 
-% Middle ring vertices
-\coordinate (F) at (0,1.2);
-\coordinate (G) at (1.1,0.9);
-\coordinate (H) at (1.4,-0.4);
-\coordinate (I) at (0.7,-1.2);
-\coordinate (J) at (-0.7,-1.2);
-\coordinate (K) at (-1.4,-0.4);
-\coordinate (L) at (-1.1,0.9);
+% Outer square (face 1)
+\coordinate (A) at (0,0);
+\coordinate (B) at (2,0);
+\coordinate (C) at (2,2);
+\coordinate (D) at (0,2);
 
-% Inner pentagon (central face)
-\coordinate (M) at (0,0.4);
-\coordinate (N) at (0.6,0.2);
-\coordinate (O) at (0.4,-0.5);
-\coordinate (P) at (-0.4,-0.5);
-\coordinate (Q) at (-0.6,0.2);
+% Inner vertices (the "back" face projected inside)
+\coordinate (E) at (0.7,0.7);
+\coordinate (F) at (1.3,0.7);
+\coordinate (G) at (1.3,1.3);
+\coordinate (H) at (0.7,1.3);
 
 % Draw all edges
-% Outer pentagon (face 1)
-\draw[thick] (A) -- (B) -- (C) -- (D) -- (E) -- cycle;
+% Outer square (face 1)
+\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
 
-% Connections from outer to middle ring
-\draw[thick] (A) -- (F);
-\draw[thick] (A) -- (L);
+% Inner square (face 2 - the "back" face)
+\draw[thick] (E) -- (F) -- (G) -- (H) -- cycle;
+
+% Connecting edges (the other 4 faces)
+\draw[thick] (A) -- (E);
 \draw[thick] (B) -- (F);
-\draw[thick] (B) -- (G);
-\draw[thick] (C) -- (H);
-\draw[thick] (C) -- (I);
-\draw[thick] (D) -- (I);
-\draw[thick] (D) -- (J);
-\draw[thick] (E) -- (J);
-\draw[thick] (E) -- (K);
+\draw[thick] (C) -- (G);
+\draw[thick] (D) -- (H);
 
-% Middle ring connections
-\draw[thick] (F) -- (G) -- (H) -- (I) -- (J) -- (K) -- (L) -- cycle;
+% Diagonal edges to show the 3D structure
+\draw[thick] (E) -- (B);
+\draw[thick] (F) -- (C);
+\draw[thick] (G) -- (D);
+\draw[thick] (H) -- (A);
 
-% Connections from middle ring to inner pentagon
-\draw[thick] (F) -- (M);
-\draw[thick] (F) -- (N);
-\draw[thick] (G) -- (N);
-\draw[thick] (G) -- (O);
-\draw[thick] (H) -- (O);
-\draw[thick] (H) -- (P);
-\draw[thick] (I) -- (P);
-\draw[thick] (I) -- (Q);
-\draw[thick] (J) -- (Q);
-\draw[thick] (J) -- (M);
-\draw[thick] (K) -- (M);
-\draw[thick] (K) -- (N);
-\draw[thick] (L) -- (N);
-\draw[thick] (L) -- (Q);
+% Label vertices
+\node[below left] at (A) {A};
+\node[below right] at (B) {B};
+\node[above right] at (C) {C};
+\node[above left] at (D) {D};
+\node[below left] at (E) {E};
+\node[below right] at (F) {F};
+\node[above right] at (G) {G};
+\node[above left] at (H) {H};
 
-% Inner pentagon (central face)
-\draw[thick] (M) -- (N) -- (O) -- (P) -- (Q) -- cycle;
+% Label faces
+\node at (1,1) {Face 1 (Front)};
+\node at (1,0.3) {Face 2 (Bottom)};
+\node at (1.7,1) {Face 3 (Right)};
+\node at (1,1.7) {Face 4 (Top)};
+\node at (0.3,1) {Face 5 (Left)};
+\node at (1,1) {Face 6 (Back)};
 
-% Draw vertices as small dots
-\foreach \point in {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q}
-    \filldraw (\point) circle (1pt);
+% Add a legend
+\node[align=left, font=\small] at (3,1) {
+    Schlegel Diagram of a Cube\\
+    (Regular Hexahedron)\\
+    \textbf{6 faces}\\
+    \textbf{8 vertices}\\
+    \textbf{12 edges}
+};
 
 \end{tikzpicture}
 
@@ -308,4 +298,6 @@ But without `Deepthink` and `Search`, it gave me a nice and clean (and correct!)
 
 
 
-Very weird.
+Very weird. Perhaps it was due to 2 things:
+- it was genuinely overthinking, trying to make something profound while there is actually not much things there. (e.g. trying to add more "structures" to a very very simple schlegel diagram)
+- it "learned" things from the internet but it was just 鵜呑み (i.e. taking something withOUT a grain of salt. I'm not sure if there is a clean and short way to say it in english) so it added random craps into the answer.
