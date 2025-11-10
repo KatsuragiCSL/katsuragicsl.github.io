@@ -1,6 +1,5 @@
 ---
-draft: true
-title: "Calculating the homology of Poincaré's sphere through dodecahedron and cellular homology"
+title: "Calculating the homology of Poincaré's homology sphere through dodecahedron and cellular homology"
 math: true
 tikz: true
 date: 2025-11-10T04:01:59+08:00
@@ -8,10 +7,22 @@ TocOpen: true
 categories: ["mathematics"]
 tags: ['alegbraic-topology', 'homology', 'CW-complex']
 cover:
-  image: "https://images.unsplash.com/photo-1728406970522-1d42256abec8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
+  image: "https://media.sciencephoto.com/image/c0530106/800wm/C0530106-Dodecahedron_universe,_conceptual_illustration.jpg"
+  caption: "Credits: https://www.sciencephoto.com/media/1198122/view/dodecahedron-universe-conceptual-illustration"
 ---
 
-## Dodecahedron
+## Homology sphere
+
+A homology sphere is a (closed connected oriented) $n$-mainfolds with the same homology as the $n$-sphere. Poincaré first conjectured that any $n$-manifolds homologous (i.e. having the same homology) to the $n$-sphere should be homeomorphic to the $n$-sphere, then later he found a counterexample, which led him to a modified conjecture (which is the Poincaré's conjecture).
+
+The counterexample he found is very interesting, one of the way to construct it is the folowing:
+1. take a dodecahedron
+2. identify the pairs of opposite faces by rotating each of them by $\dfrac{\pi}{5}$
+
+This will identify $4$ vertices into $1$, $3$ edges into $1$, and $2$ faces into $1$. The resulting manifold will be a CW-complex with **$5$** $0$-cells, **$10$** $1$-cells and **$6$** $2$-cells. And it can be shown that it has the same homology as $\mathbb{S}^3$, but I have never seen anyone worked it out...so I decided to do it by myself with nice diagrams, since it is quite hard to keep track of everything while computing, and I thought that it will be beautiful to draw them out :smiley:
+
+
+## Clumsy (but colorful) computation
 
 Below is a figure showing the identified vertices (with numbers) and edges (with colors) of the dodecahedron aftering taking quotient:
 
@@ -970,3 +981,10 @@ where
 $A = \begin{pmatrix}  0 & 0 & 0 & -1 & 0 & -1 & 1 & 0 & 1 & 0 \\\\  1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & -1 & 0 \\\\ -1 & 1 & 0 & 0 & 0 & 0 & -1 & 0 & 0 & 1 \\\\ 0 & -1 & 1 & 0 & 0 & 1 & 0 & -1 & 0 & 0 \\\\ 0 & 0 & -1 & 1 & -1 & 0 & 0 & 0 & 0 & -1  \end{pmatrix}$ 
 
  $B = \begin{pmatrix}  1 & -1 & 0 & 0 & 1 & 0\\\\  1 & 0 & -1 & 0 & 0 & -1\\\\ 1 & -1 & 0 & -1 & 0 & 0\\\\ 1 & 0 & -1 & 0 & -1 & 0\\\\ 0 & 1 & -1 & 0 & 0 & -1\\\\ 0 & 1 & 0 & 0 & 1 & -1\\\\ 0 & 1 & -1 & 1 & 0 & 0\\\\ 0 & 0 & 1 & -1 & 1 & 0\\\\ 1 & 0 & 0 & -1 & 0 & -1\\\\ 0 & 0 & 0 & 1 & -1 & 1  \end{pmatrix}$
+
+
+ (God I hate huge matrices)
+
+ So $\texttt{ker} B = 0$, $\texttt{ker} A \cong \mathbb{Z}^6$ and we get $\tilde{H}_n (X) = \mathbb{Z}$ for $n = 3$ and $0$ otherwise, the same as $\mathbb{S}^3$.
+
+ It's been a toil... maybe this is something like diagram chasing - not difficult, but better to do it in private :smile:

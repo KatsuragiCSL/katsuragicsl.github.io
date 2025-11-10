@@ -11,14 +11,15 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Nov 2025 04:20:48 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Nov 2025 15:41:30 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/mathematics/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Calculating the homology of Poincaré&#39;s sphere through dodecahedron</title>
+      <title>Calculating the homology of Poincaré&#39;s homology sphere through dodecahedron and cellular homology</title>
       <link>http://localhost:1313/blogs/mathematics/homology-of-poincare-sphere-through-dodecahedron/</link>
       <pubDate>Mon, 10 Nov 2025 04:01:59 +0800</pubDate>
       <guid>http://localhost:1313/blogs/mathematics/homology-of-poincare-sphere-through-dodecahedron/</guid>
-      <description>Dodecahedron Below is a figure showing the identified vertices of the dodecahedron aftering taking quotient:</description>
+      <description>Homology sphere A homology sphere is a (closed connected oriented) $n$-mainfolds with the same homology as the $n$-sphere. Poincaré first conjectured that any $n$-manifolds homologous (i.e. having the same homology) to the $n$-sphere should be homeomorphic to the $n$-sphere, then later he found a counterexample, which led him to a modified conjecture (which is the Poincaré&amp;rsquo;s conjecture).
+The counterexample he found is very interesting, one of the way to construct it is the folowing:</description>
     </item>
     <item>
       <title>The H&#43; doner and acceptor analogy in universal coefficient theorem for homology</title>
