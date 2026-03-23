@@ -11,16 +11,8 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Feb 2026 02:39:34 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 28 Dec 2024 00:16:04 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/combinatorics/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Chain homotopy, homotopy invariance of singular homology and EilenBerg-Zilber map</title>
-      <link>http://localhost:1313/blogs/mathematics/chain-homotopy-homotopy-invariance-of-singular-homology-and-eilenberg-zilber-map/</link>
-      <pubDate>Mon, 09 Feb 2026 02:37:10 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/mathematics/chain-homotopy-homotopy-invariance-of-singular-homology-and-eilenberg-zilber-map/</guid>
-      <description>This is more like a notes on my reflections on some once confusing definitions in basic algebra topology, more than exposition (although it could be?).
-Singular homology should be homotopy invariant The idea of singular homology is to consider how the $n$-simplices in a topological space $X$ relate to each other, especially the cycles, i.e. those with empty boundary. We calculate the homology by taking quotient from the cycles by the boundaries.</description>
-    </item>
     <item>
       <title>Reinventing Catalan numbers</title>
       <link>http://localhost:1313/blogs/mathematics/reinventing-catalan-numbers/</link>

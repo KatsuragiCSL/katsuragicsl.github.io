@@ -11,15 +11,14 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Feb 2026 02:39:34 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2026 20:38:18 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Chain homotopy, homotopy invariance of singular homology and EilenBerg-Zilber map</title>
-      <link>http://localhost:1313/blogs/mathematics/chain-homotopy-homotopy-invariance-of-singular-homology-and-eilenberg-zilber-map/</link>
-      <pubDate>Mon, 09 Feb 2026 02:37:10 +0800</pubDate>
-      <guid>http://localhost:1313/blogs/mathematics/chain-homotopy-homotopy-invariance-of-singular-homology-and-eilenberg-zilber-map/</guid>
-      <description>This is more like a notes on my reflections on some once confusing definitions in basic algebra topology, more than exposition (although it could be?).
-Singular homology should be homotopy invariant The idea of singular homology is to consider how the $n$-simplices in a topological space $X$ relate to each other, especially the cycles, i.e. those with empty boundary. We calculate the homology by taking quotient from the cycles by the boundaries.</description>
+      <title>憶友</title>
+      <link>http://localhost:1313/blogs/%E8%A9%A9%E8%A9%9E/%E6%86%B6%E5%8F%8B/</link>
+      <pubDate>Mon, 23 Mar 2026 20:38:18 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/%E8%A9%A9%E8%A9%9E/%E6%86%B6%E5%8F%8B/</guid>
+      <description>忽見離巢燕，君行有十年。 高堂驚白髮，老樹尚妍妍。 昔日恩仇快，餘生憾事纏。 欲將天際雁，寄意到卿前。</description>
     </item>
     <item>
       <title>The overthinking of LLM</title>
