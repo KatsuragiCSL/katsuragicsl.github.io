@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>五絕 on Script Adults</title>
+    <link>http://localhost:1313/tags/%E4%BA%94%E7%B5%95/</link>
+    <description>Recent content in 五絕 on Script Adults</description>
+    <image>
+      <title>Script Adults</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Mar 2026 17:26:58 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E4%BA%94%E7%B5%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>春分始聞春雷</title>
+      <link>http://localhost:1313/blogs/%E8%A9%A9%E8%A9%9E/sa/</link>
+      <pubDate>Fri, 27 Mar 2026 17:26:58 +0800</pubDate>
+      <guid>http://localhost:1313/blogs/%E8%A9%A9%E8%A9%9E/sa/</guid>
+      <description>今歲春雷晚，牆陰蘚早成。 雲烏風驟起，一震百禽鳴。</description>
+    </item>
+  </channel>
+</rss>
