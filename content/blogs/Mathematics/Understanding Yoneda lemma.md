@@ -24,11 +24,11 @@ Call a morphism $g: A \to X$ a **probe**. Then $h^A$ is the whole system of prob
 
 ### Probing more than one target at a time
 
-Start in $\mathbf{Set}$ with the simplest possible source, a one-point set $A = \{*\}$. A probe $\{*\} \to X$ just selects an element of $X$, so
+Start in $\mathbf{Set}$ with the simplest possible source, a one-point set $A = \{\*\}$. A probe $\{\*\} \to X$ just selects an element of $X$, so
 
 $$\mathcal{C}(\{*\}, X) \cong X.$$
 
-Probing elements one at a time is fine, but it throws something away: the elements of different sets are tied together by the functions between those sets, and one-at-a-time probing ignores all of that. So let's probe several targets at once and *insist that the probes respect the maps between targets*.
+Probing elements one at a time is fine, but it throws something away: the elements of different sets are tied together by the functions between those sets, and one-at-a-time probing ignores all of that. So let's probe several targets at once and **insist that the probes respect the maps between targets**.
 
 To compare against, fix some observable --- a functor $F: \mathbf{Set} \to \mathbf{Set}$ --- and record, for each probe, a piece of $F$-data. That assignment is a family of functions $\alpha_X: \mathcal{C}(\{*\}, X) \to F(X)$, one per target. "Respecting structure" means: for any map $h: X \to Y$ between targets,
 
@@ -42,7 +42,7 @@ $$\alpha_{\{a,b\}}(a) = F(\iota)\big(\alpha_{\{a\}}(a)\big),$$
 
 so once you've recorded data for the probe hitting $a$ in $\{a\}$, the data for $a$ inside $\{a, b\}$ is no longer yours to choose --- the inclusion fixes it. Only the genuinely new element $b$ looks free at this stage. The structure between the targets lets you trace exactly which recorded datum determines which.
 
-So why stop at two targets? Push the same logic everywhere. Every element $x \in X$ is itself a probe $\hat{x}: \{*\} \to X$, and it factors through the trivial probe as $\hat{x} = \hat{x} \circ \text{id}_{\{*\}}$. Run naturality along $\hat{x}$:
+So why stop at two targets? Push the same logic everywhere. Every element $x \in X$ is itself a probe $\hat{x}: \{\*\} \to X$, and it factors through the trivial probe as $\hat{x} = \hat{x} \circ \text{id}_{\{\*\}}$. Run naturality along $\hat{x}$:
 
 $$\alpha_X(\hat{x}) = F(\hat{x})\big(\alpha_{\{*\}}(\text{id}_{\{*\}})\big).$$
 
