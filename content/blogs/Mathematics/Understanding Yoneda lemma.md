@@ -24,7 +24,7 @@ Call a morphism $g: A \to X$ a **probe**. Then $h^A$ is the whole system of prob
 
 ### Probing more than one target at a time
 
-Start in $\mathbf{Set}$ with the simplest possible source, a one-point set $A = \{\*\}$. A probe $\{\*\} \to X$ just selects an element of $X$, so
+Start in $\mathbf{Set}$ with the simplest possible source, a one-point set $A = \{\ast\}$. A probe $\{\ast\} \to X$ just selects an element of $X$, so
 
 $$\mathcal{C}(\{*\}, X) \cong X.$$
 
@@ -42,17 +42,17 @@ $$\alpha_{\{a,b\}}(a) = F(\iota)\big(\alpha_{\{a\}}(a)\big),$$
 
 so once you've recorded data for the probe hitting $a$ in $\{a\}$, the data for $a$ inside $\{a, b\}$ is no longer yours to choose --- the inclusion fixes it. Only the genuinely new element $b$ looks free at this stage. The structure between the targets lets you trace exactly which recorded datum determines which.
 
-So why stop at two targets? Push the same logic everywhere. Every element $x \in X$ is itself a probe $\hat{x}: \{\*\} \to X$, and it factors through the trivial probe as $\hat{x} = \hat{x} \circ \text{id}_{\{\*\}}$. Run naturality along $\hat{x}$:
+So why stop at two targets? Push the same logic everywhere. Every element $x \in X$ is itself a probe $\hat{x}: \{\ast\} \to X$, and it factors through the trivial probe as $\hat{x} = \hat{x} \circ \text{id}_{\{\ast\}}$. Run naturality along $\hat{x}$:
 
-$$\alpha_X(\hat{x}) = F(\hat{x})\big(\alpha_{\{*\}}(\text{id}_{\{*\}})\big).$$
+$$\alpha_X(\hat{x}) = F(\hat{x})\big(\alpha_{\{\ast\}}(\text{id}_{\{\ast\}})\big).$$
 
-Every value of $\alpha$, on every target, is computed from the single datum $u = \alpha_{\{*\}}(\text{id}_{\{*\}}) \in F(\{*\})$. The whole infinite family is the image of the trivial probe, carried around by $F$. That "free" element $b$ from a moment ago wasn't free after all --- it's another probe $\{*\} \to \{a,b\}$, so its datum is $F$ applied to the same $u$.
+Every value of $\alpha$, on every target, is computed from the single datum $u = \alpha_{\{\ast\}}(\text{id}_{\{\ast\}}) \in F(\{\ast\})$. The whole infinite family is the image of the trivial probe, carried around by $F$. That "free" element $b$ from a moment ago wasn't free after all --- it's another probe $\{\ast\} \to \{a,b\}$, so its datum is $F$ applied to the same $u$.
 
-Reading it the other way: every datum $u \in F(\{*\})$ does give a consistent family, and different $u$'s give different families. So the natural transformations are *exactly* the elements of $F(\{*\})$:
+Reading it the other way: every datum $u \in F(\{\ast\})$ does give a consistent family, and different $u$'s give different families. So the natural transformations are *exactly* the elements of $F(\{\ast\})$:
 
-$$\text{Nat}\big(h^{\{*\}}, F\big) \cong F(\{*\}).$$
+$$\text{Nat}\big(h^{\{\ast\}}, F\big) \cong F(\{\ast\}).$$
 
-Nothing used that the source was a point. Replace $\{*\}$ with any object $A$, replace "element of $X$" with "probe $A \to X$", and replace the trivial probe with $\text{id}_A$, and the same argument runs unchanged.
+Nothing used that the source was a point. Replace $\{\ast\}$ with any object $A$, replace "element of $X$" with "probe $A \to X$", and replace the trivial probe with $\text{id}_A$, and the same argument runs unchanged.
 
 ### The statement
 
