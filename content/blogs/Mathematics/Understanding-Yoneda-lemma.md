@@ -1,10 +1,13 @@
 ---
 title: "Understanding Yoneda lemma"
-date: 2026-06-02T17:59:01+08:00
+date: 2026-06-03T01:33:43+08:00
 TocOpen: true
 categories: ["mathematics"]
-tags: ['category-theory']
+tags: ['category-theory', 'intuition']
 math: true
+tikz: true
+cover:
+  image: "/Understanding-Yoneda-lemma/pic.png"
 ---
 
 
