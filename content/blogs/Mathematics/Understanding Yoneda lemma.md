@@ -100,6 +100,7 @@ The picture puts the cyclic-group version on the left and the Yoneda version on 
 {{< tikz >}}
 
 \usepackage{tikz}
+\usetikzlibrary{amsfonts}
 
 \begin{document}
 \begin{tikzpicture}[scale=1.5, font=\sffamily, >=stealth]
