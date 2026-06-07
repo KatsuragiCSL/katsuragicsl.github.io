@@ -1,5 +1,5 @@
 ---
-title: "The Courier and the Train"
+title: "The Courier and the truck"
 subtitle: "What the Delivery Worker Knows About AI"
 date: 2026-06-07T15:06:05+08:00
 TocOpen: true
@@ -9,7 +9,7 @@ cover:
   image: "https://images.unsplash.com/photo-1636543133032-e175f2adfe25?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ---
 
-## The Courier and the Train; complement and substitute
+## The Courier and the truck; complement and substitute
 
 Although people say "this time is different", there is something in common.
 
