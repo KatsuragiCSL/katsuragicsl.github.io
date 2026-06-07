@@ -1,7 +1,6 @@
 ---
 title: "The Courier and the Train"
 subtitle: "What the Delivery Worker Knows About AI"
-draft: true
 date: 2026-06-07T15:06:05+08:00
 TocOpen: true
 categories: ["thoughts"]
@@ -18,7 +17,7 @@ In the ancient ancient times, if you needed a parcel moved across the country, y
 
 Later, people came to know how to use horses and other animals, so we needed those who could use these animals well to do their job, instead of just strong fast walkers, although most of the time the delivery men still have to walk so their physicality still matters.
 
-Then came the trains and trucks, and no human alive could compete with either. So the entire basis of the courier's value, his bodily speed, rendered worthless. However the industry didn't collapse. What changed was the definition of a good worker. The edge moved off the body and onto the machine: now the skilled worker was the one who could route, schedule, load, and operate the system that did the moving. Physicality stopped mattering, unless you are so weak that you would faint for dring a truck for an hour.
+Then came the trains and trucks, and no human alive could compete with either. So the entire basis of the courier's value, his bodily speed, rendered worthless. However the industry didn't collapse. What changed was the definition of a good worker. The edge moved off the body and onto the machine: now the skilled worker was the one who could route, schedule, load, and operate the system that did the moving. Physicality stopped mattering, unless you are so weak that you would faint for driving a truck for an hour.
 
 Every wave of automation provoked exactly same fear of losing jobs/getting an industry killed --- the Luddites smashing looms, the clerks watching the typewriter, the switchboard operators watching the exchange go automatic. Yes, some jobs vanished, but they were replaced by jobs no one had thought to imagine. Net employment did not collapse, it just migrated.
 
@@ -34,15 +33,19 @@ What rescued workers each previous time was human cognitive flexibility: the mac
 
 The unsettling possibility is not that AI is good at one more task. It is that the rung itself: general-purpose cognition, the thing that let us keep climbing, is now the thing being automated. If the ladder is what's being replaced, "climb higher" stops being a plan.
 
-This also makes us think: is "complement" and "substitue" that different? Or is it just a spectrum and our previous inventions were not powerful enough?
+This also makes us think: is "complement" and "substitute" that different? Or is it just a spectrum and our previous inventions were not powerful enough?
 
-## The new operating skill is a thinner moat
+## The industry does not die, but the new operating skill is a thinner moat
 
 When the skill moved off the courier's legs and onto the machine, it landed on something hard. Driving plus logistics took real time to acquire. Because the skill was scarce, the people who had it captured rent from it. They were paid for the difficulty of becoming good at operating the new system. That rent was the cushion that made the transition survivable for workers. The fast legs became worthless, but the logistics were worth something, and the something was defensible because not everyone could do it.
 
 "Being good at using AI" is not like that. The barrier is extremely low. You can learn to prompt a model competently in an afternoon. The operating skill itself is abundant, and abundant skills do not command rent.
 
-So the slice of the surplus that historically flowed to skilled operators, the slice that made mechanization tolerable for the people doing the work, may simply be much thinner this time. The durable moat is not operating the AI. It is the judgment the AI cannot supply: knowing which of its outputs is confidently wrong, deciding what actually matters, being the person whose name goes on the call. Yes, that moat is real, but it is much narrower than "knows how to drive the truck".
+So the slice of the surplus that historically flowed to skilled operators, the slice that made mechanization tolerable for the people doing the work, may simply be much thinner this time. The durable moat is not operating the AI. It is the judgment the AI cannot supply: knowing which of its outputs is confidently wrong, deciding what actually matters, being the person whose name goes on the call.
+
+Yes, that moat is real, but it is much narrower than "knows how to drive the truck".
+
+If the operating skill is thin, and automated again a year later, then no worker is scarce, and hence the leverage that came from scarcity is gone. Worse, the work is now distributed, remote, atomized by design. And the reflexive policy answer, *retrain people*, is the weakest of all, because retraining only works when there is a durable scarce skill to train into. A thin moat turns retraining into a treadmill, where the rent evaporates as fast as anyone acquires it. 
 
 ## Who cares the industry? I only care about my life, so does everyone.
 
@@ -50,14 +53,28 @@ Notice that everything above is about the size of the pie and the shape of the r
 
 It is worth being precise here. The modern logistics worker is, in absolute terms, vastly better off than the pre-industrial porter --- better fed, longer-lived, materially richer by any measure, thanks to technological advances. That is not the thing that got worse. What got worse is *relative*: the worker's share of the value the system produces, and his bargaining power against the platform that owns the system. The squeeze is on the slice, not the standard of living.
 
-The historical record on the slice is brutal, and it is underused in these conversations. Economic historians call it the Engels' Pause: a stretch of roughly the 1790s to the 1840s in Britain during which output per worker climbed steadily while real wages sat almost flat. For something like a generation, the machines got more productive and the people running them did not get richer. The gains *did* eventually broaden, but not because the technology decided to share. They broadened through institutions that were fought for: organized labor, regulation, public education, and the mass-market logic that eventually made it profitable to pay workers enough to be customers. Technology set the size of the pie. Politics and institutions decided the slices. Nothing in the machinery guaranteed the second would follow the first, and for a generation it didn't.
+The historical record on the slice is brutal, and it is underused in these conversations. Economic historians call it the Engels' Pause: a stretch of roughly the 1790s to the 1840s in Britain during which output per worker climbed steadily while real wages sat almost flat. By the numbers Robert Allen assembled, output per worker rose about 46% between 1780 and 1840 while the real wage rose only about 12%; labour's share of national income slid from around 60% toward one half, and capital's share more than doubled, from about 20% to over 40%.[^1] For something like a generation, the machines got more productive and the people running them did not get richer.
 
-## What makes it harder this time
+## The elasticity spectrum
 
-Take the two levers that did the most work in the nineteenth and twentieth centuries: skilled labor that could bargain, and education that produced it. Both ran on the same engine: a durable, scarce skill that workers could acquire and then charge rent for. Collective bargaining had teeth because skilled workers were hard to replace, and because the factory physically gathered them into a room where organizing was possible. Public education mattered because it manufactured exactly that scarcity at scale: literate, numerate, trainable workers who could capture the rent the new machines created.
+So is the line between complement and substitute real, or just a matter of degree? Think in the terms of the elasticity of substitution between capital and labour. It measures precisely the thing the courier story was circling --- how easily one can stand in for the other. Near zero means the two are complements, like when the machine needs the human beside it: the truck that still needs a driver lives here. Push the number higher and the machine begins to replace the human outright; the self-driving truck lives at the far end.
 
-Run the AI case through that engine and it stalls. If the operating skill is thin, and automated again a year later, then no worker is scarce, and hence the leverage that came from scarcity is gone. Worse, the work is now distributed, remote, atomized by design; the room that the factory provided, the one that made organizing possible at all, has been emptied out. And the reflexive policy answer, *retrain everyone*, is the weakest of all, because retraining only works when there is a durable scarce skill to train into. A thin moat turns retraining into a treadmill, where the rent evaporates as fast as anyone acquires it. 
+When Allen calibrated his model of the industrial revolution, that dial sat very low --- an elasticity of roughly 0.2.[^2] Capital and labour were strong complements. You could not simply swap a machine in for a worker: the spinning frame was useless without hands to run it, and a pile of unmanned capital scarcely raised output at all. Growth required both to climb together, or it did not happen.
 
-If the slice cannot be defended inside the labor market --- not through wages, not through bargaining, not through reskilling --- then the only place left to defend it is ownership. This is the move the structure of the problem actually points to. It is a contest over the split between capital and labor, and you do not win a contest over the split by asking, more politely, for higher wages. You win it by changing who owns the thing producing the surplus.
+That low number is the hidden reason the pause ended. Because capital could not do without labour, the capitalists' own hoarded profits eventually worked in the workers' favour: every new machine they bought needed more hands to operate, so the swelling capital stock bid up the price of labour until wages finally rose in line with output.[^3]
 
-None of this is guaranteed, and it is worth saying plainly. The institutions that bent the curve last time took the better part of a century and were fought for, sometimes bloodily, by people who did not live to see the payoff. The atomization that weakens bargaining weakens that fight too. There is no mechanism in the technology that makes any of it happen on its own.
+So about the invention of AI?
+
+It is not that the machine is clever. It is that AI may be the first machine to sit near the other end of the elasticity spectrum. If it substitutes for cognitive labour rather than requiring it, the elasticity climbs toward infinity, and the chain that saved the Victorian worker comes off. Accumulation no longer bids for hands, because it no longer needs them; the profits simply buy more machines. The very mechanism that made the last recovery automatic depends on a low elasticity, and a high one dismantles it. Allen even caught the number beginning to creep upward inside his own period, as power looms took over work that handlooms had once needed people for.[^4] The spectrum was always there. The fear, stated precisely, is that AI is the first invention powerful enough to carry us to the end of it --- past the point the nineteenth century ever reached, and past the point where a society growing richer still has to mean paying the people who made it so.
+
+The institutions that bent the curve last time took the better part of a century and were fought for, sometimes bloodily, by people who did not live to see the payoff. There is no mechanism in the technology that makes any of it happen on its own.
+
+---
+
+[^1]: Robert C. Allen, "Engels' Pause: Technical Change, Capital Accumulation, and Inequality in the British Industrial Revolution," *Explorations in Economic History* 46, no. 4 (2009): 418–435. doi:10.1016/j.eeh.2009.04.004. Output per worker and real-wage growth, 1780–1840: Fig. 1 and the surrounding discussion. Factor shares (labour falling from ~60% toward one half, capital roughly doubling from ~20% to over 40%): Fig. 2 and Section 1. Available at https://www.nuff.ox.ac.uk/Users/Allen/engelspause.pdf
+
+[^2]: Allen (2009), Section 4 and Fig. 5. The elasticity of substitution between capital and labour is estimated at approximately 0.2 c. 1810 --- well below one, indicating the two were strong complements rather than substitutes.
+
+[^3]: Allen (2009), Section 6 ("Capital accumulation and the two phase history of inequality") and Conclusion.
+
+[^4]: Allen (2009), Section 4.
