@@ -19,7 +19,7 @@ Later, people came to know how to use horses and other animals, so we needed tho
 
 Then came the trains and trucks, and no human alive could compete with either. So the entire basis of the courier's value, his bodily speed, rendered worthless. However the industry didn't collapse. What changed was the definition of a good worker. The edge moved off the body and onto the machine: now the skilled worker was the one who could route, schedule, load, and operate the system that did the moving. Physicality stopped mattering, unless you are so weak that you would faint for driving a truck for an hour.
 
-Every wave of automation provoked exactly same fear of losing jobs/getting an industry killed --- the Luddites smashing looms, the clerks watching the typewriter, the switchboard operators watching the exchange go automatic. Yes, some jobs vanished, but they were replaced by jobs no one had thought to imagine. Net employment did not collapse, it just migrated.
+Every wave of automation provoked exactly same fear of losing jobs/getting an industry killed --- the clerks and the typewriter, the switchboard operators and the exchange go automatic. Yes, some jobs vanished, but they were replaced by jobs no one had thought to imagine. Net employment did not collapse, it just migrated.
 
 The train *complemented* instead of *substituted* the courier. It went faster than he ever could, but it did not remove him. Someone still had to drive it, route it, load it, and carry the parcel the last hundred yards to the door. The machine extended human reach rather than replacing the human inside the loop. That is the entire reason the industry kept employing people: the technology needed them.
 
