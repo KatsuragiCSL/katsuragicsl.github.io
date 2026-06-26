@@ -15,9 +15,9 @@ It was >10 years ago and I still remember how many times I listened and pronounc
 
 {{< figure src="/static/even-a-chinchilla-is-better-than-you-in-language-learning/dare.png" alt="だれ" caption="me prnouncing だれ" >}}
 
-{{< figure src="/static/even-a-chinchilla-is-better-than-you-in-language-learning/tare.png" alt="たれ" caption="notice the short voicing lag in たれ" >}}
+{{< figure src="/static/even-a-chinchilla-is-better-than-you-in-language-learning/tare_marked.png" alt="たれ" caption="notice the short voicing lag in たれ" >}}
 
-{{< figure src="/static/even-a-chinchilla-is-better-than-you-in-language-learning/dare.png" alt="だれ" caption="notice the voicing lead in だれ" >}}
+{{< figure src="/static/even-a-chinchilla-is-better-than-you-in-language-learning/dare_marked.png" alt="だれ" caption="notice the voicing lead in だれ" >}}
 
 People from similar background often have troubles in distinguishing them, some even do not realize that they are different. Some even suspect that the contrast is not real. :roll_eyes:
 
