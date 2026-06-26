@@ -13,7 +13,7 @@ It was >10 years ago and I still remember how many times I listened and pronounc
 
 {{< figure src="even-a-chinchilla-is-better-than-you-in-language-learning/tare.png" alt="たれ" caption="me pronouncing たれ" >}}
 
-{{< figure src="even-a-chinchilla-is-better-than-you-in-language-learning/dare.png" alt="だれ" caption="me prnouncing だれ" >}}
+{{< figure src="even-a-chinchilla-is-better-than-you-in-language-learning/dare.png" alt="だれ" caption="me pronouncing だれ" >}}
 
 {{< figure src="even-a-chinchilla-is-better-than-you-in-language-learning/tare_marked.png" alt="たれ" caption="notice the short voicing lag in たれ" >}}
 
