@@ -80,3 +80,8 @@ outputs:
     - HTML
     - RSS
     - JSON
+
+
+security:
+  allowContent:
+  - *
