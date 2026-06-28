@@ -37,15 +37,12 @@ params:
     title: Script Adult
     subtitle: "A big boy playing on the sea-shore, sharing the wonder he gets when he finds smooth pebbles and pretty shells."
 
-  social:
+  socialIcons:
     - name: github
-      icon: fa-brands fa-github
       url: "https://github.com/KatsuragiCSL"
     - name: X
-      icon: fa-brands fa-x-twitter
       url: "https://x.com/katsuragicsl"
     - name: linkedin
-      icon: fa-brands fa-linkedin
       url: https://www.linkedin.com/in/jack-shue-long-chan/
 
   utteranc:

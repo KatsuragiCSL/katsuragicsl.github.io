@@ -5,7 +5,8 @@ date: 2026-06-26T02:50:34+08:00
 categories: ["misc"]
 tags: ['linguistics', 'phonetics']
 series: ['Journey of a linguistics noob']
-image: "https://images.unsplash.com/photo-1780247594774-8deddf5ab79f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+cover:
+  image: "https://images.unsplash.com/photo-1780247594774-8deddf5ab79f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ---
 
 Ok it is definitely a clickbait. But as a native speaker of a language (Cantonese, Hong Kong/GuangZhou dialect) that does not have voicing constracts in its consonants, I had a real hard time in differentiate voiced and voiceless consonants when I started learning Japanese (which has the voicing constracts, and the voiceless consonants are unaspirated in native speakers' mouths most of the time). 
