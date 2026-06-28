@@ -11,13 +11,13 @@ Ok it is definitely a clickbait. But as a native speaker of a language (Cantones
 
 It was >10 years ago and I still remember how many times I listened and pronounced voiced and voiceless consonants with a Praat installed in my computer, and looked at the spectrograms allllll day long.
 
-{{< figure src="even-a-chinchilla-is-better-than-you-in-language-learning/tare.png" alt="たれ" caption="me pronouncing たれ" >}}
+{{< figure src="/even-a-chinchilla-is-better-than-you-in-language-learning/tare.png" alt="たれ" caption="me pronouncing たれ" >}}
 
-{{< figure src="even-a-chinchilla-is-better-than-you-in-language-learning/dare.png" alt="だれ" caption="me pronouncing だれ" >}}
+{{< figure src="/even-a-chinchilla-is-better-than-you-in-language-learning/dare.png" alt="だれ" caption="me pronouncing だれ" >}}
 
-{{< figure src="even-a-chinchilla-is-better-than-you-in-language-learning/tare_marked.png" alt="たれ" caption="notice the short voicing lag in たれ" >}}
+{{< figure src="/even-a-chinchilla-is-better-than-you-in-language-learning/tare_marked.png" alt="たれ" caption="notice the short voicing lag in たれ" >}}
 
-{{< figure src="even-a-chinchilla-is-better-than-you-in-language-learning/dare_marked.png" alt="だれ" caption="notice the voicing lead in だれ" >}}
+{{< figure src="/even-a-chinchilla-is-better-than-you-in-language-learning/dare_marked.png" alt="だれ" caption="notice the voicing lead in だれ" >}}
 
 People from similar background often have troubles in distinguishing them, some even do not realize that they are different. Some even suspect that the contrast is not real. :roll_eyes:
 
