@@ -1,18 +1,159 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Mathematics on Script Adults</title><link>https://katsuragicsl.github.io/categories/mathematics/</link><description>Recent content in Mathematics on Script Adults</description><image><title>Script Adults</title><url>https://katsuragicsl.github.io/images/papermod-cover.png</url><link>https://katsuragicsl.github.io/images/papermod-cover.png</link></image><generator>Hugo -- 0.128.2</generator><language>en-us</language><lastBuildDate>Thu, 11 Jun 2026 22:03:19 +0800</lastBuildDate><atom:link href="https://katsuragicsl.github.io/categories/mathematics/index.xml" rel="self" type="application/rss+xml"/><item><title>Understanding Yoneda lemma</title><link>https://katsuragicsl.github.io/blogs/mathematics/understanding-yoneda-lemma/</link><pubDate>Wed, 03 Jun 2026 01:33:43 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/understanding-yoneda-lemma/</guid><description>The Yoneda Lemma The Yoneda lemma has been being complainted as &amp;ldquo;hard to understand&amp;rdquo; for a long time. Indeed it is not very easy, so I was trying to come up with a way to understand it more intuitively.
-Everyone knows the analogy by Ravi Vakil:
-You work at a particle accelerator. You want to understand some particle. All you can do are throw other particles at it and see what happens.</description></item><item><title>Calculating the homology of Poincaré's homology sphere through dodecahedron and cellular homology</title><link>https://katsuragicsl.github.io/blogs/mathematics/homology-of-poincare-sphere-through-dodecahedron/</link><pubDate>Mon, 10 Nov 2025 04:01:59 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/homology-of-poincare-sphere-through-dodecahedron/</guid><description>Homology sphere A homology sphere is a (closed connected oriented) $n$-mainfolds with the same homology as the $n$-sphere. Poincaré first conjectured that any $n$-manifolds homologous (i.e. having the same homology) to the $n$-sphere should be homeomorphic to the $n$-sphere, then later he found a counterexample, which led him to a modified conjecture (which is the Poincaré&amp;rsquo;s conjecture).
-The counterexample he found is very interesting, one of the way to construct it is the folowing:</description></item><item><title>The H+ doner and acceptor analogy in universal coefficient theorem for homology</title><link>https://katsuragicsl.github.io/blogs/mathematics/universal-coefficient-theorem-homology-h+-doner-acceptor-analogy/</link><pubDate>Fri, 24 Oct 2025 10:17:00 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/universal-coefficient-theorem-homology-h+-doner-acceptor-analogy/</guid><description>Using fields to detect integral homology? So in the universal coefficient theorem, by taking $R = \mathbb{Z}$, we know that there is a short exact sequence (which splits):
-$0 \rightarrow H_n(C_{*}) \otimes_R M \rightarrow H_n(C_{*} \otimes_R M) \rightarrow Tor^R_1(H_{n-1}(C_*), M) \rightarrow 0$
-Some interesting cases are when $M = \mathbb{Z}_{p} \text{ or } \mathbb{Q}$ , do the homology over $\mathbb{Q}$ and $\mathbb{Z}_p$ tells us something about the integral homology? In particular, if $\tilde{H}(X; \mathbb{Q}) = 0$ and $\tilde{H}(X; \mathbb{Z}_p) = 0$ for all $p$, does it imply that $\tilde{H}(X) = 0$ ?</description></item><item><title>The double dual trick to construct a better object from the existing one</title><link>https://katsuragicsl.github.io/blogs/mathematics/the-double-dual-trick-to-construct-better-object-from-the-existing-one/</link><pubDate>Thu, 31 Jul 2025 23:28:34 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/the-double-dual-trick-to-construct-better-object-from-the-existing-one/</guid><description>Stone–Čech compactification One of the proof of the Stone–Čech compactification is to consider the continuous functions from a given topological space $X$ to $[0, 1]$.
-Crux 1: constructing $[0, 1]^{C}$
-Let $C$ be the space of all continuous functions from $X$ to $[0, 1]$, consider $[0, 1]^{C}$, there is a natural map from $X$ to $[0, 1]^{C}$: for each $x \in X$, define $\phi(x) = f \mapsto f(x)$. With product topology $\phi$ is continuous.</description></item><item><title>Playful observations with deformation retracts and path connected-ness</title><link>https://katsuragicsl.github.io/blogs/mathematics/playful-observations-with-deformation-retracts-and-path-connected-ness/</link><pubDate>Mon, 21 Jul 2025 01:47:45 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/playful-observations-with-deformation-retracts-and-path-connected-ness/</guid><description>I was going through a problem in Lee&amp;rsquo;s Topological Manifolds book1 (problem 7-12). It states that the infinite broom has a strong deformation retract to $(0, 0)$ but not for $(1, 0)$ (only a deformation retract).
-Below is some of my playful observations inspired by this problem. (Not restricted to the infinite broom space.)
-Inifinite Broom Note that the deformation retract to $(0, 0)$ itselfs imply the deformation retract to $(1, 0)$, since one can define the deformation retract to $(1, 0)$ by &amp;ldquo;first retract to $(0, 0)$, then push it to the point $(1, 0)$ along the line joining these two points&amp;rdquo;.</description></item><item><title>Amazed by how ring theory can be linked up to topology</title><link>https://katsuragicsl.github.io/blogs/mathematics/linking-up-ring-and-topology/</link><pubDate>Thu, 26 Jun 2025 01:37:20 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/linking-up-ring-and-topology/</guid><description>I am reviewing some fundamental algebra, and I just learnt something beautifully suggesting the connection of ring theory and geometry, which made me eager to learn some algebraic geometry (which I was not very interested when I was in undergrad). It is an exercise in Aluffi&amp;rsquo;s book1.
-Lets&amp;rsquo; jump into it.
-The problem Let $K$ be a compact topological space, and let $R$ be the ring of continuous real-valued functions on $K$, with addition and multiplication defined pointwise.</description></item><item><title>A more intuitive explanation of Burnside's lemma</title><link>https://katsuragicsl.github.io/blogs/mathematics/a-more-intuitive-explanation-of-burnside-lemma/</link><pubDate>Thu, 10 Apr 2025 00:56:29 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/a-more-intuitive-explanation-of-burnside-lemma/</guid><description>Warning
-You need to know some basic group theory terminology to appreciate(I hope you do) the following content.
-Burnside&amp;rsquo;s lemma Here is the statement of the Burnside&amp;rsquo;s lemma:
-Let $G$ be a group that actions on a set $X$. Denote $X^{g}$ the set of fixed points of $g$ i.e. $\{x \in X | g \cdot x = x\}$, then the number of orbits of the action is equal to $\dfrac{1}{|G|}\sum\limits_{g \in G} |X^g|$.</description></item><item><title>An elementary solution of a weird intergal problem (Putnam 1985 A5)</title><link>https://katsuragicsl.github.io/blogs/mathematics/elementary-solution-of-a-weird-integral-problem/</link><pubDate>Sat, 05 Apr 2025 22:38:14 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/elementary-solution-of-a-weird-integral-problem/</guid><description>Problem Let $I_{m} = \int^{2\pi}_{0} \cos(x)\cos(2x)\dots\cos(mx) dx$. For $m$ in $1, 2, \dots, 10$, for which $m$ is $I_m \neq 0$ ?
-Solution $I_m$ is non-zero if and only if $m \equiv 0, 3 \pmod{4}$.
-Main idea The official(seemingly? It is in the putnam problem book and a few solutions I found online do the same.) solution is to substitute $\cos x = \frac{e^{ix} + e^{-ix}}{2}$ followed by grouping the terms into $\cos x \cos (2x) \dots \cos (mx) = e^{\text{something}}$, and analyze the something.</description></item><item><title>Reinventing Catalan numbers</title><link>https://katsuragicsl.github.io/blogs/mathematics/reinventing-catalan-numbers/</link><pubDate>Sat, 10 Aug 2024 17:59:01 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/reinventing-catalan-numbers/</guid><description>Counting binary trees I was thinking about of the problem of balancing a binary tree, and my mind stumbled across to the question &amp;ldquo;How many different binary trees with labelled nodes can you make without changing the traversal order?&amp;rdquo;. After figuring out the answer myself I realized that the numbers of such binary trees are just Catalan numebrs (I was not really into combinatorics - now I am).
-For example, the following has traversal order 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6-&amp;gt;7</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Mathematics on Script Adults</title><link>https://katsuragicsl.github.io/categories/mathematics/</link><description>Recent content in Mathematics on Script Adults</description><image><title>Script Adults</title><url>https://katsuragicsl.github.io/images/papermod-cover.png</url><link>https://katsuragicsl.github.io/images/papermod-cover.png</link></image><generator>Hugo -- 0.140.0</generator><language>en-us</language><lastBuildDate>Thu, 11 Jun 2026 22:03:19 +0800</lastBuildDate><atom:link href="https://katsuragicsl.github.io/categories/mathematics/index.xml" rel="self" type="application/rss+xml"/><item><title>Understanding Yoneda lemma</title><link>https://katsuragicsl.github.io/blogs/mathematics/understanding-yoneda-lemma/</link><pubDate>Wed, 03 Jun 2026 01:33:43 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/understanding-yoneda-lemma/</guid><description>&lt;h3 id="the-yoneda-lemma">The Yoneda Lemma&lt;/h3>
+&lt;p>The Yoneda lemma has been being complainted as &amp;ldquo;hard to understand&amp;rdquo; for a long time. Indeed it is not very easy, so I was trying to come up with a way to understand it more intuitively.&lt;/p>
+&lt;p>Everyone knows the analogy by Ravi Vakil:&lt;/p>
+&lt;blockquote>
+&lt;p>You work at a particle accelerator. You want to understand some particle. All you can do are throw other particles at it and see what happens. If you understand how your mystery particle responds to all possible test particles at all possible test energies, then you know everything there is to know about your mystery particle.&lt;/p></description></item><item><title>Calculating the homology of Poincaré's homology sphere through dodecahedron and cellular homology</title><link>https://katsuragicsl.github.io/blogs/mathematics/homology-of-poincare-sphere-through-dodecahedron/</link><pubDate>Mon, 10 Nov 2025 04:01:59 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/homology-of-poincare-sphere-through-dodecahedron/</guid><description>&lt;h2 id="homology-sphere">Homology sphere&lt;/h2>
+&lt;p>A homology sphere is a (closed connected oriented) $n$-mainfolds with the same homology as the $n$-sphere. Poincaré first conjectured that any $n$-manifolds homologous (i.e. having the same homology) to the $n$-sphere should be homeomorphic to the $n$-sphere, then later he found a counterexample, which led him to a modified conjecture (which is the Poincaré&amp;rsquo;s conjecture).&lt;/p>
+&lt;p>The counterexample he found is very interesting, one of the way to construct it is the folowing:&lt;/p></description></item><item><title>The H+ doner and acceptor analogy in universal coefficient theorem for homology</title><link>https://katsuragicsl.github.io/blogs/mathematics/universal-coefficient-theorem-homology-h+-doner-acceptor-analogy/</link><pubDate>Fri, 24 Oct 2025 10:17:00 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/universal-coefficient-theorem-homology-h+-doner-acceptor-analogy/</guid><description>&lt;h2 id="using-fields-to-detect-integral-homology">Using fields to detect integral homology?&lt;/h2>
+&lt;p>So in the universal coefficient theorem, by taking $R = \mathbb{Z}$, we know that there is a short exact sequence (which splits):&lt;/p>
+&lt;p>$0 \rightarrow H_n(C_{*}) \otimes_R M \rightarrow H_n(C_{*} \otimes_R M) \rightarrow Tor^R_1(H_{n-1}(C_*), M) \rightarrow 0$&lt;/p>
+&lt;p>Some interesting cases are when $M = \mathbb{Z}_{p} \text{ or } \mathbb{Q}$ , do the homology over $\mathbb{Q}$ and $\mathbb{Z}_p$ tells us something about the integral homology? In particular, if $\tilde{H}(X; \mathbb{Q}) = 0$ and $\tilde{H}(X; \mathbb{Z}_p) = 0$ for all $p$, does it imply that $\tilde{H}(X) = 0$ ? .This is a problem suggested in [Kup2020]&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p></description></item><item><title>The double dual trick to construct a better object from the existing one</title><link>https://katsuragicsl.github.io/blogs/mathematics/the-double-dual-trick-to-construct-better-object-from-the-existing-one/</link><pubDate>Thu, 31 Jul 2025 23:28:34 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/the-double-dual-trick-to-construct-better-object-from-the-existing-one/</guid><description>&lt;h3 id="stonečech-compactification">Stone–Čech compactification&lt;/h3>
+&lt;p>One of the proof of the Stone–Čech compactification is to consider the continuous functions from a given topological space $X$ to $[0, 1]$.&lt;/p>
+&lt;p>Crux 1: constructing $[0, 1]^{C}$&lt;/p>
+&lt;p>Let $C$ be the space of all continuous functions from $X$ to $[0, 1]$, consider $[0, 1]^{C}$, there is a natural map from $X$ to $[0, 1]^{C}$: for each $x \in X$, define $\phi(x) = f \mapsto f(x)$. With product topology $\phi$ is continuous. Also by Tychonnof&amp;rsquo;s theorem $[0, 1]^{C}$ is compact. Now the closure of the image is obviously compact Hausdorff, and it satisfies a nice property: any continuous map $f : X \to [0, 1]$ extends uniquely to a continuous map $\overline{\phi(X)} \to [0,1]$: for any $\phi(x)$, it has to map to $f(x)$!&lt;/p></description></item><item><title>Playful observations with deformation retracts and path connected-ness</title><link>https://katsuragicsl.github.io/blogs/mathematics/playful-observations-with-deformation-retracts-and-path-connected-ness/</link><pubDate>Mon, 21 Jul 2025 01:47:45 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/playful-observations-with-deformation-retracts-and-path-connected-ness/</guid><description>&lt;p>I was going through a problem in Lee&amp;rsquo;s Topological Manifolds book&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> (problem 7-12). It states that the infinite broom has a strong deformation retract to $(0, 0)$ but not for $(1, 0)$ (only a deformation retract).&lt;/p>
+&lt;p>Below is some of my playful observations inspired by this problem. (Not restricted to the infinite broom space.)&lt;/p>
+&lt;h3 id="inifinite-broom">Inifinite Broom&lt;/h3>
+&lt;div class="flex" width="full" height="full">
+&lt;div class="flex-grow">&lt;/div>
+&lt;script type="text/tikz">
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\begin{document}
+\begin{tikzpicture}[scale=2.5]
+% Draw the base line [0,1]
+\draw[thick] (0,0) -- (5,0);
+\fill (5,0) circle (1pt);
+\node[below] at (0,0) {$0$};
+\node[below] at (5,0) {$1$};
+% Draw bristles for n=1 to 5
+\foreach \n in {1,2,...,5} {
+\draw (0,0) -- (5,{5/\n});
+\node[right] at (5,{5/\n}) {$\left(1, \frac{1}{\n}\right)$};
+\fill (5,{5/\n}) circle (1pt);
+}
+% Draw the "infinite continuation" indicator
+\draw[line width=1pt, line cap=round, dash pattern=on 0pt off 2\pgflinewidth]
+(5,1) -- (5,0.1);
+% poor man's caption
+\node[yshift=-1cm, scale=2] at (2.5,0) {Infinite broom};
+\end{tikzpicture}
+\end{document}
+&lt;/script>
+&lt;div class="flex-grow">&lt;/div>
+&lt;/div>
+&lt;p>Note that the deformation retract to $(0, 0)$ itselfs imply the deformation retract to $(1, 0)$, since one can define the deformation retract to $(1, 0)$ by &amp;ldquo;first retract to $(0, 0)$, then push it to the point $(1, 0)$ along the line joining these two points&amp;rdquo;.&lt;/p></description></item><item><title>Amazed by how ring theory can be linked up to topology</title><link>https://katsuragicsl.github.io/blogs/mathematics/linking-up-ring-and-topology/</link><pubDate>Thu, 26 Jun 2025 01:37:20 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/linking-up-ring-and-topology/</guid><description>&lt;p>I am reviewing some fundamental algebra, and I just learnt something beautifully suggesting the connection of ring theory and geometry, which made me eager to learn some algebraic geometry (which I was not very interested when I was in undergrad). It is an exercise in Aluffi&amp;rsquo;s book&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>Lets&amp;rsquo; jump into it.&lt;/p>
+&lt;h3 id="the-problem">The problem&lt;/h3>
+&lt;blockquote>
+&lt;p>Let $K$ be a compact topological space, and let $R$ be the ring of continuous real-valued functions on $K$, with addition and multiplication defined pointwise. &lt;br>
+(i) For $p \in K$, let $M_p = \{f \in R | f(p) = 0\}$. Prove that $M_p$ is a maximal ideal in $R$. &lt;br>
+(ii) Prove that if $f_1, \dots , f_r \in R$ have no common zeros, then $(f1, \dots , fr)$ = $(1)$. &lt;br>
+(Hint: Consider $f^2_1 + \dots + f^2_r$ .) &lt;br>
+(iii) Prove that every maximal ideal $M$ in $R$ is of the form $M_p$ for some $p \in K$. &lt;br>
+(Hint: You will use the compactness of $K$ and (ii).)&lt;/p></description></item><item><title>A more intuitive explanation of Burnside's lemma</title><link>https://katsuragicsl.github.io/blogs/mathematics/a-more-intuitive-explanation-of-burnside-lemma/</link><pubDate>Thu, 10 Apr 2025 00:56:29 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/a-more-intuitive-explanation-of-burnside-lemma/</guid><description>&lt;style type="text/css">
+.notice {
+--title-color: #fff;
+--title-background-color: #6be;
+--content-color: #444;
+--content-background-color: #e7f2fa;
+}
+.notice.info {
+--title-background-color: #fb7;
+--content-background-color: #fec;
+}
+.notice.tip {
+--title-background-color: #5a5;
+--content-background-color: #efe;
+}
+.notice.warning {
+--title-background-color: #c33;
+--content-background-color: #fee;
+}
+@media (prefers-color-scheme:dark) {
+.notice {
+--title-color: #fff;
+--title-background-color: #069;
+--content-color: #ddd;
+--content-background-color: #023;
+}
+.notice.info {
+--title-background-color: #a50;
+--content-background-color: #420;
+}
+.notice.tip {
+--title-background-color: #363;
+--content-background-color: #121;
+}
+.notice.warning {
+--title-background-color: #800;
+--content-background-color: #400;
+}
+}
+body.dark .notice {
+--title-color: #fff;
+--title-background-color: #069;
+--content-color: #ddd;
+--content-background-color: #023;
+}
+body.dark .notice.info {
+--title-background-color: #a50;
+--content-background-color: #420;
+}
+body.dark .notice.tip {
+--title-background-color: #363;
+--content-background-color: #121;
+}
+body.dark .notice.warning {
+--title-background-color: #800;
+--content-background-color: #400;
+}
+.notice {
+padding: 18px;
+line-height: 24px;
+margin-bottom: 24px;
+border-radius: 4px;
+color: var(--content-color);
+background: var(--content-background-color);
+}
+.notice p:last-child {
+margin-bottom: 0
+}
+.notice-title {
+margin: -18px -18px 12px;
+padding: 4px 18px;
+border-radius: 4px 4px 0 0;
+font-weight: 700;
+color: var(--title-color);
+background: var(--title-background-color);
+}
+.icon-notice {
+display: inline-flex;
+align-self: center;
+margin-right: 8px;
+}
+.icon-notice img,
+.icon-notice svg {
+height: 1em;
+width: 1em;
+fill: currentColor;
+}
+.icon-notice img,
+.icon-notice.baseline svg {
+top: .125em;
+position: relative;
+}
+&lt;/style>&lt;div class="notice warning" >
+&lt;p class="notice-title">
+&lt;span class="icon-notice baseline">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="126 76.5 300 300">
+&lt;path d="M297.431 324.397v-34.255c0-3.245-2.344-5.95-5.358-5.95h-32.146c-3.014 0-5.358 2.705-5.358 5.95v34.255c0 3.245 2.344 5.95 5.358 5.95h32.146c3.014 0 5.358-2.705 5.358-5.95Zm-.335-67.428 3.014-82.753c0-1.081-.502-2.524-1.674-3.425-1.005-.902-2.512-1.983-4.019-1.983h-36.834c-1.507 0-3.014 1.081-4.019 1.983-1.172.901-1.674 2.704-1.674 3.786l2.846 82.392c0 2.344 2.512 4.146 5.693 4.146h30.975c3.013 0 5.525-1.803 5.692-4.146Zm-2.344-168.39L423.34 342.425c3.683 7.032 3.516 15.686-.335 22.717-3.85 7.031-10.883 11.358-18.417 11.358H147.413c-7.534 0-14.566-4.327-18.417-11.358-3.85-7.031-4.018-15.685-.335-22.716L257.248 88.578C260.93 81.188 268.13 76.5 276 76.5c7.87 0 15.069 4.688 18.752 12.08Z"/>
+&lt;/svg>
+&lt;/span>Warning&lt;/p></description></item><item><title>An elementary solution of a weird intergal problem (Putnam 1985 A5)</title><link>https://katsuragicsl.github.io/blogs/mathematics/elementary-solution-of-a-weird-integral-problem/</link><pubDate>Sat, 05 Apr 2025 22:38:14 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/elementary-solution-of-a-weird-integral-problem/</guid><description>&lt;h3 id="problem">Problem&lt;/h3>
+&lt;p>Let $I_{m} = \int^{2\pi}_{0} \cos(x)\cos(2x)\dots\cos(mx) dx$. For $m$ in $1, 2, \dots, 10$,
+for which $m$ is $I_m \neq 0$ ?&lt;/p>
+&lt;h3 id="solution">Solution&lt;/h3>
+&lt;p>$I_m$ is non-zero if and only if $m \equiv 0, 3 \pmod{4}$.&lt;/p>
+&lt;h3 id="main-idea">Main idea&lt;/h3>
+&lt;p>The official(seemingly? It is in the putnam problem book and a few solutions I found online do the same.) solution is to substitute $\cos x = \frac{e^{ix} + e^{-ix}}{2}$ followed by grouping the terms into $\cos x \cos (2x) \dots \cos (mx) = e^{\text{something}}$, and analyze the &lt;code>something&lt;/code>. This approach of cause is of cause good in its own right: it is exactly how you split up the $e^{in\theta}$ terms into triginometric polynomials (or ) in Fourier analysis 101. However it is a little bit annoying to manipulate those powers of $e$. And for this problem it could be done much in a much simpler and elementary way: exploiting the point of symmetry.&lt;/p></description></item><item><title>Reinventing Catalan numbers</title><link>https://katsuragicsl.github.io/blogs/mathematics/reinventing-catalan-numbers/</link><pubDate>Sat, 10 Aug 2024 17:59:01 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/mathematics/reinventing-catalan-numbers/</guid><description>&lt;h3 id="counting-binary-trees">Counting binary trees&lt;/h3>
+&lt;p>I was thinking about of the problem of balancing a binary tree, and my mind stumbled across to the question &amp;ldquo;How many different binary trees with labelled nodes can you make without changing the traversal order?&amp;rdquo;. After figuring out the answer myself I realized that the numbers of such binary trees are just &lt;a href="https://en.wikipedia.org/wiki/Catalan_number">Catalan numebrs&lt;/a> (I was not really into combinatorics - now I am).&lt;/p>
+&lt;p>For example, the following has traversal order 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6-&amp;gt;7&lt;/p></description></item></channel></rss>

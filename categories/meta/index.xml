@@ -1,2 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Meta on Script Adults</title><link>https://katsuragicsl.github.io/categories/meta/</link><description>Recent content in Meta on Script Adults</description><image><title>Script Adults</title><url>https://katsuragicsl.github.io/images/papermod-cover.png</url><link>https://katsuragicsl.github.io/images/papermod-cover.png</link></image><generator>Hugo -- 0.128.2</generator><language>en-us</language><lastBuildDate>Sun, 26 Jan 2025 23:12:20 +0800</lastBuildDate><atom:link href="https://katsuragicsl.github.io/categories/meta/index.xml" rel="self" type="application/rss+xml"/><item><title>Added tikzjax support</title><link>https://katsuragicsl.github.io/blogs/meta/added-tikzjax-support/</link><pubDate>Sat, 25 Jan 2025 17:37:38 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/meta/added-tikzjax-support/</guid><description>Just added support for tikzjax since I received some feedback about my hand-drawn diagrams are hard to read&amp;hellip;now I can use nice graphs like these:
-source: https://tikzjax.com/ source: https://tikzjax.com/ source: https://tikz.net/ source: https://tikz.net/</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Meta on Script Adults</title><link>https://katsuragicsl.github.io/categories/meta/</link><description>Recent content in Meta on Script Adults</description><image><title>Script Adults</title><url>https://katsuragicsl.github.io/images/papermod-cover.png</url><link>https://katsuragicsl.github.io/images/papermod-cover.png</link></image><generator>Hugo -- 0.140.0</generator><language>en-us</language><lastBuildDate>Sun, 26 Jan 2025 23:12:20 +0800</lastBuildDate><atom:link href="https://katsuragicsl.github.io/categories/meta/index.xml" rel="self" type="application/rss+xml"/><item><title>Added tikzjax support</title><link>https://katsuragicsl.github.io/blogs/meta/added-tikzjax-support/</link><pubDate>Sat, 25 Jan 2025 17:37:38 +0800</pubDate><guid>https://katsuragicsl.github.io/blogs/meta/added-tikzjax-support/</guid><description>&lt;p>Just added support for tikzjax since I received some feedback about my hand-drawn diagrams are hard to read&amp;hellip;now I can use nice graphs like these:&lt;/p>
+&lt;p>&lt;em>source: &lt;a href="https://tikzjax.com/">https://tikzjax.com/&lt;/a>&lt;/em>
+&lt;div class="flex" width="full" height="full">
+&lt;div class="flex-grow">&lt;/div>
+&lt;script type="text/tikz">
+\usepackage{tikz-cd}
+\tikzcdset{scale cd/.style={every label/.append style={scale=#1},
+cells={nodes={scale=#1}}}}
+\begin{document}
+\begin{tikzcd}[scale cd=2]
+A \arrow[r, "\phi"] \arrow[d, red]
+&amp; B \arrow[d, "\psi" red] \\
+C \arrow[r, red, "\eta" blue]
+&amp; |[blue, rotate=-15]| D
+\end{tikzcd}
+\end{document}
+&lt;/script>
+&lt;div class="flex-grow">&lt;/div>
+&lt;/div>&lt;/p>
+&lt;p>&lt;em>source: &lt;a href="https://tikzjax.com/">https://tikzjax.com/&lt;/a>&lt;/em>
+&lt;div class="flex" width="full" height="full">
+&lt;div class="flex-grow">&lt;/div>
+&lt;script type="text/tikz">
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzpicture}
+\draw (0,0) circle (1in);
+\end{tikzpicture}
+\end{document}
+&lt;/script>
+&lt;div class="flex-grow">&lt;/div>
+&lt;/div>&lt;/p>
+&lt;p>&lt;em>source: &lt;a href="https://tikz.net/">https://tikz.net/&lt;/a>&lt;/em>
+&lt;div class="flex" width="full" height="full">
+&lt;div class="flex-grow">&lt;/div>
+&lt;script type="text/tikz">
+\usepackage{chemfig}
+\begin{document}
+\chemfig{[:-90]HN(-[::-45](-[::-45]R)=[::+45]O)>[::+45]*4(-(=O)-N*5(-(&lt;:(=[::-60]O)-[::+60]OH)-(&lt;[::+0])(&lt;:[::-108])-S>)--)}
+\end{document}
+&lt;/script>
+&lt;div class="flex-grow">&lt;/div>
+&lt;/div>&lt;/p></description></item></channel></rss>

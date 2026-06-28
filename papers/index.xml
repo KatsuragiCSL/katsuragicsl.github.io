@@ -1,1 +1,180 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Papers on Script Adults</title><link>https://katsuragicsl.github.io/papers/</link><description>Recent content in Papers on Script Adults</description><image><title>Script Adults</title><url>https://katsuragicsl.github.io/images/papermod-cover.png</url><link>https://katsuragicsl.github.io/images/papermod-cover.png</link></image><generator>Hugo -- 0.128.2</generator><language>en-us</language><lastBuildDate>Fri, 21 Mar 2025 22:45:56 +0800</lastBuildDate><atom:link href="https://katsuragicsl.github.io/papers/index.xml" rel="self" type="application/rss+xml"/><item><title>CONNECTEDNESS: A DIMENSION OF SECURITY BUG SEVERITY ASSESSMENT FOR MEASURING UNCERTAINTY</title><link>https://katsuragicsl.github.io/papers/connectedness/</link><pubDate>Mon, 17 Mar 2025 13:10:18 +0800</pubDate><guid>https://katsuragicsl.github.io/papers/connectedness/</guid><description> Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Papers on Script Adults</title><link>https://katsuragicsl.github.io/papers/</link><description>Recent content in Papers on Script Adults</description><image><title>Script Adults</title><url>https://katsuragicsl.github.io/images/papermod-cover.png</url><link>https://katsuragicsl.github.io/images/papermod-cover.png</link></image><generator>Hugo -- 0.140.0</generator><language>en-us</language><lastBuildDate>Fri, 21 Mar 2025 22:45:56 +0800</lastBuildDate><atom:link href="https://katsuragicsl.github.io/papers/index.xml" rel="self" type="application/rss+xml"/><item><title>CONNECTEDNESS: A DIMENSION OF SECURITY BUG SEVERITY ASSESSMENT FOR MEASURING UNCERTAINTY</title><link>https://katsuragicsl.github.io/papers/connectedness/</link><pubDate>Mon, 17 Mar 2025 13:10:18 +0800</pubDate><guid>https://katsuragicsl.github.io/papers/connectedness/</guid><description>&lt;script src= '/js/pdf-js/build/pdf.js'>&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 10px;
+right: 4px;
+color: #000;
+margin: auto;
+background-color: #eeeeee;
+padding: 0.3em 1em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-d33ffd1f">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-d33ffd1f">
+&lt;div class="pdf-loading" id="pdf-loading-d33ffd1f">&lt;/div>
+&lt;/div>
+&lt;div id="overlayText">
+&lt;a href="https://katsuragicsl.github.io/preprints/Connectedness__preprint_.pdf" aria-label="Download" download>
+&lt;svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+&lt;path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z" />
+&lt;/svg>
+&lt;/a>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-d33ffd1f">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-d33ffd1f">
+&lt;button id="pdf-prev-d33ffd1f">Previous&lt;/button>
+&lt;button id="pdf-next-d33ffd1f">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-d33ffd1f">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-d33ffd1f">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-d33ffd1f" href="https://katsuragicsl.github.io/preprints/Connectedness__preprint_.pdf">[pdf]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-d33ffd1f" href="https://katsuragicsl.github.io/preprints/Connectedness__preprint_.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/preprints\/Connectedness__preprint_.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/katsuragicsl.github.io\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-d33ffd1f'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-d33ffd1f"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-d33ffd1f');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-d33ffd1f').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-d33ffd1f').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-d33ffd1f').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-d33ffd1f').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script></description></item></channel></rss>
