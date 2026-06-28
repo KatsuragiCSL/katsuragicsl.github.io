@@ -20,7 +20,6 @@ pygmentsUseClasses: true
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   defaultTheme: auto
-  ShowShareButtons: true
   ShowReadingTime: true
   displayFullLangName: true
   ShowPostNavLinks: true
